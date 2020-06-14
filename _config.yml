@@ -1,3 +1,10 @@
 theme: jekyll-theme-cayman
 title: PixiJS Guides
 description: User Guides for working with PixiJS
+collections:
+  basics:
+    output: true
+  production:
+    output: true
+  advanced:
+    output: true

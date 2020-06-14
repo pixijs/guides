@@ -3,7 +3,7 @@
 PixiJS is an open source, web-based rendering system that provides blazing fast 
 performance for games, data visualization, and other graphics intensive projects.
 
-These guides are designed to be a companion to the API documentation, providing a 
+These guides are designed to be a companion to the [API documentation]({{ site.data.links.pixi-api }}), providing a 
 structured introduction to using the API to solve problems and build projects.
 
 ## Organization
@@ -22,6 +22,13 @@ If you're a PixiJS veteran, you'll find the collected wisdom of our dev team in 
 
 Beyond the guides, you may want to check out:
 
-* [PixiJS API documentation](https://pixijs.github.io/docs)
-* [PixiJS Github repo](https://github.com/pixijs/pixi.js)
+* [PixiJS API documentation]({{ site.data.links.pixi-api }})
+* [PixiJS Github repo]({{ site.data.links.pixi-github }})
 
+## Guide Contents
+
+Basics:
+
+{% for guide in site.basics %}
+  [Page]({{ guide.url }})
+{% endfor %}

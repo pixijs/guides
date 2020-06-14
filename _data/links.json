@@ -1,0 +1,9 @@
+{
+  "pixi-api": "https://pixijs.github.io/docs",
+  "pixi-github": "https://github.com/pixijs/pixi.js",
+
+  "api-graphics": "http://pixijs.download/release/docs/PIXI.Graphics.html",
+  "api-simplerope": "http://pixijs.download/release/docs/PIXI.SimpleRope.html",
+
+  "plugin-sound": "https://github.com/pixijs/pixi-sound"
+}
