@@ -4,7 +4,10 @@ description: User Guides for working with PixiJS
 collections:
   basics:
     output: true
+    permalink: /:collection/:name
   production:
     output: true
+    permalink: /:collection/:name
   advanced:
     output: true
+    permalink: /:collection/:name
