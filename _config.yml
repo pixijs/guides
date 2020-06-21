@@ -1,6 +1,7 @@
 theme: jekyll-theme-primer
 title: PixiJS Guides
 description: User Guides for working with PixiJS
+
 collections:
   basics:
     output: true
@@ -11,3 +12,8 @@ collections:
   advanced:
     output: true
     permalink: /:collection/:name
+
+defaults:
+  -
+    values:
+      layout: "default"
