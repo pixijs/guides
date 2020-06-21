@@ -3,4 +3,4 @@
 source 'https://rubygems.org'
 
 gem 'jekyll', '~> 4.0'
-gem 'jekyll-theme-cayman'
+gem 'jekyll-theme-primer'
