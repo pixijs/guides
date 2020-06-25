@@ -1,4 +1,5 @@
 ---
+title: What PixiJS Is
 ---
 # PixiJS Basics - What PixiJS Is
 
@@ -16,7 +17,7 @@ Drawing images on a page can be handled with HTML5 and the DOM, so why use Pixij
 
 ## PixiJS Knows WebGL
 
-WebGL is the Javascript API for accessing users' GPUs for fast rendering and advanced effects.  PixiJS leverages WebGL to display thousands of moving sprites efficiently even on mobile devices.  But using WebGL offers more than just speed.  By using the [PIXI.Filter]() class, you can write shader 
+WebGL is the Javascript API for accessing users' GPUs for fast rendering and advanced effects.  PixiJS leverages WebGL to display thousands of moving sprites efficiently even on mobile devices.  But using WebGL offers more than just speed.  By using the [PIXI.Filter]({{ site.data.links.api-filter }}) class, you can write shader programs (or use pre-built ones!) to achieve displacement maps, blurring, and other advanced visual effects that cannot be accomplished with just the DOM or Canvas APIs.
 
 ## PixiJS Is Open Source
 

@@ -2,8 +2,14 @@
   "pixi-api": "https://pixijs.github.io/docs",
   "pixi-github": "https://github.com/pixijs/pixi.js",
 
+  "api-filter": "http://pixijs.download/release/docs/PIXI.Filter.html",
   "api-graphics": "http://pixijs.download/release/docs/PIXI.Graphics.html",
   "api-simplerope": "http://pixijs.download/release/docs/PIXI.SimpleRope.html",
 
-  "plugin-sound": "https://github.com/pixijs/pixi-sound"
+  "plugin-sound": "https://github.com/pixijs/pixi-sound",
+
+  "tool-mongoose": "https://github.com/cesanta/mongoose/",
+  "tool-mongoose-download": "https://www.cesanta.com/binary.html",
+  "tool-xampp": "https://www.apachefriends.org/index.html",
+  "tool-npm-server": "https://www.npmjs.com/package/http-server"
 }

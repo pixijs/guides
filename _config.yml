@@ -1,6 +1,7 @@
 theme: jekyll-theme-cayman
 title: PixiJS Guides
 description: User Guides for working with PixiJS
+baseurl: /guides
 collections:
   basics:
     output: true
@@ -10,4 +11,3 @@ collections:
     permalink: /:collection/:name
   advanced:
     output: true
-    permalink: /:collection/:name
