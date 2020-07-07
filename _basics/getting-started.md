@@ -5,9 +5,28 @@ title: Getting Started
 
 In this section we're going to build the simplest possible PixiJS application.  In doing so, we'll walk through the basics of how to build and serve the code.
 
+## Advanced Users
+
+A quick note before we start: this guide is aimed at beginning PixiJS developers who have minimal experience developing JavaScript-based applications.  If you are a coding veteran, you may find that the level of detail here is not helpful.  If that's the case, you may want to skim this guide, then jump into [how to work with PixiJS and packers](TODO) like webpack and npm.
+
+## A Note About JavaScript
+
+One final note.  The JavaScript universe is currently in transition from old-school JavaScript (ES5) to the newer ES6 flavor:
+
+```javascript
+// ES5
+var x = 5;
+setTimeout(function() { alert(x); }, 1000);
+// ES6
+const x = 5;
+setTimeout(() => alert(x), 1000);
+```
+
+ES6 brings a number of major advantages in terms of clearer syntax, better variable scoping, native class support, etc.  By now, all major browsers support it.  Given this, our examples in these guides will use ES6.  This doesn't mean you can't use PixiJS with ES5 programs!  Just mentally substitute "var" for "let/const", expand the shorter function-passing syntax, and everything will run just fine.
+
 ## Components of a PixiJS Application
 
-There are only a few steps required to write a PixiJS application:
+OK!  With those notes out of the way, let's get started.  There are only a few steps required to write a PixiJS application:
 
 * Create an HTML file
 * Serve the file with a web server
@@ -21,7 +40,7 @@ Let's walk through them together.
 
 ## The HTML File
 
-PixiJS is a javascript library that runs in a web page.  So the first thing we're going to need is some HTML in a file.  In a real PixiJS application, you might want to embed your display within a complex existing page, or you might want your display area to fill the whole page.  For this demo, we'll build an empty page to start:
+PixiJS is a JavaScript library that runs in a web page.  So the first thing we're going to need is some HTML in a file.  In a real PixiJS application, you might want to embed your display within a complex existing page, or you might want your display area to fill the whole page.  For this demo, we'll build an empty page to start:
 
 ```html
 <!doctype html>
@@ -58,21 +77,21 @@ This will include a minified version of the latest version of PixiJS when your p
 
 ## Creating an Application
 
-Loading the library doesn't do much good if we don't *use* it, so the next step is to start up PixiJS.  Start by replacing the line `<h1>Hello PixiJS</h1>' with a script tag like so:
+Loading the library doesn't do much good if we don't *use* it, so the next step is to start up PixiJS.  Start by replacing the line `<h1>Hello PixiJS</h1>` with a script tag like so:
 
 ```html
 <script>
-  var app = new PIXI.Application({ width: 640, height: 360 });
+  let app = new PIXI.Application({ width: 640, height: 360 });
 </script>
 ```
 
-What we're doing here is adding a javascript code block, and in that block creating a new PIXI.Application instance.  PIXI.Application is a helper class that simplifies working with PixiJS.  It creates the renderer, creates the stage, and starts a ticker for updating.  In production, you'll almost certainly want to do these steps yourself for added customization and control - we'll cover doing so in a later guide.  For now, the Application class is a perfect way to start playing with PixiJS without worrying about the details.
+What we're doing here is adding a JavaScript code block, and in that block creating a new PIXI.Application instance.  PIXI.Application is a helper class that simplifies working with PixiJS.  It creates the renderer, creates the stage, and starts a ticker for updating.  In production, you'll almost certainly want to do these steps yourself for added customization and control - we'll cover doing so in a later guide.  For now, the Application class is a perfect way to start playing with PixiJS without worrying about the details.
 
 ## Adding the View to the DOM
 
 When the PIXI.Application class creates the renderer, it builds a Canvas element that it will render *to*.  In order to see what we draw with PixiJS, we need to add this Canvas element to the DOM.  Append the following line to your page's script block:
 
-```javascript
+```JavaScript
   document.body.appendChild(app.view);
 ```
 
@@ -86,8 +105,8 @@ There are a number of ways to draw images in PixiJS, but the simplest is by usin
 
 Before PixiJS can render an image, it needs to be loaded.  Just like in any web page, image loading happens asynchronously.  We'll talk a lot more about resource loading in later guides.  For now, we can use a helper method on the PIXI.Sprite class to handle the image loading for us:
 
-```javascript
-  var sprite = PIXI.Sprite.from('sample.png');
+```JavaScript
+  let sprite = PIXI.Sprite.from('sample.png');
 ```
 
 [Download the sample PNG here]({{ "/assets/images/sample.png" | relative_url }}), and save it into your `pixi-test` directory next to your `index.html`.
@@ -96,7 +115,7 @@ Before PixiJS can render an image, it needs to be loaded.  Just like in any web 
 
 Finally, we need to add our new sprite to the stage.  The stage is simply a PIXI.Container that is the root of the scene graph.  Every child of the stage container will be rendered every frame.  By adding our sprite to the stage, we tell PixiJS's renderer we want to draw it.
 
-```javascript
+```JavaScript
   app.stage.addChild(sprite);
 ```
 
@@ -111,11 +130,11 @@ Here's what we have so far:
   <body>
     <script>
       // Create the application helper and add its render target to the page
-      var app = new PIXI.Application({ width: 640, height: 360 });
+      let app = new PIXI.Application({ width: 640, height: 360 });
       document.body.appendChild(app.view);
 
       // Create the sprite and add it to the stage
-      var sprite = PIXI.Sprite.from('sample.png');
+      let sprite = PIXI.Sprite.from('sample.png');
       app.stage.addChild(sprite);
     </script>
   </body>

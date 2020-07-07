@@ -8,8 +8,13 @@
 
   "plugin-sound": "https://github.com/pixijs/pixi-sound",
 
-  "tool-mongoose": "https://github.com/cesanta/mongoose/",
+  "tool-babylonjs": "https://www.babylonjs.com/",
+  "tool-cordova": "https://cordova.apache.org",
+  "tool-electron": "https://www.electronjs.org",
+  "tool-howler": "https://howlerjs.com/",
+  "tool-mongoose": "https://github.com/cesanta/mongoose",
   "tool-mongoose-download": "https://www.cesanta.com/binary.html",
-  "tool-xampp": "https://www.apachefriends.org/index.html",
-  "tool-npm-server": "https://www.npmjs.com/package/http-server"
+  "tool-npm-server": "https://www.npmjs.com/package/http-server",
+  "tool-threejs": "https://threejs.org/",
+  "tool-xampp": "https://www.apachefriends.org/index.html"
 }

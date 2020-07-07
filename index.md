@@ -29,7 +29,7 @@ Basics:
 
 Production:
 {% for guide in site.production %}
-  [{{ guide.title }}]({{ guide.url }})
+  [{{ guide.title }}]({{ guide.url | relative_url }})
 {% endfor %}
 
 Advanced:

@@ -1,18 +1,29 @@
+# Base setup
 theme: jekyll-theme-primer
 title: PixiJS Guides
 description: User Guides for working with PixiJS
+
+# Deploy endpoint, use relative_url filter to apply
 baseurl: /guides
 
+# Set up our collections of guides
 collections:
   basics:
     output: true
-    permalink: /:collection/:name
+    order:
+      - what-pixijs-is.md
+      - what-pixijs-is-not.md
+      - getting-started.md
+      - architecture-overview.md
+      - render-loop.md
+      - scene-graph.md
+      - display-object.md
   production:
     output: true
-    permalink: /:collection/:name
   advanced:
     output: true
 
+# Overall defaults
 defaults:
   -
     values:
