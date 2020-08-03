@@ -2,3 +2,5 @@
 /.jekyll-cache
 Gemfile.lock
 .jekyll-metadata
+.ruby-version
+test.html

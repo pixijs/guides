@@ -20,7 +20,7 @@ If you're new to PixiJS, we suggest you start with the Basics and read through t
 
 If you're a PixiJS veteran, you'll find the collected wisdom of our dev team in the Production section of the guides to help you take your projects to the next level of scalability and performance.  The Advanced section can offer inspiration and how-tos for pushing your games to the limit and adding cutting-edge visual effects.
 
-## Guide Table of Contents
+## Table of Contents
 
 Basics:
 {% for guide in site.basics %}
