@@ -1,5 +1,5 @@
 ---
-title: PIXI.DisplayObject
+title: DisplayObject
 ---
 # What Is a DisplayObject?
 
@@ -19,10 +19,10 @@ Angle
 : Angle is an alias for rotation that is specified in degrees instead of radians
 
 Alpha
-: Opacity from 0.0 - 1.0 with 0.0 being fully transparent
+: Opacity from 0.0 (fully transparent) to 1.0 (fully opaque)
 
 Scale
-: Scale is specified as a percent with 1.0 being unchanged, and can be set independently for x and y scaling
+: Scale is specified as a percent with 1.0 being unchanged, and can be set independently for the x and y axis
 
 Skew
 : Skew transforms the object in x and y similar to the CSS skew() function, and is specified in radians
