@@ -18,10 +18,10 @@ Here's a list of the major components that make up PixiJS.  Note that this list 
 ### Major Components:
 
 Scene Graph
-: The scene graph is the tree of renderable objects to be displayed.
+: The scene graph is the tree of renderable objects to be displayed, such as sprites, containers and text.
 
 Renderer
-: The core of the PixiJS system is the renderer, which runs the scene graph and draws it to the screen.  PixiJS supports two renderers that can be used more-or-less interchangeably: a WebGL-based renderer which is faster and supports all PixiJS features, and a Canvas-based renderer which is compatible with older hardware and software, but cannot use advanced features like filters.  (For more information about the various parts of the renderer, and how to modify and extend them, check out the [PixiJS Core guide](pixijs-core.md).)
+: The core of the PixiJS system is the renderer, which runs the scene graph and draws it to the screen.  The default renderer for PixiJS is based on WebGL under the hood. (For more information about the various parts of the renderer, and how to modify and extend them, check out the [PixiJS Core guide](pixijs-core.md).)
 
 Loader
 : The loader system provides tools for asynchronously loading resources such as images, fonts and audio files.
@@ -29,10 +29,12 @@ Loader
 Ticker
 : Tickers provide periodic callbacks based on a clock.  Your game update logic will generally be run in response to a tick once per frame.  You can have multiple tickers in use at one time.
 
-InteractionManager
-: PixiJS supports both touch and mouse-based interaction - making objects clickable, firing hover events, etc.  The InteractionManager provides the services under the hood required to capture and process these events.
-
 Application
 : The Application is a helper that wraps a loader, ticker and renderer into a single easy-to-use object.  Great for prototyping and learning, but you will likely want to build your own application equivalent in production.
 
+Interaction
+: PixiJS supports both touch and mouse-based interaction - making objects clickable, firing hover events, etc.
+
+Accessibility
+: Woven through our display system is a rich set of tools for enabling keyboard and screen-reader accessibility.
 

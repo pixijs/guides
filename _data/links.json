@@ -3,16 +3,19 @@
   "pixi-github": "https://github.com/pixijs/pixi.js",
   "pixi-customize": "https://pixijs.io/customize/",
 
+  "api-bitmaptext": "http://pixijs.download/release/docs/PIXI.BitmapText.html",
   "api-displayobject": "http://pixijs.download/release/docs/PIXI.DisplayObject.html",
   "api-filter": "http://pixijs.download/release/docs/PIXI.Filter.html",
   "api-graphics": "http://pixijs.download/release/docs/PIXI.Graphics.html",
   "api-simplerope": "http://pixijs.download/release/docs/PIXI.SimpleRope.html",
+  "api-text": "http://pixijs.download/release/docs/PIXI.Text.html",
 
   "plugin-sound": "https://github.com/pixijs/pixi-sound",
 
   "tool-babylonjs": "https://www.babylonjs.com/",
   "tool-cordova": "https://cordova.apache.org",
   "tool-electron": "https://www.electronjs.org",
+  "tool-fontfaceobserver": "https://fontfaceobserver.com/",
   "tool-howler": "https://howlerjs.com/",
   "tool-mongoose": "https://github.com/cesanta/mongoose",
   "tool-mongoose-download": "https://www.cesanta.com/binary.html",

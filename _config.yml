@@ -18,6 +18,7 @@ collections:
       - render-loop.md
       - scene-graph.md
       - display-object.md
+      - text.md
   production:
     output: true
   advanced:
