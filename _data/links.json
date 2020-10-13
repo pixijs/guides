@@ -3,10 +3,14 @@
   "pixi-github": "https://github.com/pixijs/pixi.js",
   "pixi-customize": "https://pixijs.io/customize/",
 
+  "api-basetexture": "http://pixijs.download/release/docs/PIXI.BaseTexture.html",
   "api-bitmaptext": "http://pixijs.download/release/docs/PIXI.BitmapText.html",
   "api-displayobject": "http://pixijs.download/release/docs/PIXI.DisplayObject.html",
   "api-filter": "http://pixijs.download/release/docs/PIXI.Filter.html",
   "api-graphics": "http://pixijs.download/release/docs/PIXI.Graphics.html",
+  "api-graphics-geometry": "http://pixijs.download/release/docs/PIXI.GraphicsGeometry.html",
+  "api-loader": "http://pixijs.download/release/docs/PIXI.Loader.html",
+  "api-prepare": "http://pixijs.download/release/docs/PIXI.Prepare.html",
   "api-simplerope": "http://pixijs.download/release/docs/PIXI.SimpleRope.html",
   "api-text": "http://pixijs.download/release/docs/PIXI.Text.html",
 

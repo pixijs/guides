@@ -7,6 +7,10 @@ Whether it's a high score or a diagram label, text is often the best way to conv
 
 Let's dig into how this works.
 
+## There Are Two Kinds of Text
+
+Because of the challenges of working with text in WebGL, PixiJS provides two very different solutions.  In this guide, we're going to go over both methods in some detail to help you make the right choice for your project's needs.  Selecting the wrong text type can have a large negative impact on your project's performance and appearance.
+
 ## The PIXI.Text Object
 
 In order to draw text to the screen, you use a [PIXI.Text]({{ site.data.links.api-text }}) object.  Under the hood, this class draws text to an off-screen buffer using the browser's normal text rendering, then uses that offscreen buffer as the source for drawing the text object.  Effectively what this means is that whenever you create or change text, PixiJS creates a new rasterized image of that text, and then treats it like a sprite.  This approach allows truly rich text display while keeping rendering speed high.
@@ -52,7 +56,7 @@ Now that the browser knows what our font is and how to find the source files, it
 
 ```javascript
 // Create the loader
-var font = new FontFaceObserver('Short Stack', {});
+let font = new FontFaceObserver('Short Stack', {});
 // Start loading the font
 font.load().then(() => {
   // Successful load, start up your PixiJS app as usual
@@ -80,3 +84,25 @@ In addition to the standard PIXI.Text approach to adding text to your project, P
 
 The primary advantage of this approach is speed - changing text frequently is much cheaper and rendering each additional piece of text is much faster due to the shared source texture.
 
+## BitmapFont
+
+- 3rd party solutions
+- BitmapFont.from auto-generation
+
+## Selecting the Right Approach
+
+PIXI.Text
+- Static text
+- Small number of text objects
+- High fidelity text rendering (kerning e.g.)
+- Text layout (line & letter spacing)
+
+PIXI.BitmapText
+- Dynamic text
+- Large number of text objects
+- Lower memory
+
+## Other options
+
+WebGL-only glyph rendering (SDF text)
+DOM-based overlays ()

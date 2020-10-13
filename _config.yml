@@ -18,7 +18,11 @@ collections:
       - render-loop.md
       - scene-graph.md
       - display-object.md
+      - textures.md
+      - sprites.md
+      - sprite-sheets.md
       - text.md
+      - graphics.md
   production:
     output: true
   advanced:
