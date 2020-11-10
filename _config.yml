@@ -22,11 +22,28 @@ collections:
       - sprites.md
       - sprite-sheets.md
       - text.md
+      - containers.md
       - graphics.md
+      - interaction.md
+      - masks.md
+      - audio.md
   production:
     output: true
+    order:
+      - resolution.md
+      - resource-loading.md
+      - memory-management.md
+      - network-optimization.md
+      - performance-tuning.md
+      - scenes.md
+      - bundlers.md
+      - canvas-renderer.md
   advanced:
     output: true
+    order:
+      - pixi-core.md
+      - particles.md
+      - filters.md
 
 # Overall defaults
 defaults:

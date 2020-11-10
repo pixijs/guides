@@ -13,10 +13,13 @@ Position
 : X- and Y-position are given in pixels and change the position of the object relative to its parent
 
 Rotation
-: Rotation is specified in radians, and turns an object clockwise
+: Rotation is specified in radians, and turns an object clockwise (0.0 - 2 * Math.PI)
+
+Pivot
+: Point the object rotates around, in pixels - also sets origin for child objects
 
 Angle
-: Angle is an alias for rotation that is specified in degrees instead of radians
+: Angle is an alias for rotation that is specified in degrees instead of radians (0.0 - 360.0)
 
 Alpha
 : Opacity from 0.0 (fully transparent) to 1.0 (fully opaque)
@@ -29,9 +32,3 @@ Skew
 
 Visible
 : Whether the object is visible or not, as a boolean value
-
-## Anchors and Pivots
-
-If you add a sprite to your stage and rotate it, it will by default rotate around the top-left corner of the image.  In some cases, this is what you want.  In many cases, however, what you want is for the sprite to rotate around the center of the image it contains, or around an arbitrary point.
-
-There are two ways to achieve this: 

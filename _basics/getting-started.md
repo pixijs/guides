@@ -70,10 +70,10 @@ Test that everything is working by opening your browser of choice and entering `
 OK, so we have a web page, and we're serving it.  But it's empty.  The next step is to actually load the PixiJS library.  If we were building a real application, you'd want to download a target version of PixiJS from the [Pixi Github repo]({{ site.data.links.pixi-github }}) so that your version wouldn't change on you.  But for this sample application, we'll just use the CDN version of PixiJS.  Add this line to the `<head>` section of your `index.html` file:
 
 ```html
-<script src="https://pixijs.download/release/pixi.min.js"></script>
+<script src="https://pixijs.download/release/pixi.js"></script>
 ```
 
-This will include a minified version of the latest version of PixiJS when your page loads, ready to be used.
+This will include a *non-minified* version of the latest version of PixiJS when your page loads, ready to be used.  We use the non-minified version because we're in development.  In production, you'd want to use `pixi.min.js` instead, which is compressed for faster download and excludes assertions and deprecation warnings that can help when building your project, but take longer to download and run.
 
 ## Creating an Application
 

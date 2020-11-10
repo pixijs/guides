@@ -31,9 +31,25 @@ Once you understand what's going on, things start to make a lot more sense.  Whe
 
 That's why it helps to think of the Graphics class not as a drawing tool, but as a geometry building tool.
 
+## Types of Primitives
+
+Line
+Circle
+Rect
+RoundRect
+Ellipse
+Arc
+Bezier/Quadratic Curves
+Star
+
+GraphicsExtras
+Torus
+Funky rectangles
+Regular Polygons
+
 ## The Geometry List
 
-Inside every Graphics object is a GraphicsGeometry object.  The [PIXI.GraphicsGeometry]({{ site.data.links.api-graphics-geometry }}) class manages the list of geometry primitives created by the Graphics parent object.  For the most part, you will not work directly with this object.  The owning Graphics object creates and manages it.  However, there are two related cases where you *do* work with the list.
+Inside every Graphics object is a GraphicsGeometry object.  The [PIXI.GraphicsGeometry]({{ site.data.links.api-graphicsgeometry }}) class manages the list of geometry primitives created by the Graphics parent object.  For the most part, you will not work directly with this object.  The owning Graphics object creates and manages it.  However, there are two related cases where you *do* work with the list.
 
 First, you can re-use geometry from one Graphics object in another.  No matter whether you're re-drawing the same shape over and over, or re-using it as a hit test over and over, it's more efficient to share identical GraphicsGeometry.  You can do this like so:
 
@@ -73,13 +89,19 @@ This technique is very useful in conjunction with masking or displaying, to allo
 The PIXI.Graphics class is a complex beast, and so there are a number of things to be aware of when using it.
 
 Memory Leaks
-: The first has already been mentioned - call `delete()` on any Graphics object you no longer need to avoid memory leaks.
+: The first has already been mentioned - call `destroy()` on any Graphics object you no longer need to avoid memory leaks.
+
+Holes
+: Holes you create have to be contained in the shape (TODO: primitive shapes not working on canvas?)
 
 Changing Geometry
-: If you want to change the shape of a Graphics object, you don't need to delete and recreate it.  Instead you can use the `clear()` function to reset the contents of the geometry list, then add new primitives as desired.
+: If you want to change the shape of a Graphics object, you don't need to delete and recreate it.  Instead you can use the `clear()` function to reset the contents of the geometry list, then add new primitives as desired.  Be careful of performance.
+
+Performance
+: Generally good.  Prefer many smaller objects.  Complexity of graphic is key driver, once over a given threshhold, won't be batched, which can impact performance
 
 Transparency
-: Because the Graphics object renders its primitives sequentially, be careful when using blend modes or partial transparency with overlapping geometry.  Blend modes like ADD and MULTIPLY will work *on each primitive*, not on the final composite image.  Similarly, partially transparent Graphics objects will look wrong if your geometry primitives overlap.  (TODO: ways to overcome this?)
+: Because the Graphics object renders its primitives sequentially, be careful when using blend modes or partial transparency with overlapping geometry.  Blend modes like ADD and MULTIPLY will work *on each primitive*, not on the final composite image.  Similarly, partially transparent Graphics objects will look wrong if your geometry primitives overlap.  Workaround: set filter = AlphaFilter, or use render texture
 
 ## Baking Into Texture
 

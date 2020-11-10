@@ -22,17 +22,17 @@ If you're a PixiJS veteran, you'll find the collected wisdom of our dev team in 
 
 ## Table of Contents
 
-Basics:
+**Basics**
 {% for guide in site.basics %}
   [{{ guide.title }}]({{ guide.url | relative_url }})
 {% endfor %}
 
-Production:
+**Production**
 {% for guide in site.production %}
   [{{ guide.title }}]({{ guide.url | relative_url }})
 {% endfor %}
 
-Advanced:
+**Advanced**
 {% for guide in site.advanced %}
   [{{ guide.title }}]({{ guide.url | relative_url }})
 {% endfor %}

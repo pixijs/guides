@@ -119,18 +119,22 @@ app.ticker.add((delta) => {
 
 If you'd like to re-order a child object, you can use `setChildIndex()`.  To add a child at a given point in a parent's list, use `addChildAt()`.  Finally, you can enable automatic sorting of an object's children using the `sortableChildren` option combined with setting the `zIndex` property on each child.
 
+## Culling
+
+If you're building a project where a large proportion of your DisplayObject's are off-screen (say, a side-scrolling game), you will want to *cull* those objects.  If you don't, the renderer will still have to draw them, even though none of their pixels end up on the screen.  PixiJS doesn't provide built-in support for viewport culling, but you can find 3rd party plugins that might fit your needs.  Alternately, if you'd like to build your own culling system, simply set `visible` to false on any object that doesn't need to be drawn, and it will be skipped during renders.
+
 ## Local vs Global Coordinates
 
 If you add a sprite to the stage, by default it will show up in the top left corner of the screen.  That's the origin of the global coordinate space used by PixiJS.  If all your objects were children of the stage, that's the only coordinates you'd need to worry about.  But once you introduce containers and children, things get more complicated.  A child object at [50, 100] is 50 pixels right and 100 pixels down *from its parent*.
 
-We call these two coordinate systems "global" and "local" coordinates.  When you use `setPos()` on an object, you're always working in local coordinates, relative to the object's parent.
+We call these two coordinate systems "global" and "local" coordinates.  When you use `position.set(x, y)` on an object, you're always working in local coordinates, relative to the object's parent.
 
 The problem is, there are many times when you want to know the global position of an object.  For example, if you want to cull offscreen objects to save render time, you need to know if a given child is outside the view rectangle.
 
 To convert from local to global coordinates, you use the `toGlobal()` function.  Here's a sample usage:
 
 ```javascript
-// Get the global position of an object
+// Get the global position of an object, relative to the top-left of the screen
 let globalPos = obj.toGlobal(new PIXI.Point(0,0));
 ```
 
