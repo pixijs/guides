@@ -12,7 +12,7 @@ structured introduction to using the API to solve problems and build projects.
 
 The guides are split into three sections:
 
-* **Basics** - Learn how to set up and use PixiJS, with discussion of common elements such as Sprites and Text, as well as a thorough walk through of the application lifecycle. 
+* **Basics** - Learn how to set up and use PixiJS, with discussion of common objects such as Sprites and Text, as well as a thorough walk through of the application lifecycle. 
 * **Production** - Information on optimization, deployment, and common issues encountered when moving from prototypes to production-ready code.
 * **Advance Topics** - Standalone articles exploring advanced features of the API.
 

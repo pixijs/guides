@@ -33,7 +33,7 @@ OK!  With those notes out of the way, let's get started.  There are only a few s
 * Load the PixiJS library
 * Create a [PIXI.Application]({{ site.data.links.api-application }})
 * Add the generated view to the DOM
-* Add images to the stage
+* Add an image to the stage
 * Write an update loop
 
 Let's walk through them together.
@@ -67,7 +67,7 @@ Test that everything is working by opening your browser of choice and entering `
 
 ## Loading PixiJS
 
-OK, so we have a web page, and we're serving it.  But it's empty.  The next step is to actually load the PixiJS library.  If we were building a real application, you'd want to download a target version of PixiJS from the [Pixi Github repo]({{ site.data.links.pixi-github }}) so that your version wouldn't change on you.  But for this sample application, we'll just use the CDN version of PixiJS.  Add this line to the `<head>` section of your `index.html` file:
+OK, so we have a web page, and we're serving it.  But it's empty.  The next step is to actually load the PixiJS library.  If we were building a real application, we'd want to download a target version of PixiJS from the [Pixi Github repo]({{ site.data.links.pixi-github }}) so that our version wouldn't change on us.  But for this sample application, we'll just use the CDN version of PixiJS.  Add this line to the `<head>` section of your `index.html` file:
 
 ```html
 <script src="https://pixijs.download/release/pixi.js"></script>
@@ -85,11 +85,11 @@ Loading the library doesn't do much good if we don't *use* it, so the next step 
 </script>
 ```
 
-What we're doing here is adding a JavaScript code block, and in that block creating a new PIXI.Application instance.  PIXI.Application is a helper class that simplifies working with PixiJS.  It creates the renderer, creates the stage, and starts a ticker for updating.  In production, you'll almost certainly want to do these steps yourself for added customization and control - we'll cover doing so in a later guide.  For now, the Application class is a perfect way to start playing with PixiJS without worrying about the details.
+What we're doing here is adding a JavaScript code block, and in that block creating a new PIXI.Application instance.  [PIXI.Application]({{ site.data.links.api-application }}) is a helper class that simplifies working with PixiJS.  It creates the renderer, creates the stage, and starts a ticker for updating.  In production, you'll almost certainly want to do these steps yourself for added customization and control - we'll cover doing so in a later guide.  For now, the Application class is a perfect way to start playing with PixiJS without worrying about the details.
 
 ## Adding the View to the DOM
 
-When the PIXI.Application class creates the renderer, it builds a Canvas element that it will render *to*.  In order to see what we draw with PixiJS, we need to add this Canvas element to the DOM.  Append the following line to your page's script block:
+When the PIXI.Application class creates the renderer, it builds a Canvas element that it will render *to*.  In order to see what we draw with PixiJS, we need to add this Canvas element to the web page's DOM.  Append the following line to your page's script block:
 
 ```JavaScript
   document.body.appendChild(app.view);
@@ -101,11 +101,12 @@ This takes the view created by the application (the Canvas element) and adds it 
 
 So far all we've been doing is prep work.  We haven't actually told PixiJS to draw anything.  Let's fix that by adding an image to be displayed.
 
-There are a number of ways to draw images in PixiJS, but the simplest is by using a PIXI.Sprite.  We'll get into the details of how the scene graph works in a later guide, but for now all you need to know is that PixiJS renders a hierarchy of PIXI.DisplayObject's.  PIXI.Sprite is a type of display object that wraps a loaded image resource to allow drawing it, scaling it, rotating it, and so forth.
+There are a number of ways to draw images in PixiJS, but the simplest is by using a [PIXI.Sprite]({{ site.data.links.api-sprite }}).  We'll get into the details of how the scene graph works in a later guide, but for now all you need to know is that PixiJS renders a hierarchy of [PIXI.DisplayObject's]({{ site.data.links.api-displayobject }}).  A Sprite is a type of DisplayObject that wraps a loaded image resource to allow drawing it, scaling it, rotating it, and so forth.
 
 Before PixiJS can render an image, it needs to be loaded.  Just like in any web page, image loading happens asynchronously.  We'll talk a lot more about resource loading in later guides.  For now, we can use a helper method on the PIXI.Sprite class to handle the image loading for us:
 
 ```JavaScript
+  // Magically load the PNG asynchronously
   let sprite = PIXI.Sprite.from('sample.png');
 ```
 
@@ -113,13 +114,37 @@ Before PixiJS can render an image, it needs to be loaded.  Just like in any web 
 
 ## Adding the Sprite to the Stage
 
-Finally, we need to add our new sprite to the stage.  The stage is simply a PIXI.Container that is the root of the scene graph.  Every child of the stage container will be rendered every frame.  By adding our sprite to the stage, we tell PixiJS's renderer we want to draw it.
+Finally, we need to add our new sprite to the stage.  The stage is simply a [PIXI.Container]({{ site.data.links.api-container }}) that is the root of the scene graph.  Every child of the stage container will be rendered every frame.  By adding our sprite to the stage, we tell PixiJS's renderer we want to draw it.
 
 ```JavaScript
   app.stage.addChild(sprite);
 ```
 
-Here's what we have so far:
+## Writing an Update Loop
+
+While you _can_ use PixiJS for static content, for most projects you'll want to add animation.  Our sample app is actually cranking away, rendering the same sprite in the same place multiple times a second.  All we have to do to make the image move is to update its attributes once per frame.  To do this, we want to hook into the application's _ticker_.  A ticker is a PixiJS object that runs one or more callbacks each frame.  Doing so is surprisingly easy.  Add the following to the end of your script block:
+
+```javascript
+  // Add a variable to count up the seconds our demo has been running
+  let elapsed = 0.0;
+  // Tell our application's ticker to run a new callback every frame, passing
+  // in the amount of time that has passed since the last tick
+  app.ticker.add((delta) => {
+    // Add the time to our total elapsed time
+    elapsed += delta;
+    // Update the sprite's X position based on the cosine of our elapsed time.  We divide
+    // by 50 to slow the animation down a bit...
+    sprite.x = 100.0 + Math.cos(elapsed/50.0) * 100.0;
+  });
+```
+
+All you need to do is to call `app.ticker.add(...)`, pass it a callback function, and then update your scene in that function.  It will get called every frame, and you can move, rotate etc. whatever you'd like to drive your project's animations.
+
+## Putting It All Together
+
+That's it!  The simplest PixiJS project!
+
+Here's the whole thing in one place.  Check your file and make sure it matches if you're getting errors.
 
 ```html
 <!doctype html>
@@ -136,7 +161,17 @@ Here's what we have so far:
       // Create the sprite and add it to the stage
       let sprite = PIXI.Sprite.from('sample.png');
       app.stage.addChild(sprite);
+
+      // Add a ticker callback to move the sprite back and forth
+      let elapsed = 0.0;
+      app.ticker.add((delta) => {
+        elapsed += delta;
+        sprite.x = 100.0 + Math.cos(elapsed/50.0) * 100.0;
+      });
     </script>
   </body>
 </html>
 ```
+
+Once you have things working, the next thing to do is to read through the rest of the Basics guides to dig into how all this works in much greater depth.
+

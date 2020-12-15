@@ -3,7 +3,7 @@ title: Graphics
 ---
 # What is PIXI.Graphics?
 
-[PIXI.Graphics]({{ site.data.links.api-graphics }}) is a complex and much misunderstood tool in the PixiJS toolbox.  At first glance, it looks like a tool for drawing shapes.  And it is!  But it can also be used to generate masks, or to make complex click areas on other objects.  How does that work?
+[PIXI.Graphics]({{ site.data.links.api-graphics }}) is a complex and much misunderstood tool in the PixiJS toolbox.  At first glance, it looks like a tool for drawing shapes.  And it is!  But it can also be used to generate masks.  How does that work?
 
 In this guide, we're going to de-mystify the Graphics object, starting with how to think about what it does.
 
@@ -27,31 +27,35 @@ The problem is that the function names are centered around *drawing*, which is a
 
 Let's look a bit deeper at that `drawRect()` call.  When you call `drawRect()`, PixiJS doesn't actually draw anything.  Instead, it stores the rectangle you "drew" into a list of geometry for later use.  If you then add the Graphics object to the scene, the renderer will come along, and ask the Graphics object to render itself.  At that point, your rectangle actually gets drawn - along with any other shapes, lines, etc. that you've added to the geometry list.
 
-Once you understand what's going on, things start to make a lot more sense.  When you use a Graphics object as a hitArea, for example, the interaction system uses that list of graphics primitives in the geometry list to do hit tests.  The parent object is "hit" if the interaction event (say, a mouse click) happened inside that rectangle you built using your `drawRect()` call.  There's literally zero drawing involved.
+Once you understand what's going on, things start to make a lot more sense.  When you use a Graphics object as a mask, for example, the masking system uses that list of graphics primitives in the geometry list to constrain which pixels make it to the screen.  There's no drawing involved.
 
 That's why it helps to think of the Graphics class not as a drawing tool, but as a geometry building tool.
 
 ## Types of Primitives
 
-Line
-Circle
-Rect
-RoundRect
-Ellipse
-Arc
-Bezier/Quadratic Curves
-Star
+There are a lot of functions in the PIXI.Graphics class, but as a quick orientation, here's the list of basic primitives you can add:
 
-GraphicsExtras
-Torus
-Funky rectangles
-Regular Polygons
+* Line
+* Rect
+* RoundRect
+* Circle
+* Ellipse
+* Arc
+* Bezier and Quadratic Curve
+* Star
+
+In addition, the GraphicsExtras package includes the following complex primitives:
+
+* Torus
+* Chamfer Rect
+* Fillet Rect
+* Regular Polygon
 
 ## The Geometry List
 
 Inside every Graphics object is a GraphicsGeometry object.  The [PIXI.GraphicsGeometry]({{ site.data.links.api-graphicsgeometry }}) class manages the list of geometry primitives created by the Graphics parent object.  For the most part, you will not work directly with this object.  The owning Graphics object creates and manages it.  However, there are two related cases where you *do* work with the list.
 
-First, you can re-use geometry from one Graphics object in another.  No matter whether you're re-drawing the same shape over and over, or re-using it as a hit test over and over, it's more efficient to share identical GraphicsGeometry.  You can do this like so:
+First, you can re-use geometry from one Graphics object in another.  No matter whether you're re-drawing the same shape over and over, or re-using it as a mask over and over, it's more efficient to share identical GraphicsGeometry.  You can do this like so:
 
 ```javascript
 // Create a master graphics object
@@ -74,15 +78,13 @@ OK, so now that we've covered how the PIXI.Graphics class works, let's look at h
 
 Doing so is simple.  Create the object, call the various builder functions to add your custom primitives, then add the object to the scene graph.  Each frame, the renderer will come along, ask the Graphics object to render itself, and each primitive, with associated line and fill styles, will be drawn to the screen.
 
+(TODO: demo of drawing with lines and curves)
+
 ## Graphics as a Mask
 
 You can also use a Graphics object as a complex mask.  To do so, build your object and primitives as usual.  Next create a PIXI.Container object that will contain the masked content, and set its `mask` property to your Graphics object.  The children of the container will now be clipped to only show through inside the geometry you've created.  This technique works for both WebGL and Canvas-based rendering.
 
-## Graphics as a Click Target
-
-The third use for a Graphics object is as a hit test object for use in interactivity (handling click/touch events, etc).  Create your Graphics object and geometry, then take the object or container you want to be clickable and set its `hitArea` property to your new Graphics object.  The PIXI.Graphics class implements the `hitTest()` function based on the shapes in its geometry list.  
-
-This technique is very useful in conjunction with masking or displaying, to allow you to make only the visible parts of your object clickable - rather than approximating the hit area with a rectangle or ellipse.
+(TODO: demo of masking)
 
 ## Caveats and Gotchas
 
@@ -95,13 +97,13 @@ Holes
 : Holes you create have to be contained in the shape (TODO: primitive shapes not working on canvas?)
 
 Changing Geometry
-: If you want to change the shape of a Graphics object, you don't need to delete and recreate it.  Instead you can use the `clear()` function to reset the contents of the geometry list, then add new primitives as desired.  Be careful of performance.
+: If you want to change the shape of a Graphics object, you don't need to delete and recreate it.  Instead you can use the `clear()` function to reset the contents of the geometry list, then add new primitives as desired.  Be careful of performance when doing this every frame.
 
 Performance
-: Generally good.  Prefer many smaller objects.  Complexity of graphic is key driver, once over a given threshhold, won't be batched, which can impact performance
+: Graphics objects are generally quite performant.  However, if you build highly complex geometry, you may pass the threshhold that permits batching during rendering, which can impact performance.
 
 Transparency
-: Because the Graphics object renders its primitives sequentially, be careful when using blend modes or partial transparency with overlapping geometry.  Blend modes like ADD and MULTIPLY will work *on each primitive*, not on the final composite image.  Similarly, partially transparent Graphics objects will look wrong if your geometry primitives overlap.  Workaround: set filter = AlphaFilter, or use render texture
+: Because the Graphics object renders its primitives sequentially, be careful when using blend modes or partial transparency with overlapping geometry.  Blend modes like ADD and MULTIPLY will work *on each primitive*, not on the final composite image.  Similarly, partially transparent Graphics objects will look wrong if your geometry primitives overlap.  (TODO: workaround set filter = AlphaFilter, or use render texture?)
 
 ## Baking Into Texture
 

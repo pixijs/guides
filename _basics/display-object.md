@@ -5,6 +5,8 @@ title: DisplayObject
 
 [PIXI.DisplayObject]({{ site.data.links.api-displayobject }}) is the core class for anything that can be rendered by the engine.  It's the base class for sprites, text, complex graphics, containers, etc., and provides much of the common functionality for those objects.  As you're learning PixiJS, it's important to [read through the documentation for this class]({{ site.data.links.api-displayobject }}) to understand how to move, scale, rotate and compose the visual elements of your project.
 
+Be aware that you won't use DisplayObject directly - you'll use its functions and attributes in derived classes.
+
 ## Commonly Used Attributes
 
 The most common attributes you'll use when laying out and animating content in PixiJS are provided by the DisplayObject class:
@@ -32,3 +34,6 @@ Skew
 
 Visible
 : Whether the object is visible or not, as a boolean value
+
+
+(TODO: This feels thin, but for the life of me, not sure what else to add here...)
