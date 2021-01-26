@@ -5,6 +5,8 @@ title: What PixiJS Is
 
 So what exactly *is* PixiJS?  At its heart, PixiJS is a rendering system that uses WebGL (or optionally Canvas) to display images and other 2D visual content.  It provides a full scene graph (a hierarchy of objects to render), and provides interaction support to enable handling click and touch events.  It is a natural replacement for Flash in the modern HTML5 world, but provides better performance and pixel-level effects that go beyond what Flash could achieve.  It is perfect for online games, educational content, interactive ads, data visualization... any web-based application where complex graphics are important.  And coupled with technology such as Cordova and Electron, PixiJS apps can be distributed beyond the browser as mobile and desktop applications.
 
+(TODO: add real world examples of possible projects - game, data viz, ads)
+
 Here's what else you get with PixiJS:
 
 ## PixiJS Is ... Fast

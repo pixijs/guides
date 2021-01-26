@@ -7,7 +7,7 @@ In this section we're going to build the simplest possible PixiJS application.  
 
 ## Advanced Users
 
-A quick note before we start: this guide is aimed at beginning PixiJS developers who have minimal experience developing JavaScript-based applications.  If you are a coding veteran, you may find that the level of detail here is not helpful.  If that's the case, you may want to skim this guide, then jump into [how to work with PixiJS and packers](TODO) like webpack and npm.
+A quick note before we start: this guide is aimed at beginning PixiJS developers who have minimal experience developing JavaScript-based applications.  If you are a coding veteran, you may find that the level of detail here is not helpful.  {% comment %}If that's the case, you may want to skim this guide, then jump into [how to work with PixiJS and packers](TODO) like webpack and npm. {% endcomment %}  If that's the case, you may want to skip ahead.
 
 ## A Note About JavaScript
 

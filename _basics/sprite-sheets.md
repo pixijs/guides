@@ -11,15 +11,15 @@ A SpriteSheet is a tool for more efficiently downloading and rendering Sprites. 
 
 The basic idea of a sprite sheet is to pack a series of images together into a single image, track where each source image ends up, and use that combined image as a shared BaseTexture for the resulting Sprites.  
 
-The first step is to collect the images you want to combine.  The sprite packer then collects the images, and creates a new combined image like so:
+The first step is to collect the images you want to combine.  The sprite packer then collects the images, and creates a new combined image.
 
-(TODO: Image showing multiple source images, combined into a single image)
+{% comment %}TODO: Image showing multiple source images, combined into a single image{% endcomment %}
 
-As this image is being created, the tool building it keeps track of the location of the rectangle where each source image is stored.  It then writes out a JSON file with that information:
+As this image is being created, the tool building it keeps track of the location of the rectangle where each source image is stored.  It then writes out a JSON file with that information.
 
-(TODO: SpriteSheet json goes here)
+{% comment %}TODO: SpriteSheet json goes here{% endcomment %}
 
-These two files, in combination, can be passed into a SpriteSheet constructor.  The SpriteSheet object then parses the JSON, and creates a series of Texture objects, one for each source image, setting the source rectangle for each based on the JSON data.
+These two files, in combination, can be passed into a SpriteSheet constructor.  The SpriteSheet object then parses the JSON, and creates a series of Texture objects, one for each source image, setting the source rectangle for each based on the JSON data.  Each texture uses the same shared BaseTexture as its source.
 
 ## Doubly Efficient
 

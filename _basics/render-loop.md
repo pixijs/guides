@@ -35,4 +35,4 @@ In cases where you want to adjust that behavior, you can set the `minFPS` and `m
 
 ## Custom Render Loops
 
-What we've just covered is the default render loop provided out of the box by the Application helper class.  There are many other ways of creating a render loop that may be helpful for advanced users looking to solve a given problem.  You can read more about that in the [Custom Render Loop guide](TODO: link here).  While you're prototyping and learning PixiJS, sticking with the Application's provided system is the recommended approach.
+What we've just covered is the default render loop provided out of the box by the Application helper class.  There are many other ways of creating a render loop that may be helpful for advanced users looking to solve a given problem.  {% comment %}You can read more about that in the [Custom Render Loop guide](TODO: link here).{% endcomment %}  While you're prototyping and learning PixiJS, sticking with the Application's provided system is the recommended approach.

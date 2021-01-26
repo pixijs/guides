@@ -9,11 +9,13 @@ Every frame, PixiJS is updating and then rendering the scene graph.  Let's talk 
 
 The scene graph's root node is a container maintained by the application, and referenced with `app.stage`.  When you add a sprite or other renderable object as a child to the stage, it's added to the scene graph and will be rendered and interactable.  Most PixiJS objects can also have children, and so as you build more complex scenes, you will end up with a tree of parent-child relationships, rooted at the app's stage.
 
+(A helpful tool for exploring your project is the [Pixi.js devtools plugin]({{ site.data.links.tool-dev-tools }}) for Chrome, which allows you to view and manipulate the scene graph in real time as it's running!)
+
 ## Parents and Children
 
 When a parent moves, its children move as well.  When a parent is rotated, its children are rotated too.  Hide a parent, and the children will also be hidden.  If you have a game object that's made up of multiple sprites, you can collect them under a container to treat them as a single object in the world, moving and rotating as one.
 
-(TODO: verify this - vaguely remember caching of e.g. transforms to prevent having to run tree each frame?)  Each frame, PixiJS runs through the scene graph from the root down through all the children to the leaves to calculate each object's final position, rotation, visibility, transparency, etc.  If a parent's alpha is set to 0.5 (making it 50% transparent), all its children will start at 50% transparent as well.  If a child is then set to 0.5 alpha, it won't be 50% transparent, it will be 0.5 x 0.5 = 0.25 alpha, or 75% transparent.  Similarly, an object's position is relative to its parent, so if a parent is set to an x position of 50 pixels, and the child is set to an x position of 100 pixels, it will be drawn at a screen offset of 150 pixels, or 50 + 100.
+{% comment %}TODO: verify this - vaguely remember caching of e.g. transforms to prevent having to run tree each frame?{% endcomment %}  Each frame, PixiJS runs through the scene graph from the root down through all the children to the leaves to calculate each object's final position, rotation, visibility, transparency, etc.  If a parent's alpha is set to 0.5 (making it 50% transparent), all its children will start at 50% transparent as well.  If a child is then set to 0.5 alpha, it won't be 50% transparent, it will be 0.5 x 0.5 = 0.25 alpha, or 75% transparent.  Similarly, an object's position is relative to its parent, so if a parent is set to an x position of 50 pixels, and the child is set to an x position of 100 pixels, it will be drawn at a screen offset of 150 pixels, or 50 + 100.
 
 Here's an example.  We'll create three sprites, each a child of the last, and animate their position, rotation, scale and alpha.  Even though each sprite's properties are set to the same values, the parent-child chain amplifies each change:
 
@@ -121,7 +123,9 @@ If you'd like to re-order a child object, you can use `setChildIndex()`.  To add
 
 ## Culling
 
-If you're building a project where a large proportion of your DisplayObject's are off-screen (say, a side-scrolling game), you will want to *cull* those objects.  If you don't, the renderer will still have to draw them, even though none of their pixels end up on the screen.  PixiJS doesn't provide built-in support for viewport culling, but you can find 3rd party plugins that might fit your needs.  Alternately, if you'd like to build your own culling system, simply set `visible` to false on any object that doesn't need to be drawn, and it will be skipped during renders.
+If you're building a project where a large proportion of your DisplayObject's are off-screen (say, a side-scrolling game), you will want to *cull* those objects.  Culling is the process of evaluating if an object (or its children!) is on the screen, and if not, turning off rendering for it.  If you don't cull off-screen objects, the renderer will still draw them, even though none of their pixels end up on the screen.  
+
+PixiJS doesn't provide built-in support for viewport culling, but you can find 3rd party plugins that might fit your needs.  Alternately, if you'd like to build your own culling system, simply run your objects during each tick and set `renderable` to false on any object that doesn't need to be drawn.
 
 ## Local vs Global Coordinates
 
@@ -146,4 +150,4 @@ When your project is working with the host operating system or browser, there is
 
 Now, in many cases, screen space is equivalent to world space.  This is the case if the size of the canvas is the same as the size of the render view specified when you create you PIXI.Application.  By default, this will be the case - you'll create for example an 800x600 application window and add it to your HTML page, and it will stay that size.  100 pixels in world coordinates will equal 100 pixels in screen space.  BUT!  It is common to stretch the rendered view to have it fill the screen, or to render at a lower resolution and up-scale for speed.  In that case, the screen size of the canvas element will change (e.g. via CSS), but the underlying render view will *not*, resulting in a mis-match between world coordinates and screen coordinates.
 
-(TODO: best method to convert from world to screen coords?)
+{% comment %}TODO: best method to convert from world to screen coords?{% endcomment %}

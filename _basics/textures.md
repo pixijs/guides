@@ -5,7 +5,7 @@ title: Textures
 
 We're slowly working our way down from the high level to the low.  We've talked about the scene graph, and in general about display objects that live in it.  We're about to get to sprites and other simple display objects.  But before we do, we need to talk about textures.
 
-In PixiJS, textures are one of the core resources used by display objects.  A texture, broadly speaking, represents a set of pixels used to fill in a shape on the screen.  The simplest example is a sprite - a rectangle that is completely filled with a single texture.  But things can get much more complex.
+In PixiJS, textures are one of the core resources used by display objects.  A texture, broadly speaking, represents a source of pixels to be used to fill in an area on the screen.  The simplest example is a sprite - a rectangle that is completely filled with a single texture.  But things can get much more complex.
 
 ## Life-cycle of a Texture
 
@@ -33,7 +33,7 @@ So finally, we get to the PIXI.Texture class itself!  At this point, you may be 
 
 If all PixiJS drew were sprites, that would be pretty redundant.  But consider [SpriteSheets]({% link _basics/sprite-sheets.md %}).  A SpriteSheet is a single image that contains multiple sprite images arranged within.  In a [PIXI.SpriteSheet]({{ site.data.links.api-spritesheet }}) object, a single BaseTexture is referenced by a set of Textures, one for each source image in the original sprite sheet.  By sharing a single BaseTexture, the browser only downloads one file, and our batching renderer can blaze through drawing sprites since they all share the same underlying pixel data.  The SpriteSheet's Textures pull out just the rectangle of pixels needed by each sprite.
 
-[TODO: Image showing sprite sheet base texture, plus each sprite's texture]
+{% comment %}TODO: Image showing sprite sheet base texture, plus each sprite's texture{% endcomment %}
 
 That is why we have both Textures and BaseTextures - to allow sprite sheets, animations, button states, etc to be loaded as a single image, while only displaying the part of the master image that is needed.
 
@@ -77,5 +77,5 @@ SVG
 RenderTexture
 : A more advanced (but very powerful!) feature is to build a Texture from a [PIXI.RenderTexture]({{ site.data.links.api-rendertexture }}).  This can allow for building complex geometry using a PIXI.Geometry object, then baking that geometry down to a simple texture.
 
-Each of these texture sources has caveats and nuances that we can't cover in this guide, but they should give you a feeling for the power of PixiJS's texture system. (TODO: link to advanced textures guide)
+Each of these texture sources has caveats and nuances that we can't cover in this guide, but they should give you a feeling for the power of PixiJS's texture system. {% comment %}TODO: link to advanced textures guide{% endcomment %}
 

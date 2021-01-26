@@ -7,7 +7,7 @@ OK, now that you've gotten a feel for how easy it is to build a PixiJS applicati
 
 ## The Code
 
-Before we get into how the code is layed out, let's talk about where it lives.  PixiJS is an open source product hosted on [GitHub]({{ site.data.links.pixi-github }}).  Like any GitHub repo, you can browse and download the raw source files for each PixiJS class, as well as search existing issues & bugs, and even submit your own.  PixiJS is written in a JavaScript variant called [TypeScript]({{ site.data.links.tool-typescript }}), which enables type-checking in JavaScript via a pre-compile step.  (If you're interested in using PixiJS in a TypeScript-based project, check out the guide on [Working with Bundlers](working-with-bundlers.md).)
+Before we get into how the code is layed out, let's talk about where it lives.  PixiJS is an open source product hosted on [GitHub]({{ site.data.links.pixi-github }}).  Like any GitHub repo, you can browse and download the raw source files for each PixiJS class, as well as search existing issues & bugs, and even submit your own.  PixiJS is written in a JavaScript variant called [TypeScript]({{ site.data.links.tool-typescript }}), which enables type-checking in JavaScript via a pre-compile step.  {% comment %}TODO: (If you're interested in using PixiJS in a TypeScript-based project, check out the guide on [Working with Bundlers](working-with-bundlers.md).) {% endcomment %}
 
 ## The Components
 
@@ -21,10 +21,10 @@ Scene Graph
 : The scene graph is the tree of renderable objects to be displayed, such as sprites, containers and text.
 
 Renderer
-: The core of the PixiJS system is the renderer, which runs the scene graph and draws it to the screen.  The default renderer for PixiJS is based on WebGL under the hood. (For more information about the various parts of the renderer, and how to modify and extend them, check out the [PixiJS Core guide](pixijs-core.md).)
+: The core of the PixiJS system is the renderer, which runs the scene graph and draws it to the screen.  The default renderer for PixiJS is based on WebGL under the hood. {% comment %}TODO: (For more information about the various parts of the renderer, and how to modify and extend them, check out the [PixiJS Core guide](pixijs-core.md).) {% endcomment %}
 
 Loader
-: The loader system provides tools for asynchronously loading resources such as images, fonts and audio files.
+: The loader system provides tools for asynchronously loading resources such as images and audio files.
 
 Ticker
 : Tickers provide periodic callbacks based on a clock.  Your game update logic will generally be run in response to a tick once per frame.  You can have multiple tickers in use at one time.
