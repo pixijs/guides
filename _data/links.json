@@ -11,6 +11,7 @@
   "api-filter": "http://pixijs.download/release/docs/PIXI.Filter.html",
   "api-graphics": "http://pixijs.download/release/docs/PIXI.Graphics.html",
   "api-graphicsgeometry": "http://pixijs.download/release/docs/PIXI.GraphicsGeometry.html",
+  "api-interactionmanager": "http://pixijs.download/release/docs/PIXI.InteractionManager.html",
   "api-loader": "http://pixijs.download/release/docs/PIXI.Loader.html",
   "api-prepare": "http://pixijs.download/release/docs/PIXI.Prepare.html",
   "api-rendertexture": "http://pixijs.download/release/docs/PIXI.RenderTexture.html",
