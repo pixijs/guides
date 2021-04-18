@@ -4,3 +4,7 @@ Gemfile.lock
 .jekyll-metadata
 .ruby-version
 test.html
+
+# IntelliJ
+.idea
+*.iml
