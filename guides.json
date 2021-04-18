@@ -5,10 +5,10 @@
         "title": "BASICS",
         "kind": "category",
         "children": [
+          "getting-started",
           "architecture-overview",
           "containers",
           "display-object",
-          "getting-started",
           "graphics",
           "interaction",
           "render-loop",

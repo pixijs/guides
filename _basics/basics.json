@@ -26,6 +26,9 @@
   "sprite-sheets": {
     "title": "Sprite sheets"
   },
+  "sprites": {
+    "title": "Sprites"
+  },
   "text": {
     "title": "Text"
   },
