@@ -1,6 +1,3 @@
----
-title: Scene Graph
----
 # The Scene Graph
 
 Every frame, PixiJS is updating and then rendering the scene graph.  Let's talk about what's in the scene graph, and how it impacts how you develop your project.  If you've built games before, this should all sound very familiar, but if you're coming from HTML and the DOM, it's worth understanding before we get into specific types of objects you can render.

@@ -1,6 +1,3 @@
----
-title: Sprite Sheets
----
 # Sprite Sheets and Why You Should Use Them
 
 Now that you understand [basic sprites]({% link _basics/sprites.md %}), it's time to talk about a better way to create them - the [PIXI.SpriteSheet]({{ site.data.links.api-spritesheet }}) class.
