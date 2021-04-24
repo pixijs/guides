@@ -1,6 +1,3 @@
----
-title: Containers
----
 # Working with Containers
 
 The {@link PIXI.Container} class provides a simple display object that does what its name implies - collect a set of child objects together.  But beyond grouping objects, containers have a few uses that you should be aware of.

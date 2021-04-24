@@ -1,6 +1,3 @@
----
-title: Getting Started
----
 # Getting Started With PixiJS
 
 In this section we're going to build the simplest possible PixiJS application.  In doing so, we'll walk through the basics of how to build and serve the code.

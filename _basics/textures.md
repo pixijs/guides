@@ -1,6 +1,3 @@
----
-title: Textures
----
 # Textures
 
 We're slowly working our way down from the high level to the low.  We've talked about the scene graph, and in general about display objects that live in it.  We're about to get to sprites and other simple display objects.  But before we do, we need to talk about textures.

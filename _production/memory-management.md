@@ -1,6 +1,3 @@
----
-title: Memory Management
----
 # Memory Management
 
 

@@ -1,6 +1,3 @@
----
-title: Canvas Renderer
----
 # Rendering with Canvas
 
 

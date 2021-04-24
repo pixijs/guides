@@ -1,6 +1,3 @@
----
-title: Interaction
----
 # Interaction
 
 PixiJS is primarily a rendering system, but it also includes support for interactivity.  Adding support for mouse and touch events to your project is simple and consistent. 

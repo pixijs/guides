@@ -1,9 +1,4 @@
----
-title: Resolution and Screen Size
----
 # Resolution and Screen Size
-
-
 
 Differences between CSS coordinates, canvas dimensions, and renderer screen size
 Loading textures with `@2x` naming convention
