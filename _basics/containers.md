@@ -1,4 +1,5 @@
-# Working with Containers
+# PixiJS Guides
+## Working with Containers
 
 The {@link PIXI.Container} class provides a simple display object that does what its name implies - collect a set of child objects together.  But beyond grouping objects, containers have a few uses that you should be aware of.
 
@@ -50,12 +51,12 @@ frame.addChild(maskContainer);
 // Create contents for the masked container
 let text = new PIXI.Text(
   'This text will scroll up and be masked, so you can see how masking works.  Lorem ipsum and all that.\n\n' +
-  'You can put anything in the container and it will be masked!', 
-  { 
-    fontSize: 24, 
-    fill: 0x1010ff, 
-    wordWrap: true, 
-    wordWrapWidth: 180 
+  'You can put anything in the container and it will be masked!',
+  {
+    fontSize: 24,
+    fill: 0x1010ff,
+    wordWrap: true,
+    wordWrapWidth: 180
   }
 );
 text.x = 10;
@@ -83,4 +84,3 @@ Sprite
 The final common use for Container objects is as hosts for filtered content.  Filters are an advanced, WebGL-only feature that allows PixiJS to perform per-pixel effects like blurring and displacements.  By setting a filter on a Container, the area of the screen the Container encompasses will be processed by the filter after the Container's contents have been rendered.
 
 {% comment %}TODO: better description here of how this works - not enough history w/ filters to write this properly as yet...{% endcomment %}
-

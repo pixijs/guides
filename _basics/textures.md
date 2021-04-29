@@ -1,4 +1,5 @@
-# Textures
+# PixiJS Guides
+## Textures
 
 We're slowly working our way down from the high level to the low.  We've talked about the scene graph, and in general about display objects that live in it.  We're about to get to sprites and other simple display objects.  But before we do, we need to talk about textures.
 
@@ -75,4 +76,3 @@ RenderTexture
 : A more advanced (but very powerful!) feature is to build a Texture from a {@link PIXI.RenderTexture}.  This can allow for building complex geometry using a {@link PIXI.Geometry} object, then baking that geometry down to a simple texture.
 
 Each of these texture sources has caveats and nuances that we can't cover in this guide, but they should give you a feeling for the power of PixiJS's texture system. {% comment %}TODO: link to advanced textures guide{% endcomment %}
-

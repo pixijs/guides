@@ -1,4 +1,5 @@
-# The Render Loop
+# PixiJS Guides
+## The Render Loop
 
 Now that you understand the major parts of the system, let's look at how these parts work together to get your project onto the screen.  Unlike a web page, PixiJS is constantly updating and re-drawing itself, over and over.  You update your objects, then PixiJS renders them to the screen, then the process repeats.  We call this cycle the render loop.
 

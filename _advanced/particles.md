@@ -1,6 +1,4 @@
----
-title: Particles
----
-# Particles
+# PixiJS Guides
+## Particles
 
 They are pretty useful.

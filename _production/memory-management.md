@@ -1,7 +1,8 @@
-# Memory Management
+# PixiJS Guides
+## Memory Management
 
 
-GPU memory usage in mb can be roughly calculated by (baseTexture.realWidth * baseTexture.realHeight * 4) / 1024 / 1024. 
+GPU memory usage in mb can be roughly calculated by (baseTexture.realWidth * baseTexture.realHeight * 4) / 1024 / 1024.
 Therefore, it’s base textures that are ‘heavy’ and need to be worried about; textures are ‘light’ and essentially just rectangles mapping onto base textures. So take a look at PIXI.utils.BaseTextureCache to see what is there.
 
 Use different asset resolutions to help performance on different levels of device. It’s one of the easiest wins.

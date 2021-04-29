@@ -1,4 +1,5 @@
-# Network Optimization
+# PixiJS Guides
+## Network Optimization
 
 Since PixiJS is a browser-based rendering system, making your project load quickly over the network is key to having a good user experience.  In this guide, we're going to talk about how to ensure that the resources your project needs are ready as quickly as possible.
 

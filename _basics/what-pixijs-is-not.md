@@ -1,4 +1,5 @@
-# What PixiJS Is NOT
+# PixiJS Guides
+## What PixiJS Is NOT
 
 While PixiJS can do many things, there are things it can't do, or that require additional tools to accomplish.  Newcomers to PixiJS often struggle to identify which tasks PixiJS can solve, and which require outside solutions.  If you're about to start a project, it can be helpful to know if PixiJS is a good fit for your needs.  The following list is obviously incomplete - PixiJS is also not, for example, a duck - but it includes many common tasks or features that you might expect us to support.
 

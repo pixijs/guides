@@ -1,4 +1,5 @@
-# What is PIXI.Graphics?
+# PixiJS Guides
+## What is PIXI.Graphics?
 
 {@link PIXI.Graphics} is a complex and much misunderstood tool in the PixiJS toolbox.  At first glance, it looks like a tool for drawing shapes.  And it is!  But it can also be used to generate masks.  How does that work?
 

@@ -1,4 +1,5 @@
-# Rendering with Canvas
+# PixiJS Guides
+## Rendering with Canvas
 
 
 What is it
@@ -13,4 +14,4 @@ For the most part, everything ‘just works’, so supporting the Canvas rendere
 
 Be wary of ‘tint’ usage - it’s almost ‘free’ in the way WebGL handles it, but for Canvas it creates a new tinted canvas internally. For one off tinting to and from a certain value, it’ll be fine, but if rapidly changing tints may cause performance issues.
 
-I advise limiting base textures to 2048x2048, and limit rendering of the canvas to a max of this resolution too. For my games, the canvas render means “I don’t mind that it doesn’t look brilliant, I just want to guarantee it works”. 
+I advise limiting base textures to 2048x2048, and limit rendering of the canvas to a max of this resolution too. For my games, the canvas render means “I don’t mind that it doesn’t look brilliant, I just want to guarantee it works”.

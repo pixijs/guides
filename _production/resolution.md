@@ -1,4 +1,5 @@
-# Resolution and Screen Size
+# PixiJS Guides
+## Resolution and Screen Size
 
 Differences between CSS coordinates, canvas dimensions, and renderer screen size
 Loading textures with `@2x` naming convention

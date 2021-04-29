@@ -1,3 +1,4 @@
-# Loading Resources
+# PixiJS Guides
+## Loading Resources
 
 This is very important.

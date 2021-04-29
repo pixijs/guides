@@ -1,4 +1,5 @@
-# Architecture Overview
+# PixiJS Guides
+## Architecture Overview
 
 OK, now that you've gotten a feel for how easy it is to build a PixiJS application, let's get into the specifics.  For the rest of the Basics section, we're going to work from the high level down to the details.  We'll start with an overview of how PixiJS is put together.
 
@@ -14,24 +15,16 @@ Here's a list of the major components that make up PixiJS.  Note that this list 
 
 ### Major Components:
 
-Scene Graph
-: The scene graph is the tree of renderable objects to be displayed, such as sprites, containers and text.
+Scene Graph: The scene graph is the tree of renderable objects to be displayed, such as sprites, containers and text.
 
-Renderer
-: The core of the PixiJS system is the renderer, which runs the scene graph and draws it to the screen.  The default renderer for PixiJS is based on WebGL under the hood. {% comment %}TODO: (For more information about the various parts of the renderer, and how to modify and extend them, check out the [PixiJS Core guide](pixijs-core.md).) {% endcomment %}
+Renderer: The core of the PixiJS system is the renderer, which runs the scene graph and draws it to the screen.  The default renderer for PixiJS is based on WebGL under the hood. {% comment %}TODO: (For more information about the various parts of the renderer, and how to modify and extend them, check out the [PixiJS Core guide](pixijs-core.md).) {% endcomment %}
 
-Loader
-: The loader system provides tools for asynchronously loading resources such as images and audio files.
+Loader: The loader system provides tools for asynchronously loading resources such as images and audio files.
 
-Ticker
-: Tickers provide periodic callbacks based on a clock.  Your game update logic will generally be run in response to a tick once per frame.  You can have multiple tickers in use at one time.
+Ticker: Tickers provide periodic callbacks based on a clock.  Your game update logic will generally be run in response to a tick once per frame.  You can have multiple tickers in use at one time.
 
-Application
-: The Application is a helper that wraps a loader, ticker and renderer into a single easy-to-use object.  Great for prototyping and learning, but you will likely want to build your own application equivalent in production.
+Application: The Application is a helper that wraps a loader, ticker and renderer into a single easy-to-use object.  Great for prototyping and learning, but you will likely want to build your own application equivalent in production.
 
-Interaction
-: PixiJS supports both touch and mouse-based interaction - making objects clickable, firing hover events, etc.
+Interaction: PixiJS supports both touch and mouse-based interaction - making objects clickable, firing hover events, etc.
 
-Accessibility
-: Woven through our display system is a rich set of tools for enabling keyboard and screen-reader accessibility.
-
+Accessibility: Woven through our display system is a rich set of tools for enabling keyboard and screen-reader accessibility.
