@@ -1,0 +1,20 @@
+{
+  "name": "@pixi/guides",
+  "private": true,
+  "version": "1.0.0",
+  "description": "The holy guide for PixiJS developers",
+  "main": "index.js",
+  "scripts": {
+    "g": "npx @webdoc/cli --tutorials ./ --site-root guides --verbose; echo Run 'serve .' and open localhost:5000/guides!"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixijs/guides.git"
+  },
+  "author": "Shukant Pal <shukantpal@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pixijs/guides/issues"
+  },
+  "homepage": "https://github.com/pixijs/guides#readme"
+}
