@@ -8,3 +8,7 @@ test.html
 # IntelliJ
 .idea
 *.iml
+
+# webdoc
+guides/
+example.api.json
