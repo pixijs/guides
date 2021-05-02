@@ -5,7 +5,7 @@
   "description": "The holy guide for PixiJS developers",
   "main": "index.js",
   "scripts": {
-    "g": "npx @webdoc/cli --tutorials ./ --site-root guides --verbose; echo Run 'serve .' and open localhost:5000/guides!"
+    "g": "npx --yes  @webdoc/cli --tutorials ./ --site-root guides --verbose; echo Run 'serve .' and open localhost:5000/guides!"
   },
   "repository": {
     "type": "git",
