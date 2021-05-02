@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-16.04
     steps:
       - uses: actions/checkout@v2
+      - name: Install npm
+        run: npm install -g npm@7
       - name: Generate
         run: npm run g; ls
       - name: GH Pages deploy
