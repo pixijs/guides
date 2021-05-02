@@ -1,0 +1,44 @@
+{
+  "architecture-overview": {
+    "title": "Architecture Overview"
+  },
+  "containers": {
+    "title": "Containers"
+  },
+  "display-object": {
+    "title": "Display Objects"
+  },
+  "getting-started": {
+    "title": "Getting Started"
+  },
+  "graphics": {
+    "title": "Graphics"
+  },
+  "interaction": {
+    "title": "Interaction"
+  },
+  "render-loop": {
+    "title": "Render Loop"
+  },
+  "scene-graph": {
+    "title": "Scene graph"
+  },
+  "sprite-sheets": {
+    "title": "Sprite sheets"
+  },
+  "sprites": {
+    "title": "Sprites"
+  },
+  "text": {
+    "title": "Text"
+  },
+  "textures": {
+    "title": "Textures"
+  },
+  "what-pixijs-is": {
+    "title": "What PixiJS Is"
+  },
+  "what-pixijs-is-not": {
+    "title": "What PixiJS Is Not"
+  }
+}

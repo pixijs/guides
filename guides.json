@@ -1,0 +1,47 @@
+{
+  "index": {
+    "children": {
+      "basics": {
+        "title": "BASICS",
+        "kind": "category",
+        "children": [
+          "getting-started",
+          "architecture-overview",
+          "containers",
+          "display-object",
+          "graphics",
+          "interaction",
+          "render-loop",
+          "scene-graph",
+          "sprite-sheets",
+          "sprites",
+          "text",
+          "textures",
+          "what-pixijs-is",
+          "what-pixijs-is-not"
+        ]
+      },
+      "advanced": {
+        "title": "ADVANCED",
+        "kind": "category",
+        "children": [
+          "particles"
+        ]
+      },
+      "production": {
+        "title": "PRODUCTION",
+        "kind": "category",
+        "children": [
+          "animation",
+          "canvas-renderer",
+          "debugging",
+          "memory-management",
+          "network-optimization",
+          "performance-tuning",
+          "resolution",
+          "resource-loading"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+:root {
+    --color-primary: #e91e63;
+    --color-primary-light: #f06493;
+    --color-primary-text: #e91e63;
+    --color-secondary-text: #666;
+}
+
+.explorer {
+    background-color: transparent;
+}
+
+.explorer__header__title {
+    margin-left: 4px;
+}
+
+.explorer-tree__target {
+    margin: 4px 0 !important;
+}
+
+.explorer-tree__target > div > div:last-child {
+    font-size: 0.875em !important;
+}
+
+.explorer-tree__target > div > div:last-child > a {
+    color: #666 !important;
+}
+
+.explorer-tree__selected > div > div:last-child > a {
+    color: var(--color-primary-text) !important;
+}
+
+.explorer-tree__parent > div > div:last-child {
+    color: black !important;
+    font-weight: 500 !important;
+}
+
+.page {
+    background: #ecedf1 url(https://www.pixijs.com/img/faq-tile.png) 0 0 repeat;
+}
+
+.tutorials .page-content {
+    padding-left: 22px;
+}
+
+.document > p, .document > ul, .document > ol {
+    font-size: 1em;
+}
+
+.tutorials .document {
+    font-size: 1em;
+}
+
+.tutorials .document > :not(h1, h2, h3) {
+    background-color: white;
+    padding: 14px;
+}
+
+.tutorials .document > pre {
+    border-radius: 0;
+    background-color: white !important;
+    width: auto !important;
+}
+
+.tutorials .document > pre > code {
+    border-radius: 0;
+    font-family: 'Roboto Mono';
+    width: 100%;
+}
+
+.tutorials .document > :not(h1) {
+    margin-bottom: 0;
+}
+
+.tutorials .document > ul, .document > ol {
+    padding-left: 4em;
+}
+
+.tutorials .document > :not(h1, h2, h3, h1:first-child+p, h1:first-child+h2+p) + :not(h1, h2, h3) {
+    /* Remove margin because we added padding */
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.api-docs .document {
+    background-color: white;
+    padding: 18px;
+    margin-right: 24px
+}

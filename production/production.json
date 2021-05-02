@@ -1,0 +1,26 @@
+{
+  "animation": {
+    "title": "Animation"
+  },
+  "canvas-renderer": {
+    "title": "Canvas renderer"
+  },
+  "debugging": {
+    "title": "Debugging"
+  },
+  "memory-management": {
+    "title": "Memory Management"
+  },
+  "network-optimization": {
+    "title": "Network optimization"
+  },
+  "performance-tuning": {
+    "title": "Performance tuning"
+  },
+  "resolution": {
+    "title": "Resolution"
+  },
+  "resource-loading": {
+    "title": "Resource loading"
+  }
+}
