@@ -10,10 +10,18 @@ jobs:
     runs-on: ubuntu-16.04
     steps:
       - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Install npm
+        run: npm install -g npm@7
       - name: Generate
         run: npm run g; ls
       - name: GH Pages deploy
         uses: Cecilapp/GitHub-Pages-deploy@3.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.JEKYLL_PAT }}
         with:
           email: sukantk2002@outlook.com
           build_dir: guides
