@@ -20,6 +20,8 @@ jobs:
         run: npm run g; ls
       - name: GH Pages deploy
         uses: Cecilapp/GitHub-Pages-deploy@3.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.JEKYLL_PAT }}
         with:
           email: sukantk2002@outlook.com
           build_dir: guides
