@@ -1,4 +1,4 @@
-name: Build and deploy Jekyll site to GitHub Pages
+name: Build and deploy webdoc site
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Generate
-        run: npm run g
+        run: npm run g; ls
       - name: GH Pages deploy
         uses: Cecilapp/GitHub-Pages-deploy@3.2.0
         with:
