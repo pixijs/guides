@@ -1,6 +1,7 @@
 {
   "opts": {
-    "destination": "guides"
+    "destination": "guides",
+    "import": ["https://api.pixijs.io/pixijs.api.json"]
   },
   "template": {
     "applicationName": "PixiJS",
