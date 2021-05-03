@@ -88,20 +88,15 @@ TODO: demo of masking
 
 The PIXI.Graphics class is a complex beast, and so there are a number of things to be aware of when using it.
 
-Memory Leaks
-: The first has already been mentioned - call `destroy()` on any Graphics object you no longer need to avoid memory leaks.
+Memory Leaks: The first has already been mentioned - call `destroy()` on any Graphics object you no longer need to avoid memory leaks.
 
-Holes
-: Holes you create have to be contained in the shape TODO: primitive shapes not working on canvas?
+Holes: Holes you create have to be contained in the shape TODO: primitive shapes not working on canvas?
 
-Changing Geometry
-: If you want to change the shape of a Graphics object, you don't need to delete and recreate it.  Instead you can use the `clear()` function to reset the contents of the geometry list, then add new primitives as desired.  Be careful of performance when doing this every frame.
+Changing Geometry: If you want to change the shape of a Graphics object, you don't need to delete and recreate it.  Instead you can use the `clear()` function to reset the contents of the geometry list, then add new primitives as desired.  Be careful of performance when doing this every frame.
 
-Performance
-: Graphics objects are generally quite performant.  However, if you build highly complex geometry, you may pass the threshhold that permits batching during rendering, which can impact performance.
+Performance: Graphics objects are generally quite performant.  However, if you build highly complex geometry, you may pass the threshhold that permits batching during rendering, which can impact performance.
 
-Transparency
-: Because the Graphics object renders its primitives sequentially, be careful when using blend modes or partial transparency with overlapping geometry.  Blend modes like ADD and MULTIPLY will work *on each primitive*, not on the final composite image.  Similarly, partially transparent Graphics objects will look wrong if your geometry primitives overlap. TODO: workaround set filter = AlphaFilter, or use render texture?
+Transparency: Because the Graphics object renders its primitives sequentially, be careful when using blend modes or partial transparency with overlapping geometry.  Blend modes like ADD and MULTIPLY will work *on each primitive*, not on the final composite image.  Similarly, partially transparent Graphics objects will look wrong if your geometry primitives overlap. TODO: workaround set filter = AlphaFilter, or use render texture?
 
 ## Baking Into Texture
 

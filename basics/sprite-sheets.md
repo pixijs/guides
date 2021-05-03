@@ -31,8 +31,6 @@ Second, by __improving batch rendering__.  WebGL rendering speed scales roughly 
 
 You will need to use a 3rd party tool to assemble your sprite sheet files.  Here are two that may fit your needs:
 
-[ShoeBox](http://renderhjs.net/shoebox/)
-: ShoeBox is a free, Adobe AIR-based sprite packing utility that is great for small projects or learning how SpriteSheets work.
+[ShoeBox](http://renderhjs.net/shoebox/): ShoeBox is a free, Adobe AIR-based sprite packing utility that is great for small projects or learning how SpriteSheets work.
 
-[TexturePacker](https://www.codeandweb.com/texturepacker)
-: TexturePacker is a more polished paid tool that supports advanced features and workflows.  It's a good fit for larger projects and professional game development.
+[TexturePacker](https://www.codeandweb.com/texturepacker): TexturePacker is a more polished paid tool that supports advanced features and workflows.  It's a good fit for larger projects and professional game development.

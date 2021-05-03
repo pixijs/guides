@@ -63,16 +63,12 @@ This is a particularly good idea for short-lived imagery like cut-scenes that ar
 
 As we alluded to above, you can make a Texture out of more than just images:
 
-Video
-: Pass an HTML5 `<VIDEO>` element to `PIXI.BaseTexture.from()` to allow you to display video in your project.  Since it's a texture, you can tint it, add filters, or even apply it to custom geometry.
+Video: Pass an HTML5 `<VIDEO>` element to `PIXI.BaseTexture.from()` to allow you to display video in your project.  Since it's a texture, you can tint it, add filters, or even apply it to custom geometry.
 
-Canvas
-: Similarly, you can wrap an HTML5 `<CANVAS>` element in a BaseTexture to let you use canvas's drawing methods to dynamically create a texture.
+Canvas: Similarly, you can wrap an HTML5 `<CANVAS>` element in a BaseTexture to let you use canvas's drawing methods to dynamically create a texture.
 
-SVG
-: Pass in an `<SVG>` element or load a .svg URL, and PixiJS will attempt to rasterize it.  For highly network-constrained projects, this can allow for beautiful graphics with minimal network load times.
+SVG: Pass in an `<SVG>` element or load a .svg URL, and PixiJS will attempt to rasterize it.  For highly network-constrained projects, this can allow for beautiful graphics with minimal network load times.
 
-RenderTexture
-: A more advanced (but very powerful!) feature is to build a Texture from a {@link PIXI.RenderTexture}.  This can allow for building complex geometry using a {@link PIXI.Geometry} object, then baking that geometry down to a simple texture.
+RenderTexture: A more advanced (but very powerful!) feature is to build a Texture from a {@link PIXI.RenderTexture}.  This can allow for building complex geometry using a {@link PIXI.Geometry} object, then baking that geometry down to a simple texture.
 
 Each of these texture sources has caveats and nuances that we can't cover in this guide, but they should give you a feeling for the power of PixiJS's texture system. TODO: link to advanced textures guide
