@@ -4,7 +4,7 @@
     "import": ["https://api.pixijs.io/pixijs.api.json"]
   },
   "template": {
-    "applicationName": "PixiJS",
+    "applicationName": "<a href=\"/\" class=\"pixi-logo\"><img src=\"https://www.pixijs.com/img/blank.gif\" alt=\"PixiJS Logo\"></a>",
     "appBar": {
       "items": {
         "download": {
@@ -40,11 +40,13 @@
       "tutorials": ""
     },
     "siteDomain": "https://pixijs.io/",
+    "siteRoot": "guides",
     "stylesheets": [
       "./stylesheets/index.css",
       "./stylesheets/header.css",
       "./stylesheets/md.css"
     ],
+    "title": "PixiJS",
     "meta": {
       "og:title": "PixiJS Guides",
       "og:description": "The holy guide for PixiJS developers",
