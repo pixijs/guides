@@ -5,11 +5,11 @@ OK, now that you've gotten a feel for how easy it is to build a PixiJS applicati
 
 ## The Code
 
-Before we get into how the code is layed out, let's talk about where it lives.  PixiJS is an open source product hosted on [GitHub]({{ site.data.links.pixi-github }}).  Like any GitHub repo, you can browse and download the raw source files for each PixiJS class, as well as search existing issues & bugs, and even submit your own.  PixiJS is written in a JavaScript variant called [TypeScript]({{ site.data.links.tool-typescript }}), which enables type-checking in JavaScript via a pre-compile step.  {% comment %}TODO: (If you're interested in using PixiJS in a TypeScript-based project, check out the guide on [Working with Bundlers](working-with-bundlers.md).) {% endcomment %}
+Before we get into how the code is layed out, let's talk about where it lives.  PixiJS is an open source product hosted on [GitHub](https://github.com/pixijs/pixi.js).  Like any GitHub repo, you can browse and download the raw source files for each PixiJS class, as well as search existing issues & bugs, and even submit your own.  PixiJS is written in a JavaScript variant called [TypeScript](https://www.typescriptlang.org), which enables type-checking in JavaScript via a pre-compile step.  {% comment %}TODO: (If you're interested in using PixiJS in a TypeScript-based project, check out the guide on [Working with Bundlers](working-with-bundlers.md).) {% endcomment %}
 
 ## The Components
 
-PixiJS is a modular rendering engine.  Each task required for generating, updating and displaying content is broken out into its own component.  Not only does this make the code cleaner, it allows for greater extensibility.  Additionally, with the use of the [PixiJS Customize tool]({{ site.data.links.pixi-customize }}), it's possible to build a custom PixiJS file containing only the subset of features your project needs, saving download size.
+PixiJS is a modular rendering engine.  Each task required for generating, updating and displaying content is broken out into its own component.  Not only does this make the code cleaner, it allows for greater extensibility.  Additionally, with the use of the [PixiJS Customize tool](https://pixijs.io/customize/), it's possible to build a custom PixiJS file containing only the subset of features your project needs, saving download size.
 
 Here's a list of the major components that make up PixiJS.  Note that this list isn't exhaustive.  Additionally, don't worry too much about how each component works.  The goal here is to give you a feel for what's under the hood as we start exploring the engine.
 
@@ -17,7 +17,7 @@ Here's a list of the major components that make up PixiJS.  Note that this list 
 
 Scene Graph: The scene graph is the tree of renderable objects to be displayed, such as sprites, containers and text.
 
-Renderer: The core of the PixiJS system is the renderer, which runs the scene graph and draws it to the screen.  The default renderer for PixiJS is based on WebGL under the hood. {% comment %}TODO: (For more information about the various parts of the renderer, and how to modify and extend them, check out the [PixiJS Core guide](pixijs-core.md).) {% endcomment %}
+Renderer: The core of the PixiJS system is the renderer, which runs the scene graph and draws it to the screen.  The default renderer for PixiJS is based on WebGL under the hood. {% comment %}TODO: (For more information about the various parts of the renderer, and how to modify and extend them, check out the [PixiJS Core guide](pixijs-core.md).)
 
 Loader: The loader system provides tools for asynchronously loading resources such as images and audio files.
 

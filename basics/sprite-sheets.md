@@ -1,7 +1,7 @@
 # PixiJS Guides
 ## Sprite Sheets and Why You Should Use Them
 
-Now that you understand [basic sprites]({% link _basics/sprites.md %}), it's time to talk about a better way to create them - the [PIXI.SpriteSheet]({{ site.data.links.api-spritesheet }}) class.
+Now that you understand basic sprites, it's time to talk about a better way to create them - the {@link PIXI.Spritesheet} class.
 
 A SpriteSheet is a tool for more efficiently downloading and rendering Sprites.  While somewhat more complex to create and use, they are a key tool in optimizing your project.
 
@@ -31,8 +31,8 @@ Second, by __improving batch rendering__.  WebGL rendering speed scales roughly 
 
 You will need to use a 3rd party tool to assemble your sprite sheet files.  Here are two that may fit your needs:
 
-[ShoeBox]({{ site.data.links.tool-shoebox }})
+[ShoeBox](http://renderhjs.net/shoebox/)
 : ShoeBox is a free, Adobe AIR-based sprite packing utility that is great for small projects or learning how SpriteSheets work.
 
-[TexturePacker]({{ site.data.links.tool-texturepacker }})
+[TexturePacker](https://www.codeandweb.com/texturepacker)
 : TexturePacker is a more polished paid tool that supports advanced features and workflows.  It's a good fit for larger projects and professional game development.

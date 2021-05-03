@@ -40,7 +40,7 @@ In order for PixiJS to build a PIXI.Text object, you'll need to make sure that t
 
 Any javascript library that can load a web font will work, you just want something that will delay starting your project until the font has been fully loaded by the browser.
 
-One such library is [FontFaceObserver]({{ site.data.links.tool-fontfaceobserver }}).  Here's a simple example that shows how to use it to ensure the web font "Short Stack" is loaded before your app starts.  First, we need a font-face declaration in CSS:
+One such library is [FontFaceObserver](https://fontfaceobserver.com).  Here's a simple example that shows how to use it to ensure the web font "Short Stack" is loaded before your app starts.  First, we need a font-face declaration in CSS:
 
 ```css
 @font-face {

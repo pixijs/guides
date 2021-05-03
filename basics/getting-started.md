@@ -57,15 +57,15 @@ Create a new folder named `pixi-test`, then copy and paste this HTML into a new 
 
 You will need to run a web server to develop locally with PixiJS.  Web browsers prevent loading local files (such as images and audio files) on locally loaded web pages.  If you just double-click your new HTML file, you'll get an error when you try to add a sprite to the PixiJS stage.
 
-Running a web server sounds complex and difficult, but it turns out there are a number of simple web servers that will serve this purpose.  For this guide, we're going to be working with [Mongoose]({{ site.data.links.tool-mongoose }}), but you could just as easily use [XAMPP]({{ site.data.links.tool-xampp }}) or the [http-server Node.js package]({{ site.data.links.tool-npm-server }}) to serve your files.
+Running a web server sounds complex and difficult, but it turns out there are a number of simple web servers that will serve this purpose.  For this guide, we're going to be working with [Mongoose](https://mongoose.ws), but you could just as easily use [XAMPP](https://www.apachefriends.org/download.html) or the [http-server Node.js package](https://www.npmjs.com/package/http-server) to serve your files.
 
-To start serving your page with Mongoose, go to [the Mongoose download page]({{ site.data.links.tool-mongoose-download }}) and download the free server for your operating system.   Mongoose defaults to serving the files in the folder it's run in, so copy the downloaded executable into the folder you created in the prior step (`pixi-test`).  Double-click the executable, tell your operating system that you trust the file to run, and you'll have a running web server, serving your new folder.
+To start serving your page with Mongoose, go to [the Mongoose download page](https://mongoose.ws) and download the free server for your operating system.   Mongoose defaults to serving the files in the folder it's run in, so copy the downloaded executable into the folder you created in the prior step (`pixi-test`).  Double-click the executable, tell your operating system that you trust the file to run, and you'll have a running web server, serving your new folder.
 
 Test that everything is working by opening your browser of choice and entering `http://127.0.0.1:8080` in the location bar.  (Mongoose by default serves files on port 8080.)  You should see "Hello PixiJS" and nothing else.  If you get an error at this step, it means you didn't name your file `index.html` or you mis-configured your web server.
 
 ### Loading PixiJS
 
-OK, so we have a web page, and we're serving it.  But it's empty.  The next step is to actually load the PixiJS library.  If we were building a real application, we'd want to download a target version of PixiJS from the [Pixi Github repo]({{ site.data.links.pixi-github }}) so that our version wouldn't change on us.  But for this sample application, we'll just use the CDN version of PixiJS.  Add this line to the `<head>` section of your `index.html` file:
+OK, so we have a web page, and we're serving it.  But it's empty.  The next step is to actually load the PixiJS library.  If we were building a real application, we'd want to download a target version of PixiJS from the [Pixi Github repo](https://github.com/pixijs/pixi.js) so that our version wouldn't change on us.  But for this sample application, we'll just use the CDN version of PixiJS.  Add this line to the `<head>` section of your `index.html` file:
 
 ```html
 <script src="https://pixijs.download/release/pixi.js"></script>
@@ -83,7 +83,7 @@ Loading the library doesn't do much good if we don't *use* it, so the next step 
 </script>
 ```
 
-What we're doing here is adding a JavaScript code block, and in that block creating a new PIXI.Application instance.  [PIXI.Application]({{ site.data.links.api-application }}) is a helper class that simplifies working with PixiJS.  It creates the renderer, creates the stage, and starts a ticker for updating.  In production, you'll almost certainly want to do these steps yourself for added customization and control - we'll cover doing so in a later guide.  For now, the Application class is a perfect way to start playing with PixiJS without worrying about the details.
+What we're doing here is adding a JavaScript code block, and in that block creating a new PIXI.Application instance. {@link PIXI.Application} is a helper class that simplifies working with PixiJS.  It creates the renderer, creates the stage, and starts a ticker for updating.  In production, you'll almost certainly want to do these steps yourself for added customization and control - we'll cover doing so in a later guide.  For now, the Application class is a perfect way to start playing with PixiJS without worrying about the details.
 
 ### Adding the View to the DOM
 
@@ -99,7 +99,7 @@ This takes the view created by the application (the Canvas element) and adds it 
 
 So far all we've been doing is prep work.  We haven't actually told PixiJS to draw anything.  Let's fix that by adding an image to be displayed.
 
-There are a number of ways to draw images in PixiJS, but the simplest is by using a [PIXI.Sprite]({{ site.data.links.api-sprite }}).  We'll get into the details of how the scene graph works in a later guide, but for now all you need to know is that PixiJS renders a hierarchy of [PIXI.DisplayObject's]({{ site.data.links.api-displayobject }}).  A Sprite is a type of DisplayObject that wraps a loaded image resource to allow drawing it, scaling it, rotating it, and so forth.
+There are a number of ways to draw images in PixiJS, but the simplest is by using a {@link PIXI.Sprite}.  We'll get into the details of how the scene graph works in a later guide, but for now all you need to know is that PixiJS renders a hierarchy of {@link PIXI.DisplayObject PIXI.DisplayObjects}.  A Sprite is a type of DisplayObject that wraps a loaded image resource to allow drawing it, scaling it, rotating it, and so forth.
 
 Before PixiJS can render an image, it needs to be loaded.  Just like in any web page, image loading happens asynchronously.  We'll talk a lot more about resource loading in later guides.  For now, we can use a helper method on the PIXI.Sprite class to handle the image loading for us:
 
@@ -108,11 +108,11 @@ Before PixiJS can render an image, it needs to be loaded.  Just like in any web 
   let sprite = PIXI.Sprite.from('sample.png');
 ```
 
-[Download the sample PNG here]({{ "/assets/images/sample.png" | relative_url }}), and save it into your `pixi-test` directory next to your `index.html`.
+[Download the sample PNG here](../assets/images/sample.png), and save it into your `pixi-test` directory next to your `index.html`.
 
 ### Adding the Sprite to the Stage
 
-Finally, we need to add our new sprite to the stage.  The stage is simply a [PIXI.Container]({{ site.data.links.api-container }}) that is the root of the scene graph.  Every child of the stage container will be rendered every frame.  By adding our sprite to the stage, we tell PixiJS's renderer we want to draw it.
+Finally, we need to add our new sprite to the stage.  The stage is simply a {@link PIXI.Container} that is the root of the scene graph.  Every child of the stage container will be rendered every frame.  By adding our sprite to the stage, we tell PixiJS's renderer we want to draw it.
 
 ```JavaScript
   app.stage.addChild(sprite);
