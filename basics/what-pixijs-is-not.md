@@ -9,11 +9,11 @@ PixiJS is a rendering engine, and it supports additional features such as intera
 
 ## ... A 3D Renderer
 
-PixiJS is built for 2D.  Platformers, adventure games, interactive ads, custom data visualization... all good.  But if you want to render 3D models, you might want to check out [babylon.js]({{ site.data.links.tool-babylonjs }}) or [three.js]({{ site.data.links.tool-threejs }}).
+PixiJS is built for 2D.  Platformers, adventure games, interactive ads, custom data visualization... all good.  But if you want to render 3D models, you might want to check out [babylon.js](https://www.babylonjs.com) or [three.js](https://threejs.org).
 
 ## ... A Mobile App
 
-If you're looking to build mobile games, you can do it with PixiJS, but you'll need to use a deployment system like [Apache Cordova]({{ site.data.links.tool-cordova }}) if you want access to native bindings.  We don't provide access to the camera, location services, notifications, etc.
+If you're looking to build mobile games, you can do it with PixiJS, but you'll need to use a deployment system like [Apache Cordova](https://cordova.apache.org) if you want access to native bindings.  We don't provide access to the camera, location services, notifications, etc.
 
 ## ... A UI Library
 
@@ -25,7 +25,7 @@ There are many techniques and technologies that you can use to store settings, s
 
 ## ... An Audio Library
 
-At least, not out of the box.  Again, web audio technology is a constantly evolving challenge, with constantly changing rules and requirements across many browsers.  There are a number of dedicated web audio libraries (such as [Howler.js]({{ site.data.links.tool-howler }})) that can be used with PixiJS to play sound effects and music.  Alternatively, the [PixiJS Sound plugin]({{ site.data.links.plugin-sound }}) is designed to work well with PixiJS.
+At least, not out of the box.  Again, web audio technology is a constantly evolving challenge, with constantly changing rules and requirements across many browsers.  There are a number of dedicated web audio libraries (such as [Howler.js](https://howlerjs.com) that can be used with PixiJS to play sound effects and music.  Alternatively, the [PixiJS Sound plugin](https://github.com/pixijs/pixi-sound) is designed to work well with PixiJS.
 
 ## ... A Development Environment
 

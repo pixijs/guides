@@ -7,7 +7,7 @@ Every frame, PixiJS is updating and then rendering the scene graph.  Let's talk 
 
 The scene graph's root node is a container maintained by the application, and referenced with `app.stage`.  When you add a sprite or other renderable object as a child to the stage, it's added to the scene graph and will be rendered and interactable.  Most PixiJS objects can also have children, and so as you build more complex scenes, you will end up with a tree of parent-child relationships, rooted at the app's stage.
 
-(A helpful tool for exploring your project is the [Pixi.js devtools plugin]({{ site.data.links.tool-dev-tools }}) for Chrome, which allows you to view and manipulate the scene graph in real time as it's running!)
+(A helpful tool for exploring your project is the [Pixi.js devtools plugin](https://chrome.google.com/webstore/detail/pixijs-devtools/aamddddknhcagpehecnhphigffljadon) for Chrome, which allows you to view and manipulate the scene graph in real time as it's running!)
 
 ## Parents and Children
 

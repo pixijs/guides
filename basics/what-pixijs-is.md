@@ -21,7 +21,7 @@ WebGL is the JavaScript API for accessing users' GPUs for fast rendering and adv
 
 ## ... Open Source
 
-Want to understand how the engine works?  Trying to track down a bug?  Been burned by closed-source projects going dark?  With PixiJS, you get a mature project with full source code access.  We're MIT licensed for compatibility, and [hosted on GitHub]({{ site.data.links.pixi-github }}) for issue tracking and ease of access.
+Want to understand how the engine works?  Trying to track down a bug?  Been burned by closed-source projects going dark?  With PixiJS, you get a mature project with full source code access.  We're MIT licensed for compatibility, and [hosted on GitHub](https://github.com/pixijs/pixi.js) for issue tracking and ease of access.
 
 ## ... Extensible
 

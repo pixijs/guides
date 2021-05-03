@@ -21,9 +21,9 @@ So what should you do?  The answer is to combine multiple files into one file wh
 
 Image files can be combined by using [SpriteSheet objects]({% link _basics/sprite-sheets.md %}).  You use a 3rd party texture packer utility to combine many images into one, then use PixiJS's texture system to pull out each image's pixels as needed.
 
-Audio clips can similarly be combined when using audio libraries like [Howler.js]({{ site.data.links.tool-howler }}) or the [PixiJS Sound plugin]({{ site.data.links.plugin-sound }}).  You pack a set of audio files together into a single audio file, and the libraries seek to the start of the appropriate part of the file on playback.
+Audio clips can similarly be combined when using audio libraries like [Howler.js](https://howlerjs.com) or the [PixiJS Sound plugin](https://github.com/pixijs/sound).  You pack a set of audio files together into a single audio file, and the libraries seek to the start of the appropriate part of the file on playback.
 
-Finally, you'll want to use some type of JavaScript bundler like [webpack]({{ site.data.links.tool-webpack }}) to serve a single JavaScript file containing all your code.  You may even want to combine and compress JSON data files, depending on your project.
+Finally, you'll want to use some type of JavaScript bundler like [webpack](https://webpack.js.org) to serve a single JavaScript file containing all your code.  You may even want to combine and compress JSON data files, depending on your project.
 
 Each of these techniques requires a bit of setup, but the reduction in loading times can be significant.
 
