@@ -9699,17 +9699,22 @@ function Header_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
         appBarItem = _ref4[1];
 
     return appBarItem.kind === "divider" ? React.createElement("section", {
+      key: id,
       className: "header--divider header--item-".concat(id),
       dangerouslySetInnerHTML: {
         __html: appBarItem.content
       }
-    }) : React.createElement("a", {
+    }) : React.createElement(React.Fragment, {
+      key: id
+    }, React.createElement("a", {
       className: "header__link".concat(id === currentItemId ? " header__link__current" : ""),
       href: appBarItem.uri,
       dangerouslySetInnerHTML: {
         __html: appBarItem.name
       }
-    });
+    }), i < items.length - 1 && React.createElement("div", {
+      className: "header--gap"
+    }));
   }), appData.integrations.search && React.createElement(Search, {
     integration: appData.integrations.search
   })));
@@ -9740,7 +9745,10 @@ window.onload = function () {
       current: explorerRoot
     }
   })), explorerRoot);
-  external_ReactDOM_default.a.render(React.createElement(components_Footer, null), footerRoot);
+
+  if (footerRoot) {
+    external_ReactDOM_default.a.render(React.createElement(components_Footer, null), footerRoot);
+  }
 };
 
 function wakeAccordions() {
