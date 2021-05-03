@@ -83,4 +83,4 @@ Sprite
 
 The final common use for Container objects is as hosts for filtered content.  Filters are an advanced, WebGL-only feature that allows PixiJS to perform per-pixel effects like blurring and displacements.  By setting a filter on a Container, the area of the screen the Container encompasses will be processed by the filter after the Container's contents have been rendered.
 
-{% comment %}TODO: better description here of how this works - not enough history w/ filters to write this properly as yet...{% endcomment %}
+TODO: better description here of how this works - not enough history w/ filters to write this properly as yet...

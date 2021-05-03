@@ -76,13 +76,13 @@ OK, so now that we've covered how the PIXI.Graphics class works, let's look at h
 
 Doing so is simple.  Create the object, call the various builder functions to add your custom primitives, then add the object to the scene graph.  Each frame, the renderer will come along, ask the Graphics object to render itself, and each primitive, with associated line and fill styles, will be drawn to the screen.
 
-{% comment %}TODO: demo of drawing with lines and curves{% endcomment %}
+TODO: demo of drawing with lines and curves
 
 ## Graphics as a Mask
 
 You can also use a Graphics object as a complex mask.  To do so, build your object and primitives as usual.  Next create a PIXI.Container object that will contain the masked content, and set its `mask` property to your Graphics object.  The children of the container will now be clipped to only show through inside the geometry you've created.  This technique works for both WebGL and Canvas-based rendering.
 
-{% comment %}TODO: demo of masking{% endcomment %}
+TODO: demo of masking
 
 ## Caveats and Gotchas
 
@@ -92,7 +92,7 @@ Memory Leaks
 : The first has already been mentioned - call `destroy()` on any Graphics object you no longer need to avoid memory leaks.
 
 Holes
-: Holes you create have to be contained in the shape {% comment %}TODO: primitive shapes not working on canvas?{% endcomment %}
+: Holes you create have to be contained in the shape TODO: primitive shapes not working on canvas?
 
 Changing Geometry
 : If you want to change the shape of a Graphics object, you don't need to delete and recreate it.  Instead you can use the `clear()` function to reset the contents of the geometry list, then add new primitives as desired.  Be careful of performance when doing this every frame.
@@ -101,10 +101,8 @@ Performance
 : Graphics objects are generally quite performant.  However, if you build highly complex geometry, you may pass the threshhold that permits batching during rendering, which can impact performance.
 
 Transparency
-: Because the Graphics object renders its primitives sequentially, be careful when using blend modes or partial transparency with overlapping geometry.  Blend modes like ADD and MULTIPLY will work *on each primitive*, not on the final composite image.  Similarly, partially transparent Graphics objects will look wrong if your geometry primitives overlap.  {% comment %}TODO: workaround set filter = AlphaFilter, or use render texture?{% endcomment %}
+: Because the Graphics object renders its primitives sequentially, be careful when using blend modes or partial transparency with overlapping geometry.  Blend modes like ADD and MULTIPLY will work *on each primitive*, not on the final composite image.  Similarly, partially transparent Graphics objects will look wrong if your geometry primitives overlap. TODO: workaround set filter = AlphaFilter, or use render texture?
 
-{% comment %}
 ## Baking Into Texture
 
 TODO: Advantages vs disadvantages of pre-rendering to a texture, using render texture: https://jsfiddle.net/bigtimebuddy/6tzyv91j/
-{% endcomment %}

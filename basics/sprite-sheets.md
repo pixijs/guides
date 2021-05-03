@@ -11,11 +11,11 @@ The basic idea of a sprite sheet is to pack a series of images together into a s
 
 The first step is to collect the images you want to combine.  The sprite packer then collects the images, and creates a new combined image.
 
-{% comment %}TODO: Image showing multiple source images, combined into a single image{% endcomment %}
+TODO: Image showing multiple source images, combined into a single image
 
 As this image is being created, the tool building it keeps track of the location of the rectangle where each source image is stored.  It then writes out a JSON file with that information.
 
-{% comment %}TODO: SpriteSheet json goes here{% endcomment %}
+TODO: SpriteSheet json goes here
 
 These two files, in combination, can be passed into a SpriteSheet constructor.  The SpriteSheet object then parses the JSON, and creates a series of Texture objects, one for each source image, setting the source rectangle for each based on the JSON data.  Each texture uses the same shared BaseTexture as its source.
 

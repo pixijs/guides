@@ -19,7 +19,7 @@ The answer is that browsers are limited in the number of files they can download
 
 So what should you do?  The answer is to combine multiple files into one file where possible.
 
-Image files can be combined by using [SpriteSheet objects]({% link _basics/sprite-sheets.md %}).  You use a 3rd party texture packer utility to combine many images into one, then use PixiJS's texture system to pull out each image's pixels as needed.
+Image files can be combined by using [SpriteSheet objects]{@link _basics/sprite-sheets.md}.  You use a 3rd party texture packer utility to combine many images into one, then use PixiJS's texture system to pull out each image's pixels as needed.
 
 Audio clips can similarly be combined when using audio libraries like [Howler.js](https://howlerjs.com) or the [PixiJS Sound plugin](https://github.com/pixijs/sound).  You pack a set of audio files together into a single audio file, and the libraries seek to the start of the appropriate part of the file on playback.
 
