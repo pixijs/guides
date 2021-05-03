@@ -73,11 +73,9 @@ app.ticker.add((delta) => {
 
 There are two types of masks supported by PixiJS:
 
-Graphics
-: Use a {@link PIXI.Graphics} object to create a mask with an arbitrary shape - powerful, but doesn't support anti-aliasing
+Graphics: Use a {@link PIXI.Graphics} object to create a mask with an arbitrary shape - powerful, but doesn't support anti-aliasing
 
-Sprite
-: Use the alpha channel from a {@link PIXI.Sprite Sprite} as your mask, providing anti-aliased edging - _not_ supported on the Canvas renderer
+Sprite: Use the alpha channel from a {@link PIXI.Sprite Sprite} as your mask, providing anti-aliased edging - _not_ supported on the Canvas renderer
 
 ## Filtering
 
