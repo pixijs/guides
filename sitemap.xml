@@ -50,12 +50,6 @@
     <loc>https://pixijs.io/guides/basics/what-pixijs-is-not.html</loc>
   </url>
   <url>
-    <loc>https://pixijs.io/guides/advanced.html</loc>
-  </url>
-  <url>
-    <loc>https://pixijs.io/guides/advanced/particles.html</loc>
-  </url>
-  <url>
     <loc>https://pixijs.io/guides/production.html</loc>
   </url>
   <url>
@@ -81,5 +75,11 @@
   </url>
   <url>
     <loc>https://pixijs.io/guides/production/resource-loading.html</loc>
+  </url>
+  <url>
+    <loc>https://pixijs.io/guides/advanced.html</loc>
+  </url>
+  <url>
+    <loc>https://pixijs.io/guides/advanced/particles.html</loc>
   </url>
 </urlset>
