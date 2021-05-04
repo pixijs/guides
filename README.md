@@ -16,7 +16,9 @@ Then simply run the `build` script to generate the guides.
 npm run build
 ```
 
-To preview the guides in a browser, run the following command:
+## Development
+
+To develop the guides in a browser, run the following command. Changes to the souce documentation will automatically re-build.
 
 ```shell
 npm start
