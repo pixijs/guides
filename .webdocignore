@@ -1,8 +1,0 @@
-# Ignore links.json as it isn't a webdoc configuration
-_data/links.json
-package.json
-webdoc.conf.json
-guides/
-example.api.json
-node_modules
-package-lock.json

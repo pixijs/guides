@@ -42,16 +42,16 @@
     "siteDomain": "https://pixijs.io/",
     "siteRoot": "guides",
     "stylesheets": [
-      "./stylesheets/index.css",
-      "./stylesheets/header.css",
-      "./stylesheets/md.css"
+      "./static/styles/index.css",
+      "./static/styles/header.css",
+      "./static/styles/md.css"
     ],
     "title": "PixiJS",
     "meta": {
       "og:title": "PixiJS Guides",
       "og:description": "The holy guide for PixiJS developers",
       "og:image": "https://camo.githubusercontent.com/dd5f0c8ce84c09599ebd30c7a48076b3ca4ef7d1f36aed96c64952d3432942a1/68747470733a2f2f706978696a732e646f776e6c6f61642f706978696a732d62616e6e65722d6e6f2d76657273696f6e2e706e67",
-      "og:site": "{{url}}"
+      "og:site": "https://pixijs.io/guides/"
     }
   }
 }

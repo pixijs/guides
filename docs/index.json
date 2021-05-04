@@ -1,8 +1,9 @@
 {
   "index": {
+    "title": "Welcome",
     "children": {
       "basics": {
-        "title": "BASICS",
+        "title": "Basics",
         "kind": "category",
         "children": [
           "getting-started",
@@ -22,14 +23,14 @@
         ]
       },
       "advanced": {
-        "title": "ADVANCED",
+        "title": "Advanced",
         "kind": "category",
         "children": [
           "particles"
         ]
       },
       "production": {
-        "title": "PRODUCTION",
+        "title": "Production",
         "kind": "category",
         "children": [
           "animation",

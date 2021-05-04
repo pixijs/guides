@@ -3,7 +3,7 @@
     "title": "Animation"
   },
   "canvas-renderer": {
-    "title": "Canvas renderer"
+    "title": "Canvas Renderer"
   },
   "debugging": {
     "title": "Debugging"
@@ -12,15 +12,15 @@
     "title": "Memory Management"
   },
   "network-optimization": {
-    "title": "Network optimization"
+    "title": "Network Optimization"
   },
   "performance-tuning": {
-    "title": "Performance tuning"
+    "title": "Performance Tuning"
   },
   "resolution": {
     "title": "Resolution"
   },
   "resource-loading": {
-    "title": "Resource loading"
+    "title": "Resource Loading"
   }
 }

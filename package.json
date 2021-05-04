@@ -5,7 +5,9 @@
   "description": "The holy guide for PixiJS developers",
   "main": "index.js",
   "scripts": {
-    "build": "webdoc --tutorials ./ --site-root guides --verbose",
+    "prebuild": "rimraf guides/*",
+    "build": "webdoc --tutorials ./docs/ --verbose",
+    "postbuild": "copyfiles static/**/* guides",
     "start": "http-server ./ -o ./guides"
   },
   "repository": {
@@ -20,6 +22,8 @@
   "homepage": "https://github.com/pixijs/guides#readme",
   "devDependencies": {
     "@webdoc/cli": "^1.3.4",
-    "http-server": "^0.12.3"
+    "copyfiles": "^2.4.1",
+    "http-server": "^0.12.3",
+    "rimraf": "^3.0.2"
   }
 }

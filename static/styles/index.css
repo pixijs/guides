@@ -32,6 +32,7 @@
 .explorer-tree__parent > div > div:last-child {
     color: black !important;
     font-weight: 500 !important;
+    text-transform: uppercase;
 }
 
 .page {
