@@ -22,13 +22,6 @@
           "what-pixijs-is-not"
         ]
       },
-      "advanced": {
-        "title": "Advanced",
-        "kind": "category",
-        "children": [
-          "particles"
-        ]
-      },
       "production": {
         "title": "Production",
         "kind": "category",
@@ -41,6 +34,13 @@
           "performance-tuning",
           "resolution",
           "resource-loading"
+        ]
+      },
+      "advanced": {
+        "title": "Advanced",
+        "kind": "category",
+        "children": [
+          "particles"
         ]
       }
     }
