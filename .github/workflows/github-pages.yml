@@ -16,6 +16,7 @@ jobs:
           node-version: 12.x
       - name: Install npm
         run: npm install -g npm@7
+      - name: Install Dependencies
         run: npm install
       - name: Generate
         run: npm run build
