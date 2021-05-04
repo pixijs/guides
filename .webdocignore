@@ -4,3 +4,5 @@ package.json
 webdoc.conf.json
 guides/
 example.api.json
+node_modules
+package-lock.json

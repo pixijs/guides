@@ -5,7 +5,8 @@
   "description": "The holy guide for PixiJS developers",
   "main": "index.js",
   "scripts": {
-    "g": "npx --yes  @webdoc/cli --tutorials ./ --site-root guides --verbose; echo Run 'serve .' and open localhost:5000/guides!"
+    "build": "webdoc --tutorials ./ --site-root guides --verbose",
+    "start": "http-server ./ -o ./guides"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/pixijs/guides/issues"
   },
-  "homepage": "https://github.com/pixijs/guides#readme"
+  "homepage": "https://github.com/pixijs/guides#readme",
+  "devDependencies": {
+    "@webdoc/cli": "^1.3.4",
+    "http-server": "^0.12.3"
+  }
 }
