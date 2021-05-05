@@ -1,48 +1,46 @@
 {
   "index": {
-    "title": "Welcome",
-    "children": {
-      "basics": {
-        "title": "Basics",
-        "kind": "category",
-        "children": [
-          "getting-started",
-          "architecture-overview",
-          "containers",
-          "display-object",
-          "graphics",
-          "interaction",
-          "render-loop",
-          "scene-graph",
-          "sprite-sheets",
-          "sprites",
-          "text",
-          "textures",
-          "what-pixijs-is",
-          "what-pixijs-is-not"
-        ]
-      },
-      "production": {
-        "title": "Production",
-        "kind": "category",
-        "children": [
-          "animation",
-          "canvas-renderer",
-          "debugging",
-          "memory-management",
-          "network-optimization",
-          "performance-tuning",
-          "resolution",
-          "resource-loading"
-        ]
-      },
-      "advanced": {
-        "title": "Advanced",
-        "kind": "category",
-        "children": [
-          "particles"
-        ]
-      }
-    }
+    "title": "Welcome"
+  },
+  "basics": {
+    "title": "Basics",
+    "kind": "category",
+    "children": [
+      "getting-started",
+      "architecture-overview",
+      "containers",
+      "display-object",
+      "graphics",
+      "interaction",
+      "render-loop",
+      "scene-graph",
+      "sprite-sheets",
+      "sprites",
+      "text",
+      "textures",
+      "what-pixijs-is",
+      "what-pixijs-is-not"
+    ]
+  },
+  "production": {
+    "title": "Production",
+    "kind": "category",
+    "children": [
+      "animation",
+      "canvas-renderer",
+      "debugging",
+      "memory-management",
+      "network-optimization",
+      "performance-tuning",
+      "resolution",
+      "resource-loading"
+    ]
+  },
+  "advanced": {
+    "title": "Advanced",
+    "kind": "category",
+    "children": [
+      "particles"
+    ]
   }
 }
