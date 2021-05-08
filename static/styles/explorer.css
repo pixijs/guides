@@ -1,5 +1,8 @@
 .page-explorer {
-
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
 }
 
 .explorer ul {
@@ -9,6 +12,8 @@
 
 .explorer__tree ul {
   padding-left: 12px;
+  max-height: 1000px;
+  transition: max-height 500ms, opacity 500ms;
 }
 
 .explorer li {
@@ -20,19 +25,19 @@
   padding-left: 18px;
 }
 
-.explorer-tree__target > div:first-child {
+.explorer-tree__target > div {
   align-items: center;
   display: flex;
   flex-direction: row;
   height: 24px;
 }
 
-.explorer-tree__target > div:first-child > div {
+.explorer-tree__target > div > div {
   align-items: center;
   display: flex;
 }
 
-.explorer-tree__target > div:first-child > div > svg {
+.explorer-tree__target > div > div > svg {
   height: 18px;
   width: 18px;
 }
@@ -53,4 +58,9 @@
   opacity: 0;
   position: absolute;
   width: 18px;
+}
+
+.explorer-tree__target input:not(:checked) + div + ul {
+  opacity: 0;
+  max-height: 0;
 }

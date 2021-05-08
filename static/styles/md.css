@@ -1,8 +1,31 @@
+.tutorials .document > * {
+  margin: 10px 0;
+}
+
+.tutorials .document > *:first-child {
+  margin-top: 0;
+}
+
 .tutorials .document h1 {
     color: #333;
     font-size: 4.375em;
     font-weight: 400;
     line-height: 1.1em;
+}
+
+.tutorials .document a {
+  color: var(--color-primary-text);
+  text-decoration: none;
+}
+
+.tutorials .document a:visited {
+  color: var(--color-primary-text);
+}
+
+.tutorials .document > h1 {
+  font-size: 4.375em;
+  line-height: 1.1em;
+  margin: 10px 0;
 }
 
 .tutorials .document > :is(h2, h3, h4, h5, h6) {
