@@ -1,0 +1,56 @@
+.page-explorer {
+
+}
+
+.explorer ul {
+  padding-left: 8px;
+  list-style-type: none;
+}
+
+.explorer__tree ul {
+  padding-left: 12px;
+}
+
+.explorer li {
+  margin: 0;
+  padding: 0;
+}
+
+.explorer-tree__target:not(.explorer-tree__parent) {
+  padding-left: 18px;
+}
+
+.explorer-tree__target > div:first-child {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 24px;
+}
+
+.explorer-tree__target > div:first-child > div {
+  align-items: center;
+  display: flex;
+}
+
+.explorer-tree__target > div:first-child > div > svg {
+  height: 18px;
+  width: 18px;
+}
+
+.explorer-tree__target a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.explorer-tree__target a:link {
+  color: var(--color-text-secondary);
+}
+
+.explorer__tree input {
+  cursor: pointer;
+  height: 18px;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  width: 18px;
+}

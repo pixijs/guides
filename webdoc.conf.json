@@ -36,6 +36,7 @@
         }
       }
     },
+    "variant": "plain",
     "routes": {
       "tutorials": ""
     },
@@ -44,7 +45,9 @@
     "stylesheets": [
       "./static/styles/index.css",
       "./static/styles/header.css",
-      "./static/styles/md.css"
+      "./static/styles/md.css",
+      "./static/styles/layout.css",
+      "./static/styles/explorer.css"
     ],
     "title": "PixiJS",
     "meta": {

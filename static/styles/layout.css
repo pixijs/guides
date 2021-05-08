@@ -1,0 +1,36 @@
+.page, .header-content-container {
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.header-content-container__content {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 270px 1fr;
+  max-height: calc(100vh - 62px);
+  width: 100vw;
+}
+
+.page-explorer {
+  grid-row: 1;
+  grid-column: 1;
+  height: 100%;
+  max-height: calc(100vh - 62px);
+  overflow-y: auto;
+}
+
+.page-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  grid-row: 1;
+  grid-column: 2;
+  height: 100%;
+  max-height: calc(100vh - 62px);
+  overflow-y: auto;
+}
+
+.document {
+  margin: 16px;
+  max-width: min(1000px, 100%);
+}

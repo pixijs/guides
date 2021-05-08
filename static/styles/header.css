@@ -12,10 +12,20 @@
 }
 
 .header__container {
-    backdrop-filter: none;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.explorer__header__title {
+  margin: 0;
+  padding: 0 33px;
 }
 
 .header {
+    background-color: white;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35);
     height: 62px;
     min-height: 60px;
@@ -23,6 +33,10 @@
 
 .header__contents {
     backdrop-filter: none;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    height: 100%;
     justify-content: center;
 }
 
@@ -35,6 +49,10 @@
     height: 100%;
     text-decoration: none;
     transition: color .25s cubic-bezier(.215,.61,.355,1)
+}
+
+.header__gap {
+    width: 48px;
 }
 
 .header__link:hover {

@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+
 :root {
     --color-primary: #e91e63;
     --color-primary-light: #f06493;
     --color-primary-text: #e91e63;
     --color-secondary-text: #666;
+
+    font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
 }
 
 .explorer {
