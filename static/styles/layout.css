@@ -14,7 +14,7 @@
 @media only screen and (min-width: 1014px) {
   .header-content-container__content {
     grid-template-rows: auto;
-    grid-template-columns: 270px 1fr;
+    grid-template-columns: 220px 1fr;
   }
 }
 

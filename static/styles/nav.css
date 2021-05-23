@@ -128,4 +128,8 @@
       align-items: center;
       flex-direction: row;
     }
+
+    .serial-navigation__next > section:first-child > *:last-child {
+      margin-bottom: 0;
+    }
 }
