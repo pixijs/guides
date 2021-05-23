@@ -2,7 +2,7 @@
     // This code was copied from @webdoc/default-template:tmpl/components/header/index.tmpl
 
     /** This component renders the header, and is only used in "plain" variants. */
-    const { appBar, applicationName } = obj;
+    const { appBar, applicationName, explorerData } = obj;
 ?>
 
 <div class="header__wrapper">
@@ -40,20 +40,6 @@
   </div>
   <!-- FOR MOBILE -->
   <div class="hamburger-menu">
-    <?js Object.entries(appBar.items).forEach(([id, item]) => { ?>
-      <?js if (item.kind === "divider") { ?>
-        <section class="header__divider header__item-<?js= id ?>">
-          <?js= item.content ?>
-        </section>
-      <?js } else { ?>
-        <a
-          class="header__link <?js if (appBar.current === id) { ?>header__link--current<?js } ?>"
-          href="<?js= item.uri ?>"
-        >
-          <?js= item.name ?>
-        </a>
-        <div class="header__gap"></div>
-      <?js } ?>
-    <?js }); ?>
+    <?js= this.partial("explorer", { explorerData }) ?>
   </div>
 </div>
