@@ -1,8 +1,14 @@
 .page-explorer {
   align-items: flex-end;
-  display: flex;
+  display: none;
   flex-direction: column;
   padding-top: 8px;
+}
+
+@media only screen and (min-width: 1014px) {
+  .page-explorer {
+    display: flex;
+  }
 }
 
 .explorer ul {
