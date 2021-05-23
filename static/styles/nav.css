@@ -1,10 +1,8 @@
-
 .serial-navigation {
     align-self: center;
     color: var(--color-secondary-text);
     display: flex;
     flex-direction: row;
-    margin-left: 16px;
     margin-top: 24px;
     padding-bottom: 16px;
     max-width: min(800px, 100%);
@@ -15,6 +13,10 @@
 }
 
 @media only screen and (max-width: 1014px) {
+  .serial-navigation {
+    margin-left: 40px;
+  }
+
   .serial-navigation--only-previous {
     justify-content: flex-end;
     width: 100%;
@@ -105,6 +107,10 @@
 }
 
 @media only screen and (min-width: 1014px) {
+    .serial-navigation {
+      margin-left: 40px;
+    }
+
     .serial-navigation > hr {
         height: 41px;
     }

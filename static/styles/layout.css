@@ -21,7 +21,6 @@
 .page-explorer {
     grid-row: 1;
     grid-column: 1;
-    height: 100%;
     max-height: calc(100vh - 62px);
     overflow-y: auto;
 }
@@ -31,7 +30,7 @@
     flex-direction: column;
     grid-row: 1;
     grid-column: 2;
-    height: 100%;
+    height: calc(100vh - 62px);
     max-height: calc(100vh - 62px);
     overflow-y: auto;
 }
@@ -40,10 +39,12 @@
     align-self: center;
     margin: 16px;
     max-width: min(800px, 100%);
+    padding-top: 24px;
 }
 
 @media only screen and (min-width: 1014px) {
   .document {
     align-self: start;
+    margin-left: 40px;
   }
 }

@@ -23,10 +23,6 @@ body {
     margin-left: 4px;
 }
 
-.explorer-tree__target {
-    margin: 4px 0 !important;
-}
-
 .explorer-tree__target > div > div:last-child {
     font-size: 0.875em !important;
 }
@@ -45,12 +41,12 @@ body {
     text-transform: uppercase;
 }
 
-.page {
-    background: #ecedf1 url(https://www.pixijs.com/img/faq-tile.png) 0 0 repeat;
+.header-content-container {
+    background-color: #272d37;
 }
 
-.tutorials .page-content {
-    padding-left: 22px;
+.header-content-container__content {
+  background: #ecedf1 url(https://www.pixijs.com/img/faq-tile.png) 0 0 repeat;
 }
 
 .document > p, .document > ul, .document > ol {
