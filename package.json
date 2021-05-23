@@ -5,7 +5,7 @@
   "description": "The holy guide for PixiJS developers",
   "main": "index.js",
   "scripts": {
-    "generate": "webdoc --tutorials ./docs/ --verbose",
+    "generate": "mkdir -p guides/scripts && webdoc --tutorials ./docs/ --verbose",
     "copy": "copyfiles static/**/* guides",
     "clean": "rimraf guides/*",
     "build": "run-s clean generate copy",
