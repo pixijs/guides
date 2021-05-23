@@ -1,0 +1,89 @@
+.page-explorer {
+  display: none;
+  flex-direction: column;
+  padding-left: 32px;
+  z-index: 1;
+}
+
+.page-explorer > .explorer-wrapper {
+  margin-top: 32px;
+}
+
+@media only screen and (min-width: 1014px) {
+  .page-explorer {
+    display: flex;
+  }
+}
+
+.explorer-wrapper > section > h3 {
+  font-family: Roboto, sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.explorer ul {
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+.explorer__tree ul {
+  padding-left: 0px;
+  max-height: 1000px;
+  transition: max-height 500ms, opacity 500ms;
+}
+
+.explorer li {
+  padding: 0;
+}
+
+.explorer-tree__target {
+  margin: 4px 4px 4px 0;
+}
+
+.explorer-tree__parent {
+  margin-left: -18px;
+}
+
+.explorer-tree__parent > ul {
+  margin-left: 18px;
+}
+
+.explorer-tree__target > div {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 24px;
+}
+
+.explorer-tree__target > div > div {
+  align-items: center;
+  display: flex;
+}
+
+.explorer-tree__target > div > div > svg {
+  height: 18px;
+  width: 18px;
+}
+
+.explorer-tree__target a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.explorer-tree__target a:link {
+  color: var(--color-text-secondary);
+}
+
+.explorer__tree input {
+  cursor: pointer;
+  height: 18px;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  width: 18px;
+}
+
+.explorer-tree__target input:not(:checked) + div + ul {
+  opacity: 0;
+  max-height: 0;
+}

@@ -1,0 +1,46 @@
+<?js
+    // This code was copied from @webdoc/default-template:tmpl/components/header/index.tmpl
+
+    /** This component renders the header, and is only used in "plain" variants. */
+    const { appBar, applicationName, explorerData } = obj;
+?>
+
+<div class="header__wrapper">
+  <input class="header-toggle" type="checkbox" />
+  <div class="header__container">
+    <section class="explorer__header__title">
+      <?js= applicationName ?>
+    </section>
+    <div class="header__contents">
+      <section class="header__contents-main">
+        <?js Object.entries(appBar.items).forEach(([id, item]) => { ?>
+          <?js if (item.kind === "divider") { ?>
+            <section class="header__divider header__item-<?js= id ?>">
+              <?js= item.content ?>
+            </section>
+          <?js } else { ?>
+            <a
+              class="header__link <?js if (appBar.current === id) { ?>header__link--current<?js } ?>"
+              href="<?js= item.uri ?>"
+            >
+              <?js= item.name ?>
+            </a>
+            <div class="header__gap"></div>
+          <?js } ?>
+        <?js }); ?>
+      </section>
+      <section class="header__contents-mobile">
+        <div class="hamburger">
+          <i class="hamburger-l1"></i>
+          <i class="hamburger-l2"></i>
+          <i class="hamburger-l3"></i>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- FOR MOBILE -->
+  <div class="hamburger-menu">
+    <h2>PixiJS Guides</h2>
+    <?js= this.partial("explorer", { explorerData }) ?>
+  </div>
+</div>

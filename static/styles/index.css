@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+
 :root {
     --color-primary: #e91e63;
     --color-primary-light: #f06493;
     --color-primary-text: #e91e63;
     --color-secondary-text: #666;
+
+    font-family: Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
 }
 
 .explorer {
@@ -11,10 +21,6 @@
 
 .explorer__header__title {
     margin-left: 4px;
-}
-
-.explorer-tree__target {
-    margin: 4px 0 !important;
 }
 
 .explorer-tree__target > div > div:last-child {
@@ -35,12 +41,12 @@
     text-transform: uppercase;
 }
 
-.page {
-    background: #ecedf1 url(https://www.pixijs.com/img/faq-tile.png) 0 0 repeat;
+.header-content-container {
+    background-color: #272d37;
 }
 
-.tutorials .page-content {
-    padding-left: 22px;
+.header-content-container__content {
+  background: #ecedf1 url(https://www.pixijs.com/img/faq-tile.png) 0 0 repeat;
 }
 
 .document > p, .document > ul, .document > ol {
