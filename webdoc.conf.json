@@ -4,6 +4,9 @@
     "import": ["https://api.pixijs.io/pixijs.api.json"]
   },
   "template": {
+    "alias": {
+      "header": "./site/header.tmpl"
+    },
     "applicationName": "<a href=\"/\" class=\"pixi-logo\"><img src=\"https://www.pixijs.com/img/blank.gif\" alt=\"PixiJS Logo\"></a>",
     "appBar": {
       "items": {
