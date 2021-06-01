@@ -1,22 +1,21 @@
 .page-explorer {
-  display: none;
-  flex-direction: column;
-  padding-left: 32px;
+  /* display: none;
+  flex-direction: column; */
+  /* padding-left: 32px; */
   z-index: 1;
+  width: 300px;
+  flex-shrink: 0;
+  width: 25%;
+  max-width: 260px;
 }
 
-.page-explorer > .explorer-wrapper {
-  margin-top: 32px;
-}
-
-@media only screen and (min-width: 1014px) {
+/* @media only screen and (min-width: 1014px) {
   .page-explorer {
     display: flex;
   }
-}
+} */
 
 .explorer-wrapper > section > h3 {
-  font-family: Roboto, sans-serif;
   font-size: 21px;
   font-weight: 400;
 }

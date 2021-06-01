@@ -5,38 +5,30 @@
   },
   "template": {
     "alias": {
-      "explorer": "./site/explorer.tmpl",
-      "header": "./site/header.tmpl",
-      "footer": "./site/footer.tmpl"
+      "explorer": "./template/explorer.tmpl",
+      "header": "./template/header.tmpl",
+      "bottom-banner": "./template/bottom-banner.tmpl"
     },
     "applicationName": "<a href=\"https://www.pixijs.com\" class=\"pixi-logo\"><img src=\"https://www.pixijs.com/img/blank.gif\" alt=\"PixiJS Logo\"></a>",
     "appBar": {
       "items": {
+        "tutorials": {
+          "name": "Guides"
+        },
         "download": {
-          "name": "Download",
-          "uri": "https://github.com/pixijs/pixi.js"
+          "name": "GitHub",
+          "uri": "https://github.com/pixijs/pixijs"
         },
         "examples": {
           "name": "Examples",
           "uri": "https://pixijs.io/examples"
         },
         "gallery": {
-          "name": "Gallery",
-          "uri": "https://www.pixijs.com/gallery"
-        },
-        "tutorials": {
-          "name": "Guides"
-        },
-        "gap": {
-          "content": "<div style=\"min-width: 48px;\"></div>",
-          "kind": "divider"
-        },
-        "consultancy": {
-          "name": "<img src=\"https://www.pixijs.com/img/icon-default-gb.png\" /><span>CONSULTANCY</span>",
-          "uri": "https://www.pixijs.com/consultancy"
+          "name": "API Docs",
+          "uri": "https://pixijs.io/docs"
         },
         "support": {
-          "name": "<img src=\"https://www.pixijs.com/img/icon-default-patron.png\"/><span>SUPPORT US</span>",
+          "name": "Support Us",
           "uri": "https://opencollective.com/pixijs"
         }
       }
@@ -54,7 +46,7 @@
       "./static/styles/layout.css",
       "./static/styles/explorer.css",
       "./static/styles/nav.css",
-      "./static/styles/footer.css"
+      "./static/styles/bottom-banner.css"
     ],
     "title": "PixiJS",
     "meta": {

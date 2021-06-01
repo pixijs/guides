@@ -1,0 +1,40 @@
+.bottom-banner-content {
+    color: #919bac;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 50px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bottom-banner-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.bottom-banner-content a:visited {
+    color: white;
+}
+
+.bottom-banner-content a:hover {
+    color: #919bac;
+}
+
+.authors > * {
+    margin: 20px;
+}
+
+.pixijs-logo {
+    background: url(../images/pixijs-logo.svg);
+    background-size: 95px 37px;
+    display: block;
+    height: 37px;
+    width: 95px;
+}
+
+/* @media only screen and (min-width: 1014px) {
+    footer {
+        margin-left: 40px;
+    }
+} */

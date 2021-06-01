@@ -31,7 +31,7 @@
 
 .explorer__header__title {
   margin: 0;
-  padding: 0 11px;
+  margin-left: 32px;
 }
 
 .header {
@@ -41,12 +41,12 @@
 }
 
 .header__contents {
-    backdrop-filter: none;
     display: flex;
     flex-direction: row;
     flex-grow: 1;
     height: 100%;
     justify-content: flex-end;
+    margin-right: 32px;
 }
 
 .header__contents-main, .header__contents-mobile {
@@ -63,26 +63,24 @@
     font-weight: 500;
     height: 100%;
     text-decoration: none;
-    transition: color .25s cubic-bezier(.215,.61,.355,1)
-}
-
-.header__gap {
-    width: 48px;
+    transition: color .25s cubic-bezier(.215,.61,.355,1);
+    white-space: nowrap;
 }
 
 .header__link:hover {
     text-decoration: none;
+    color: var(--color-primary);
 }
 
-.header__link > img {
-    margin-right: 2px;
+.header__link:last-child {
+  background: url(../images/open-collective.png) no-repeat left center;
+  padding-left: 30px;
+  text-transform: uppercase;
 }
 
-.header__link__current {
-    color: var(--color-primary-text);
-    border-bottom: 3px solid var(--color-primary-text);
-    height: calc(100% - 9px);
-    margin-top: 3px;
+.header__link:first-child {
+  border-bottom: 2px solid var(--color-primary-text);
+  color: var(--color-primary-text);
 }
 
 .header__contents-main {
@@ -128,7 +126,7 @@
 
 .hamburger-menu {
   background-color: #edeef0;
-  display: flex;
+  display: none;
   flex-direction: column;
   padding-left: 8px;
   transform: translateY(-100%) translateY(-50px);
@@ -146,13 +144,13 @@
 
 .hamburger-menu > * {
     background-color: #edeef0;
-/*
+
     font-weight: 400;
     height: 48px;
     padding: 0 10px;
-*/
-}
 
+}
+/* 
 .header-toggle:checked + .header__container .hamburger > * {
   margin: 0 0 0 0;
 }
@@ -172,18 +170,18 @@
 .header-toggle:checked + * + .hamburger-menu {
   transform: translateY(0);
   transition: transform .3s cubic-bezier(.215,.61,.355,1);
-}
+} */
 
-@media only screen and (min-width: 1014px) {
+/* @media only screen and (min-width: 1014px) { */
   .pixi-logo {
     background-size: 99px 33px;
     height: 33px;
     width: 99px;
   }
 
-  .explorer__header__title {
-    padding: 0 33px;
-  }
+  /* .explorer__header__title {
+    padding: 0 0 0 32px;
+  } */
 
   .header-toggle {
     display: none;
@@ -199,14 +197,15 @@
   }
 
   .header__contents {
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   .header__contents-main {
     display: flex;
+    gap: 32px;
   }
 
   .header__contents-mobile {
     display: none;
   }
-}
+/* } */

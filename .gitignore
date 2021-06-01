@@ -6,3 +6,6 @@
 guides/
 example.api.json
 node_modules
+
+# other
+.DS_Store

@@ -10,6 +10,7 @@
     "clean": "rimraf guides/*",
     "build": "run-s clean generate copy",
     "watch:docs": "watch \"run-s generate\" docs",
+    "watch:template": "watch \"run-s generate\" template",
     "watch:assets": "watch \"run-s copy\" static",
     "serve": "http-server ./ -o ./guides",
     "start": "run-p watch:* serve"

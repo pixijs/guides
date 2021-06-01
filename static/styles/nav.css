@@ -1,18 +1,16 @@
 .serial-navigation {
-    align-self: center;
     color: var(--color-secondary-text);
     display: flex;
     flex-direction: row;
-    margin-top: 24px;
-    padding-bottom: 16px;
-    max-width: min(800px, 100%);
+    margin: 24px auto 16px;
+    justify-content: center;
 }
 
-.serial-navigation--only-next {
+/* .serial-navigation--only-next {
   width: 100%;
-}
+} */
 
-@media only screen and (max-width: 1014px) {
+/* @media only screen and (max-width: 1014px) {
   .serial-navigation {
     margin-left: 40px;
   }
@@ -21,35 +19,34 @@
     justify-content: flex-end;
     width: 100%;
   }
-}
+} */
 
-@media only screen and (min-width: 1014px) {
+/* @media only screen and (min-width: 1014px) {
   .serial-navigation {
     align-self: auto;
     width: 100%;
   }
-}
+} */
 
 .serial-navigation > a {
     cursor: pointer;
     color: var(--color-secondary-text);
     text-decoration: none;
+    width: 50%;
 }
 
 .serial-navigation > a:hover {
     text-decoration: none;
 }
 
-.serial-navigation__previous:hover {
-    color: var(--color-primary-text);
-}
-
+.serial-navigation__previous:hover,
 .serial-navigation__next:hover {
     color: var(--color-primary-text);
 }
 
 .serial-navigation > hr {
-    border: 1px solid var(--color-secondary-text);
+    border: 0;
+    border-left: 1px solid var(--color-secondary-text);
     height: 61px;
     margin: 0 28px;
 }
@@ -72,18 +69,25 @@
   transition: 300ms color;
 }
 
+.serial-navigation__previous > section:first-child {
+  line-height: 0;
+}
+
 .serial-navigation__previous > section:last-child {
     align-items: flex-end;
     display: flex;
     flex-direction: column;
 }
-
+.serial-navigation__next > section:first-child > *:first-child,
 .serial-navigation__previous > section:last-child > *:first-child {
   margin-bottom: 6px;
+  font-size: 11px;
+  letter-spacing: 0.04rem;
 }
 
-.serial-navigation__previous svg {
-    margin-right: 14px;
+.serial-navigation__previous svg,
+.serial-navigation__next svg {
+    margin-bottom: 16px;
 }
 
 .serial-navigation__next {
@@ -95,17 +99,9 @@
     align-items: flex-start;
     display: flex;
     flex-direction: column-reverse;
-    margin-bottom: 6px;
+    /* margin-bottom: 6px; */
 }
-
-.serial-navigation__next > section:first-child > *:last-child {
-  margin-bottom: 6px;
-}
-
-.serial-navigation__next svg {
-    margin-left: 14px;
-}
-
+/* 
 @media only screen and (min-width: 1014px) {
     .serial-navigation {
       margin-left: 40px;
@@ -132,4 +128,4 @@
     .serial-navigation__next > section:first-child > *:last-child {
       margin-bottom: 0;
     }
-}
+} */
