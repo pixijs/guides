@@ -1,4 +1,4 @@
-# Welcome to the PixiJS Guides!
+# Welcome to PixiJS Guides!
 
 PixiJS is an open source, web-based rendering system that provides blazing fast
 performance for games, data visualization, and other graphics intensive projects.
