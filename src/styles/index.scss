@@ -17,59 +17,6 @@ body {
   background-color: var(--color-background);
 }
 
-.tutorials .document {
-    font-size: 1em;
-    line-height: 1.6;
-    & > p,
-    & > ul,
-    & > ol {
-        font-size: 1em;
-    }
-    & > :not(h1, h2, h3) {
-        background-color: white;
-        padding: 24px;
-    }
-    
-    & > pre {
-        border-radius: 0;
-        background-color: white !important;
-        width: auto !important;
-    }
-    
-    & > pre > code {
-        border-radius: 0;
-        font-family: 'Roboto Mono';
-        white-space: pre-wrap;
-        background: #f1f2f4;
-        padding: 30px;
-        font-size: 14px;
-    }
-    
-    & > :not(h1) {
-        margin-bottom: 0;
-    }
-    
-    & > ul,
-    & > ol {
-        padding-left: 4em;
-    }
-
-    & > :not(h1, h2, h3, h1:first-child+p, h1:first-child+h2+p) + :not(h1, h2, h3) {
-        margin-top: 0;
-        padding-top: 0;
-    }
-}
-
-.api-docs .document {
-    background-color: white;
-    padding: 18px;
-    margin-right: 24px
-}
-
-.footer-gap {
-    display: none;
-}
-
 @import 'header';
 @import 'md';
 @import 'layout';
