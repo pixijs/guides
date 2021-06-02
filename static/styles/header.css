@@ -1,9 +1,7 @@
 .pixi-logo {
-    background-image: url(https://www.pixijs.com/wp/wp-content/uploads/pixijs-v5-logo-sml2x.png);
-    background-size: 84px 28px;
+    background-image: url(../images/pixijs-logo.svg);
+    background-repeat: no-repeat;
     display: block;
-    height: 28px;
-    width: 84px;
 }
 
 .pixi-logo > img {
@@ -174,9 +172,9 @@
 
 /* @media only screen and (min-width: 1014px) { */
   .pixi-logo {
-    background-size: 99px 33px;
-    height: 33px;
-    width: 99px;
+    background-size: 82px 30px;
+    height: 30px;
+    width: 82px;
   }
 
   /* .explorer__header__title {
