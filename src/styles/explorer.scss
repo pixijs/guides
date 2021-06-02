@@ -1,19 +1,31 @@
+.explorer__header__title {
+  margin-left: 4px;
+}
+
+.explorer-tree__target > div > div:last-child {
+  font-size: 0.875em !important;
+  & > a {
+    color: #666 !important;
+  }
+}
+
+.explorer-tree__selected > div > div:last-child > a {
+  color: var(--color-primary-text) !important;
+}
+
+.explorer-tree__parent > div > div:last-child {
+  color: black !important;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+}
+
 .page-explorer {
-  /* display: none;
-  flex-direction: column; */
-  /* padding-left: 32px; */
   z-index: 1;
   width: 300px;
   flex-shrink: 0;
   width: 25%;
   max-width: 260px;
 }
-
-/* @media only screen and (min-width: 1014px) {
-  .page-explorer {
-    display: flex;
-  }
-} */
 
 .explorer-wrapper > section > h3 {
   font-size: 21px;

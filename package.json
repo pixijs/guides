@@ -8,10 +8,12 @@
     "generate": "mkdir -p guides/scripts && webdoc --tutorials ./docs/ --verbose",
     "copy": "copyfiles static/**/* guides",
     "clean": "rimraf guides/*",
-    "build": "run-s clean generate copy",
+    "styles": "sass src/styles/index.scss static/styles.css --no-source-map --style compressed",
+    "build": "run-s clean copy styles generate",
     "watch:docs": "watch \"run-s generate\" docs",
     "watch:template": "watch \"run-s generate\" template",
     "watch:assets": "watch \"run-s copy\" static",
+    "watch:styles": "npm run styles -- -w --source-map --style expanded",
     "serve": "http-server ./ -o ./guides",
     "start": "run-p watch:* serve"
   },
@@ -31,6 +33,7 @@
     "http-server": "^0.12.3",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
+    "sass": "^1.34.0",
     "watch": "^1.0.2"
   }
 }

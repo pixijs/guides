@@ -1,0 +1,23 @@
+.bottom-banner-content {
+    color: #919bac;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 50px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    a {
+        color: white;
+        text-decoration: none;
+        &:visited {
+            color: white;
+        }
+        &:hover {
+            color: #919bac;
+        }
+    }
+}
+
+.authors > * {
+    margin: 20px;
+}

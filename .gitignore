@@ -6,6 +6,7 @@
 guides/
 example.api.json
 node_modules
+static/styles.*
 
 # other
 .DS_Store

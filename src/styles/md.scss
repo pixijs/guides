@@ -1,0 +1,137 @@
+.tutorials .document {
+    font-size: 1em;
+    line-height: 1.6;
+    & > p,
+    & > ul,
+    & > ol {
+        font-size: 1em;
+    }
+    & > :not(h1, h2, h3) {
+        background-color: white;
+        padding: 24px;
+    }
+    
+    & > pre {
+        border-radius: 0;
+        background-color: white !important;
+        width: auto !important;
+    }
+    
+    & > pre > code {
+        border-radius: 0;
+        font-family: 'Roboto Mono';
+        white-space: pre-wrap;
+        background: #f1f2f4;
+        padding: 30px;
+        font-size: 14px;
+    }
+    
+    & > :not(h1) {
+        margin-bottom: 0;
+    }
+    
+    & > ul,
+    & > ol {
+        padding-left: 4em;
+    }
+
+    & > :not(h1, h2, h3, h1:first-child+p, h1:first-child+h2+p) + :not(h1, h2, h3) {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    & > * {
+        margin: 10px 0;
+    }
+    
+    & > *:first-child {
+        margin-top: 0;
+    }
+    
+    & h1 {
+        color: #333;
+        font-size: 54px;
+        line-height: 1.2em;
+        letter-spacing: -0.01em;
+        font-weight: 500;
+        margin: 10px 0;
+
+        &:first-child {
+            & + h2 + p,
+            & + p {
+                box-shadow: 0px 0px 0 2px #d1d4d9, 10px 10px 0 0 #d1d4d9;
+                margin-bottom: 24px;
+                margin-right: 10px;
+                position: relative;
+            }
+            & + h2 + p:after,
+            & + p:after,
+            & + h2 + p:before,
+            & + p:before {
+                content: ' ';
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                border: 3px solid var(--color-primary-text);
+            }
+            & + h2 + p:after,
+            & + p:after {
+                right: -2px;
+                bottom: -2px;
+                border-top: 0;
+                border-left: 0;
+            }
+            & + h2 + p:before,
+            & + p:before {
+                left: -2px;
+                top: -2px;
+                border-bottom: 0;
+                border-right: 0;
+            }
+        }
+    }
+    
+    & a {
+        color: var(--color-primary-text);
+        text-decoration: none;
+        &:visited {
+            color: var(--color-primary-text);
+        }
+    }
+
+    & > :is(h2, h3, h4, h5, h6) {
+        color: #333;
+        font-weight: 400;
+        margin-top: 28px;
+        line-height: 1.1em;
+    }
+    
+    & h2 {
+        font-size: 32px;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+    }
+    
+    & h3 {
+        font-size: 28px;
+        line-height: 1.4;
+        letter-spacing: 0.02em;
+    }
+    
+    & h4 {
+        font-family: 'Roboto Mono', 'Courier New', monospace;
+        font-size: 1.5em;
+        line-height: 48px;
+    }
+    
+    & h1 + h2 {
+        margin-top: 0;
+    }
+
+    pre {
+        max-width: calc(100vw - 50px);
+    }
+}
+
+.footer-gap {
+    display: none;
+}

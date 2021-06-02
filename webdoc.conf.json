@@ -39,15 +39,7 @@
     },
     "siteDomain": "https://pixijs.io/",
     "siteRoot": "guides",
-    "stylesheets": [
-      "./static/styles/index.css",
-      "./static/styles/header.css",
-      "./static/styles/md.css",
-      "./static/styles/layout.css",
-      "./static/styles/explorer.css",
-      "./static/styles/nav.css",
-      "./static/styles/bottom-banner.css"
-    ],
+    "stylesheets": ["./static/styles.css"],
     "title": "PixiJS",
     "meta": {
       "og:title": "PixiJS Guides",
