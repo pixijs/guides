@@ -13,8 +13,9 @@
     "watch:docs": "watch \"run-s generate\" docs",
     "watch:template": "watch \"run-s generate\" template",
     "watch:assets": "watch \"run-s copy\" static",
-    "watch:styles": "npm run styles -- -w --source-map --style expanded",
+    "watch:styles": "sass src/styles/index.scss guides/static/styles.css -w",
     "serve": "http-server ./ -o ./guides",
+    "prestart": "run-s styles",
     "start": "run-p watch:* serve"
   },
   "repository": {
