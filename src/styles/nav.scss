@@ -3,75 +3,48 @@
     display: flex;
     flex-direction: row;
     margin: 24px auto 0;
-    justify-content: center;
-    & > a {
-        cursor: pointer;
-        color: var(--color-secondary-text);
-        text-decoration: none;
-        width: 50%;
-        &:hover {
-            text-decoration: none;
-        }
-    }
     & > hr {
         border: 0;
         border-left: 1px solid var(--color-secondary-text);
         height: 61px;
         margin: 0 28px;
     }
-    
-    & > *:first-child {
-        margin-bottom: 6px;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    &.only-next {
+        justify-content: flex-end;
     }
 }
 
-.serial-navigation__previous:hover,
-.serial-navigation__next:hover {
-    color: var(--color-primary-text);
-}
-
-.serial-navigation-arrow {
-    stroke: currentColor;
-    stroke-width: 2px;
-    width: 27px;
-    height: 14px;
-}
-
-.serial-navigation__previous {
-  align-items: flex-end;
-  display: flex;
-  flex-direction: column;
-  transition: 300ms color;
-}
-
-.serial-navigation__previous > section:first-child {
-  line-height: 0;
-}
-
-.serial-navigation__previous > section:last-child {
-    align-items: flex-end;
+.serial-navigation-button {
     display: flex;
     flex-direction: column;
-}
-.serial-navigation__next > section:first-child > *:first-child,
-.serial-navigation__previous > section:last-child > *:first-child {
-  margin-bottom: 6px;
-  font-size: 11px;
-  letter-spacing: 0.04rem;
-}
-
-.serial-navigation__previous svg,
-.serial-navigation__next svg {
-    margin-bottom: 16px;
-}
-
-.serial-navigation__next {
-    display: block;
     transition: 300ms color;
-}
-
-.serial-navigation__next > section:first-child {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column-reverse;
+    cursor: pointer;
+    color: var(--color-secondary-text);
+    text-decoration: none;
+    width: 50%;
+    &:hover {
+        color: var(--color-primary-text);
+        text-decoration: none;
+    }
+    &.previous {
+        align-items: flex-end;
+    }
+    & > .arrow {
+        stroke: currentColor;
+        stroke-width: 2px;
+        width: 27px;
+        height: 14px;
+        display: block;
+        margin-bottom: 16px;
+    }
+    & > .label {
+      margin-bottom: 6px;
+      font-size: 11px;
+      letter-spacing: 0.04rem;
+      text-transform: uppercase;
+      display: block;
+    }
 }

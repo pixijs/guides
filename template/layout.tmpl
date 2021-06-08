@@ -1,0 +1,62 @@
+<?js
+/**
+ * Global layout render component.
+ */
+const rootData = obj;
+const appBar = rootData.appBar;
+const document = rootData.document;
+const explorerData = rootData.explorerData;
+const config = rootData.env.template;
+const siteRoot = this.getPlugin("linker").siteRoot;
+const sitePrefix = siteRoot ? siteRoot + "/" : siteRoot;
+const integrations = JSON.stringify(config.integrations);
+const cssPageKind =
+    document && document.type === "TutorialDoc" ? "tutorials" :
+    document ? "api-docs" :
+    obj.raw ? "sources" :
+    "";
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title><?js= config.title || config.applicationName ?>: <?js= title ?></title>
+    <?js= this.partial("snippets/analytics.tmpl", { templateConfig: config }) ?>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+    <?js Object.keys(config.meta).forEach((key) => { ?>
+      <meta name="<?js= key ?>" content="<?js= config.meta[key].replace("{{url}}", `${config.siteDomain}`) ?>" />
+    <?js }); ?>
+    <?js config.stylesheets.forEach((file) => { ?>
+      <link rel="stylesheet" type="text/css" href="<?js= "/" + sitePrefix + file ?>" />
+    <?js }); ?>
+  </head>
+  <body class="root">
+    <div class="docs <?js= cssPageKind ?>">
+      <article class="page">
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point">
+            <?js= this.partial("header", {
+                appBar,
+                applicationName: config.applicationName,
+                explorerData,
+            }) ?>
+          </section>
+          <div class="header-content-container__content">
+            <div class="page-explorer" id="explorer-mount-point">
+                <?js= this.partial("explorer", { explorerData }) ?>
+            </div>
+            <?js= content ?>
+          </div>
+          <div class="bottom-banner">
+              <?js= this.partial("bottom-banner", { appBar, explorerData }) ?>
+          </div>
+        </div>
+      </article>
+    </body>
+  </div>
+  <?js config.scripts.forEach((file) => { ?>
+    <script src="<?js= "/" + sitePrefix + file ?>"></script>
+  <?js }); ?>
+</html>

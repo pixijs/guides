@@ -1,18 +1,74 @@
-.explorer-tree__target > div > div:last-child {
-  font-size: 0.875em !important;
-  & > a {
-    color: #666 !important;
+.explorer-tree__target {
+  margin: 4px 4px 4px 0;
+  a {
+    font-size: 0.875em;
+    color: #666;
+    text-decoration: none;
+    &:link {
+      color: var(--color-text-secondary);
+    }
+    &.selected {
+      color: var(--color-primary-text) !important;
+    }
+  }
+  & > div {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 24px;
+    & > div {
+      align-items: center;
+      display: flex;
+    }
   }
 }
 
-.explorer-tree__selected > div > div:last-child > a {
-  color: var(--color-primary-text) !important;
+.explorer-tree__parent {
+  position: relative;
+  .MuiSvgIcon-root {
+    height: 18px;
+    width: 18px;
+    transition: transform 0.3s;
+    transform: rotate(90deg);
+    pointer-events: none;
+  }
+  input {
+    cursor: pointer;
+    height: 24px;
+    margin: 0;
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    &:hover + div > div {
+      color: var(--color-primary-text)  !important;
+      .MuiSvgIcon-root {
+        fill: var(--color-primary-text)  !important; 
+      }
+    }
+    &:not(:checked) {
+      & + div + ul {
+        opacity: 0;
+        max-height: 0;
+      }
+      & + div .MuiSvgIcon-root {
+        transform: rotate(0deg);
+      }
+    }
+  }
 }
 
-.explorer-tree__parent > div > div:last-child {
-  color: black !important;
-  font-weight: 500 !important;
-  text-transform: uppercase;
+.explorer-tree__parent {
+  margin-left: -18px;
+  & > ul {
+    margin-left: 18px;
+  }
+  & > div > div:last-child {
+    color: black !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.04rem;
+  }
 }
 
 .page-explorer {
@@ -28,69 +84,21 @@
   font-weight: 400;
 }
 
-.explorer ul {
-  padding-left: 0px;
-  list-style-type: none;
+.explorer {
+  ul {
+    padding-left: 0px;
+    list-style-type: none;
+    li {
+      padding: 0;
+    }
+  }
 }
 
-.explorer__tree ul {
-  padding-left: 0px;
-  max-height: 1000px;
-  transition: max-height 500ms, opacity 500ms;
-}
-
-.explorer li {
-  padding: 0;
-}
-
-.explorer-tree__target {
-  margin: 4px 4px 4px 0;
-}
-
-.explorer-tree__parent {
-  margin-left: -18px;
-}
-
-.explorer-tree__parent > ul {
-  margin-left: 18px;
-}
-
-.explorer-tree__target > div {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  height: 24px;
-}
-
-.explorer-tree__target > div > div {
-  align-items: center;
-  display: flex;
-}
-
-.explorer-tree__target > div > div > svg {
-  height: 18px;
-  width: 18px;
-}
-
-.explorer-tree__target a {
-  color: var(--color-text-secondary);
-  text-decoration: none;
-}
-
-.explorer-tree__target a:link {
-  color: var(--color-text-secondary);
-}
-
-.explorer__tree input {
-  cursor: pointer;
-  height: 18px;
-  margin: 0;
-  opacity: 0;
-  position: absolute;
-  width: 18px;
-}
-
-.explorer-tree__target input:not(:checked) + div + ul {
-  opacity: 0;
-  max-height: 0;
+.explorer__tree {
+  ul {
+    padding-left: 0px;
+    max-height: 1000px;
+    transition: max-height 0.3s, opacity 0.3s;
+    position: relative;
+  }
 }

@@ -6,14 +6,14 @@
   "main": "index.js",
   "scripts": {
     "generate": "mkdir -p guides/scripts && webdoc --tutorials ./docs/ --verbose",
-    "copy": "copyfiles static/**/* guides",
+    "copy": "copyfiles \"static/**\" guides",
     "clean": "rimraf guides/*",
     "styles": "sass src/styles/index.scss static/styles.css --no-source-map --style compressed",
     "build": "run-s clean copy styles generate",
     "watch:docs": "watch \"run-s generate\" docs",
     "watch:template": "watch \"run-s generate\" template",
     "watch:assets": "watch \"run-s copy\" static",
-    "watch:styles": "sass src/styles/index.scss guides/static/styles.css -w",
+    "watch:styles": "sass src/styles/index.scss static/styles.css -w",
     "serve": "http-server ./ -o ./guides",
     "prestart": "run-s styles",
     "start": "run-p watch:* serve"
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/pixijs/guides#readme",
   "devDependencies": {
-    "@webdoc/cli": "~1.4.0",
+    "@webdoc/cli": "~1.5.0",
     "copyfiles": "^2.4.1",
     "http-server": "^0.12.3",
     "npm-run-all": "^4.1.5",
