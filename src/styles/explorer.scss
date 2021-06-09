@@ -2,11 +2,8 @@
   margin: 4px 4px 4px 0;
   a {
     font-size: 0.875em;
-    color: #666;
+    color: var(--color-secondary-text);
     text-decoration: none;
-    &:link {
-      color: var(--color-text-secondary);
-    }
     &.selected {
       color: var(--color-primary-text) !important;
     }
