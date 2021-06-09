@@ -4,8 +4,9 @@
     font-size: 0.875em;
     color: var(--color-secondary-text);
     text-decoration: none;
+    &:hover,
     &.selected {
-      color: var(--color-primary-text) !important;
+      color: var(--color-primary-text);
     }
   }
   & > div {

@@ -90,11 +90,11 @@
         }
     }
     
-    & a {
+    a {
         color: var(--color-primary-text);
         text-decoration: none;
-        &:visited {
-            color: var(--color-primary-text);
+        &:hover {
+            text-decoration: underline;
         }
     }
 
