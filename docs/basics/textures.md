@@ -31,7 +31,7 @@ So finally, we get to the PIXI.Texture class itself!  At this point, you may be 
 
 If all PixiJS drew were sprites, that would be pretty redundant.  But consider [SpriteSheets]{@link _basics/sprite-sheets.md}.  A SpriteSheet is a single image that contains multiple sprite images arranged within.  In a {@link PIXI.Spritesheet} object, a single BaseTexture is referenced by a set of Textures, one for each source image in the original sprite sheet.  By sharing a single BaseTexture, the browser only downloads one file, and our batching renderer can blaze through drawing sprites since they all share the same underlying pixel data.  The SpriteSheet's Textures pull out just the rectangle of pixels needed by each sprite.
 
-TODO: Image showing sprite sheet base texture, plus each sprite's texture
+<!--TODO: Image showing sprite sheet base texture, plus each sprite's texture-->
 
 That is why we have both Textures and BaseTextures - to allow sprite sheets, animations, button states, etc to be loaded as a single image, while only displaying the part of the master image that is needed.
 

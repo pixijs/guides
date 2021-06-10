@@ -79,6 +79,17 @@ Sprite: Use the alpha channel from a {@link PIXI.Sprite Sprite} as your mask, pr
 
 ## Filtering
 
-The final common use for Container objects is as hosts for filtered content.  Filters are an advanced, WebGL-only feature that allows PixiJS to perform per-pixel effects like blurring and displacements.  By setting a filter on a Container, the area of the screen the Container encompasses will be processed by the filter after the Container's contents have been rendered.
+Another common use for Container objects is as hosts for filtered content.  Filters are an advanced, WebGL-only feature that allows PixiJS to perform per-pixel effects like blurring and displacements.  By setting a filter on a Container, the area of the screen the Container encompasses will be processed by the filter after the Container's contents have been rendered.
 
-TODO: better description here of how this works - not enough history w/ filters to write this properly as yet...
+Below are list of filters available by default in PixiJS. There is, however, a community repository with [many more filters](https://github.com/pixijs/filters).
+
+| Filter | Description |
+| --- | --- |
+| AlphaFilter<br>`@pixi/filter-alpha` | Similar to setting `alpha` property, but flattens the Container instead of applying to children individually. |
+| BlurFilter<br>`@pixi/filter-blur` | Apply a blur effect | 
+| ColorMatrixFilter<br>`@pixi/filter-color-matrix` | A color matrix is a flexible way to apply more complex tints or color transforms (e.g., sepia tone). |
+| DisplacementFilter<br>`@pixi/filter-displacement` | Displacement maps create visual offset pixels, for instance creating a wavy water effect. |
+| FXAAFilter<br>`@pixi/filter-fxaa` | Basic FXAA (Fast Approximate Anti-Aliasing) to create smoothing effect. |
+| NoiseFilter<br>`@pixi/filter-noise` | Create random noise (e.g., grain effect). |
+
+_**Important:** Filters should be use somewhat sparingly. They can slow performance and increase memory if used too often in a scene._ 

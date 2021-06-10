@@ -19,15 +19,17 @@ So when working with PIXI.Text objects, there are two sets of options - standard
 
 There are a lot of text style options available (see {@link PIXI.TextStyle}), but they break down into 5 main groups:
 
-Font: `fontFamily` to select the webfont to use, `fontSize` to specify the size of the text to draw, along with options for font weight, style and variant.
+**Font**: `fontFamily` to select the webfont to use, `fontSize` to specify the size of the text to draw, along with options for font weight, style and variant.
 
-Appearance: Set the color with `fill` or add a `stroke` outline, including options for gradient fills.
+**Appearance**: Set the color with `fill` or add a `stroke` outline, including options for gradient fills.
 
-Drop-Shadows: Set a drop-shadow with `dropShadow`, with a host of related options to specify offset, blur, opacity, etc.
+**Drop-Shadows**: Set a drop-shadow with `dropShadow`, with a host of related options to specify offset, blur, opacity, etc.
 
-Word Wrapping: Enable with `wordWrap` and `wordWrapWidth`, and then customize the line height and alignment.
+**Layout**: Enable with `wordWrap` and `wordWrapWidth`, and then customize the `lineHeight` and `align` or `letterSpacing`
 
-Trouble-shooting: Add padding, trim extra space, and adjust letter spacing to deal with funky font families if needed.
+**Utilities**: Add `padding` or `trim` extra space to deal with funky font families if needed.
+
+To interactively test out feature of Text Style, [check out this tool](https://pixijs.io/pixi-text-style/).
 
 ## Loading and Using Fonts
 
@@ -95,7 +97,7 @@ PIXI.BitmapText
 - Large number of text objects
 - Lower memory
 
-## Other options
+<!--## Other options
 
 WebGL-only glyph rendering (SDF text)
-DOM-based overlays ()
+DOM-based overlays ()-->

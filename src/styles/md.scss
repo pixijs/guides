@@ -1,6 +1,30 @@
 .tutorials .document {
     font-size: 1em;
     line-height: 1.6;
+    table {
+        border-spacing: 0;
+        border-collapse: separate;
+        th {
+            color: var(--color-secondary-text);
+            text-transform: uppercase;
+            text-align: left;
+            font-weight: 400;
+            font-size: 13px;
+            letter-spacing: 0.04em;
+        }
+        td, th {
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            padding: 15px;
+        }
+        th {
+            border-top: 1px solid #ddd;
+        }
+        th:first-child,
+        td:first-child {
+            border-left: 1px solid #ddd;
+        }
+    }
     & > p,
     & > ul,
     & > ol {
@@ -17,13 +41,20 @@
         width: auto !important;
     }
     
-    & > pre > code {
+    pre > code {
         border-radius: 0;
         font-family: 'Roboto Mono';
         white-space: pre-wrap;
-        background: #f1f2f4;
+        background-color: var(--color-code-background);
         padding: 30px;
         font-size: 14px;
+    }
+
+    p > code {
+        padding: .2em .4em;
+        margin: 0;
+        background-color: var(--color-code-background);
+        border-radius: 6px;
     }
     
     & > :not(h1) {

@@ -1,21 +1,21 @@
 # PixiJS Guides
-## Sprite Sheets and Why You Should Use Them
+## Spritesheets and Why You Should Use Them
 
 Now that you understand basic sprites, it's time to talk about a better way to create them - the {@link PIXI.Spritesheet} class.
 
-A SpriteSheet is a tool for more efficiently downloading and rendering Sprites.  While somewhat more complex to create and use, they are a key tool in optimizing your project.
+A Spritesheet is a media format for more efficiently downloading and rendering Sprites.  While somewhat more complex to create and use, they are a key tool in optimizing your project.
 
 ## Anatomy of a Spritesheet
 
-The basic idea of a sprite sheet is to pack a series of images together into a single image, track where each source image ends up, and use that combined image as a shared BaseTexture for the resulting Sprites.  
+The basic idea of a spritesheet is to pack a series of images together into a single image, track where each source image ends up, and use that combined image as a shared BaseTexture for the resulting Sprites.  
 
 The first step is to collect the images you want to combine.  The sprite packer then collects the images, and creates a new combined image.
 
-TODO: Image showing multiple source images, combined into a single image
+<!--TODO: Image showing multiple source images, combined into a single image-->
 
 As this image is being created, the tool building it keeps track of the location of the rectangle where each source image is stored.  It then writes out a JSON file with that information.
 
-TODO: SpriteSheet json goes here
+<!--TODO: SpriteSheet json goes here-->
 
 These two files, in combination, can be passed into a SpriteSheet constructor.  The SpriteSheet object then parses the JSON, and creates a series of Texture objects, one for each source image, setting the source rectangle for each based on the JSON data.  Each texture uses the same shared BaseTexture as its source.
 
