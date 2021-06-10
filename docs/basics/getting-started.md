@@ -65,7 +65,7 @@ Test that everything is working by opening your browser of choice and entering `
 
 ### Loading PixiJS
 
-OK, so we have a web page, and we're serving it.  But it's empty.  The next step is to actually load the PixiJS library.  If we were building a real application, we'd want to download a target version of PixiJS from the [Pixi Github repo](https://github.com/pixijs/pixi.js) so that our version wouldn't change on us.  But for this sample application, we'll just use the CDN version of PixiJS.  Add this line to the `<head>` section of your `index.html` file:
+OK, so we have a web page, and we're serving it.  But it's empty.  The next step is to actually load the PixiJS library.  If we were building a real application, we'd want to download a target version of PixiJS from the [Pixi Github repo](https://github.com/pixijs/pixijs) so that our version wouldn't change on us.  But for this sample application, we'll just use the CDN version of PixiJS.  Add this line to the `<head>` section of your `index.html` file:
 
 ```html
 <script src="https://pixijs.download/release/pixi.js"></script>

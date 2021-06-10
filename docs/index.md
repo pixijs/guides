@@ -23,4 +23,4 @@ If you're a PixiJS veteran, you'll find the collected wisdom of our dev team in 
 As you explore the guides, you may find these resources valuable:
 
 * [PixiJS API documentation](https://pixijs.download/release/docs/index.html)
-* [PixiJS Github repo](https://github.com/pixijs/pixi.js)
+* [PixiJS Github repo](https://github.com/pixijs/pixijs)
