@@ -673,15 +673,52 @@
 <p>Be aware that you won't use DisplayObject directly - you'll use its functions and attributes in derived classes.</p>
 <h2>Commonly Used Attributes</h2>
 <p>The most common attributes you'll use when laying out and animating content in PixiJS are provided by the DisplayObject class:</p>
-<p>Position: X- and Y-position are given in pixels and change the position of the object relative to its parent, also available directly as <code>object.x</code> / <code>object.y</code></p>
-<p>Rotation: Rotation is specified in radians, and turns an object clockwise (0.0 - 2 * Math.PI)</p>
-<p>Angle: Angle is an alias for rotation that is specified in degrees instead of radians (0.0 - 360.0)</p>
-<p>Pivot: Point the object rotates around, in pixels - also sets origin for child objects</p>
-<p>Alpha: Opacity from 0.0 (fully transparent) to 1.0 (fully opaque), inherited by children</p>
-<p>Scale: Scale is specified as a percent with 1.0 being unchanged, and can be set independently for the x and y axis</p>
-<p>Skew: Skew transforms the object in x and y similar to the CSS skew() function, and is specified in radians</p>
-<p>Visible: Whether the object is visible or not, as a boolean value - prevents updating and rendering object and children</p>
-<p>Renderable: Whether the object should be rendered - when false, object will still be updated, but won't be rendered, doesn't affect children</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>position</strong></td>
+<td>X- and Y-position are given in pixels and change the position of the object relative to its parent, also available directly as <code>object.x</code> / <code>object.y</code></td>
+</tr>
+<tr>
+<td><strong>rotation</strong></td>
+<td>Rotation is specified in radians, and turns an object clockwise (0.0 - 2 * Math.PI)</td>
+</tr>
+<tr>
+<td><strong>angle</strong></td>
+<td>Angle is an alias for rotation that is specified in degrees instead of radians (0.0 - 360.0)</td>
+</tr>
+<tr>
+<td><strong>pivot</strong></td>
+<td>Point the object rotates around, in pixels - also sets origin for child objects</td>
+</tr>
+<tr>
+<td><strong>alpha</strong></td>
+<td>Opacity from 0.0 (fully transparent) to 1.0 (fully opaque), inherited by children</td>
+</tr>
+<tr>
+<td><strong>scale</strong></td>
+<td>Scale is specified as a percent with 1.0 being 100% or actual-size, and can be set independently for the x and y axis</td>
+</tr>
+<tr>
+<td><strong>skew</strong></td>
+<td>Skew transforms the object in x and y similar to the CSS skew() function, and is specified in radians</td>
+</tr>
+<tr>
+<td><strong>visible</strong></td>
+<td>Whether the object is visible or not, as a boolean value - prevents updating and rendering object and children</td>
+</tr>
+<tr>
+<td><strong>renderable</strong></td>
+<td>Whether the object should be rendered - when <code>false</code>, object will still be updated, but won't be rendered, doesn't affect children</td>
+</tr>
+</tbody>
+</table>
 
   </div>
   

@@ -733,8 +733,43 @@ app.ticker.add(<span class="hljs-function">(<span class="hljs-params">delta</spa
 <p>Graphics: Use a <a href="https://api.pixijs.io/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a> object to create a mask with an arbitrary shape - powerful, but doesn't support anti-aliasing</p>
 <p>Sprite: Use the alpha channel from a <a href=https://api.pixijs.io/@pixi/sprite/PIXI/Sprite.html>Sprite</a> as your mask, providing anti-aliased edging - <em>not</em> supported on the Canvas renderer</p>
 <h2>Filtering</h2>
-<p>The final common use for Container objects is as hosts for filtered content.  Filters are an advanced, WebGL-only feature that allows PixiJS to perform per-pixel effects like blurring and displacements.  By setting a filter on a Container, the area of the screen the Container encompasses will be processed by the filter after the Container's contents have been rendered.</p>
-<p>TODO: better description here of how this works - not enough history w/ filters to write this properly as yet...</p>
+<p>Another common use for Container objects is as hosts for filtered content.  Filters are an advanced, WebGL-only feature that allows PixiJS to perform per-pixel effects like blurring and displacements.  By setting a filter on a Container, the area of the screen the Container encompasses will be processed by the filter after the Container's contents have been rendered.</p>
+<p>Below are list of filters available by default in PixiJS. There is, however, a community repository with <a href="https://github.com/pixijs/filters">many more filters</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AlphaFilter<br><code>@pixi/filter-alpha</code></td>
+<td>Similar to setting <code>alpha</code> property, but flattens the Container instead of applying to children individually.</td>
+</tr>
+<tr>
+<td>BlurFilter<br><code>@pixi/filter-blur</code></td>
+<td>Apply a blur effect</td>
+</tr>
+<tr>
+<td>ColorMatrixFilter<br><code>@pixi/filter-color-matrix</code></td>
+<td>A color matrix is a flexible way to apply more complex tints or color transforms (e.g., sepia tone).</td>
+</tr>
+<tr>
+<td>DisplacementFilter<br><code>@pixi/filter-displacement</code></td>
+<td>Displacement maps create visual offset pixels, for instance creating a wavy water effect.</td>
+</tr>
+<tr>
+<td>FXAAFilter<br><code>@pixi/filter-fxaa</code></td>
+<td>Basic FXAA (Fast Approximate Anti-Aliasing) to create smoothing effect.</td>
+</tr>
+<tr>
+<td>NoiseFilter<br><code>@pixi/filter-noise</code></td>
+<td>Create random noise (e.g., grain effect).</td>
+</tr>
+</tbody>
+</table>
+<p><em><strong>Important:</strong> Filters should be use somewhat sparingly. They can slow performance and increase memory if used too often in a scene.</em></p>
 
   </div>
   
