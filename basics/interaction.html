@@ -672,6 +672,7 @@
 <p>PixiJS is primarily a rendering system, but it also includes support for interactivity.  Adding support for mouse and touch events to your project is simple and consistent.</p>
 <h2>Enabling Interaction</h2>
 <p>Any DisplayObject-derived object (Sprite, Container, etc.) can become interactive simply by setting its <code>interactive</code> property to <code>true</code>.  Doing so will cause the object to emit interaction events that can be responded to in order to drive your project's behavior.</p>
+<iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/interaction/click.js" class="demo"></iframe>
 <h2>Interaction is Events</h2>
 <p>To respond to clicks and taps, bind to the events fired on the object, like so:</p>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> sprite = PIXI.Sprite.from(<span class="hljs-string">&#x27;/some/texture.png&#x27;</span>);
@@ -689,6 +690,7 @@ sprite.on(<span class="hljs-string">&#x27;pointerdown&#x27;</span>, <span class=
 <span class="hljs-keyword">let</span> globalPt = <span class="hljs-keyword">new</span> PIXI.Point(<span class="hljs-number">100</span>,<span class="hljs-number">50</span>);
 <span class="hljs-keyword">let</span> obj = app.renderer.plugins.interaction.hitTest(globalPt);
 </code></pre>
+<iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/interaction/custom-hitarea.js" class="demo"></iframe>
 <h2>Optimization</h2>
 <p>Hit testing requires walking the full object tree, which in complex projects can become an optimization bottleneck.  To mitigate this issue, PixiJS Container-derived objects have a property named <code>interactiveChildren</code>.  If you have Containers or other objects with complex child trees that you know will never be interactive, you can set this property to <code>false</code> and the hit testing algorithm will skip those children when checking for hover and click events.  As an example, if you were building a side-scrolling game, you would probably want to set <code>background.interactiveChildren = false</code> for your background layer with rocks, clouds, flowers, etc.  Doing so would speed up hit testing substantially due to the number of unclickable child objects the background layer would contain.</p>
 <h2>Caveats</h2>
