@@ -9,11 +9,13 @@ Let's dig into how this works.
 
 Because of the challenges of working with text in WebGL, PixiJS provides two very different solutions.  In this guide, we're going to go over both methods in some detail to help you make the right choice for your project's needs.  Selecting the wrong text type can have a large negative impact on your project's performance and appearance.
 
-## The PIXI.Text Object
+## The Text Object
 
 In order to draw text to the screen, you use a {@link PIXI.Text} object.  Under the hood, this class draws text to an off-screen buffer using the browser's normal text rendering, then uses that offscreen buffer as the source for drawing the text object.  Effectively what this means is that whenever you create or change text, PixiJS creates a new rasterized image of that text, and then treats it like a sprite.  This approach allows truly rich text display while keeping rendering speed high.
 
 So when working with PIXI.Text objects, there are two sets of options - standard display object options like position, rotation, etc that work *after* the text is rasterized internally, and text style options that are used *while* rasterizing.  Because text once rendered is basically just a sprite, there's no need to review the standard options.  Instead, let's focus on how text is styled.
+
+<iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/text/text.js" class="demo"></iframe>
 
 ## Text Styles
 
@@ -78,6 +80,8 @@ Second, be careful when scaling text.  Setting a text object's scale to > 1.0 wi
 In addition to the standard PIXI.Text approach to adding text to your project, PixiJS also supports *bitmap fonts*.  Bitmap fonts are very different from TrueType or other general purpose fonts, in that they consist of a single image containing pre-rendered versions of every letter you want to use.  When drawing text with a bitmap font, PixiJS doesn't need to render the font glyphs into a temporary buffer - it can simply copy and stamp out each character of a string from the master font image.
 
 The primary advantage of this approach is speed - changing text frequently is much cheaper and rendering each additional piece of text is much faster due to the shared source texture.
+
+<iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/text/bitmap-text.js" class="demo"></iframe>
 
 ## BitmapFont
 

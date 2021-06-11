@@ -5,6 +5,8 @@
 
 In this guide, we're going to de-mystify the Graphics object, starting with how to think about what it does.
 
+<iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/graphics/simple.js" class="demo"></iframe>
+
 ## Graphics Is About Building - Not Drawing
 
 First-time users of the PIXI.Graphics class often struggle with how it works.  Let's look at an example snippet that creates a Graphics object and draws a rectangle:
@@ -77,13 +79,12 @@ OK, so now that we've covered how the PIXI.Graphics class works, let's look at h
 
 Doing so is simple.  Create the object, call the various builder functions to add your custom primitives, then add the object to the scene graph.  Each frame, the renderer will come along, ask the Graphics object to render itself, and each primitive, with associated line and fill styles, will be drawn to the screen.
 
-<!-- TODO: demo of drawing with lines and curves -->
 
 ## Graphics as a Mask
 
 You can also use a Graphics object as a complex mask.  To do so, build your object and primitives as usual.  Next create a PIXI.Container object that will contain the masked content, and set its `mask` property to your Graphics object.  The children of the container will now be clipped to only show through inside the geometry you've created.  This technique works for both WebGL and Canvas-based rendering.
 
-<!-- TODO: demo of masking -->
+<iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/masks/graphics.js" class="demo"></iframe>
 
 ## Caveats and Gotchas
 

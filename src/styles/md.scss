@@ -77,6 +77,13 @@
     & > *:first-child {
         margin-top: 0;
     }
+
+    iframe.demo {
+        border: 0;
+        padding: 0;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
     
     & h1 {
         color: #333;

@@ -7,6 +7,8 @@ PixiJS is primarily a rendering system, but it also includes support for interac
 
 Any DisplayObject-derived object (Sprite, Container, etc.) can become interactive simply by setting its `interactive` property to `true`.  Doing so will cause the object to emit interaction events that can be responded to in order to drive your project's behavior.
 
+<iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/interaction/click.js" class="demo"></iframe>
+
 ## Interaction is Events
 
 To respond to clicks and taps, bind to the events fired on the object, like so:
@@ -37,6 +39,8 @@ Once you've set up your interaction objects, it can be useful to test what objec
 let globalPt = new PIXI.Point(100,50);
 let obj = app.renderer.plugins.interaction.hitTest(globalPt);
 ```
+
+<iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/interaction/custom-hitarea.js" class="demo"></iframe>
 
 ## Optimization
 

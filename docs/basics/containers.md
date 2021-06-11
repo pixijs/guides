@@ -11,6 +11,8 @@ However, it's a good idea _not_ to do this.  Standalone Container objects are **
 
 So that's the primary use for Containers - as groups of renderable objects in a hierarchy.
 
+<iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/demos-basic/container.js" class="demo"></iframe>
+
 ## Masking
 
 Another common use for Container objects is as hosts for masked content.  "Masking" is a technique where parts of your scene graph are only visible within a given area.

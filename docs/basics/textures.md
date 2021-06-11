@@ -71,4 +71,6 @@ SVG: Pass in an `<SVG>` element or load a .svg URL, and PixiJS will attempt to r
 
 RenderTexture: A more advanced (but very powerful!) feature is to build a Texture from a {@link PIXI.RenderTexture}.  This can allow for building complex geometry using a {@link PIXI.Geometry} object, then baking that geometry down to a simple texture.
 
-Each of these texture sources has caveats and nuances that we can't cover in this guide, but they should give you a feeling for the power of PixiJS's texture system. TODO: link to advanced textures guide
+Each of these texture sources has caveats and nuances that we can't cover in this guide, but they should give you a feeling for the power of PixiJS's texture system. <!--TODO: link to advanced textures guide-->
+
+<iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/textures/render-texture-basic.js" class="demo"></iframe>
