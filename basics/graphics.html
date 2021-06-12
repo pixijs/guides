@@ -671,7 +671,7 @@
 <h2>What is PIXI.Graphics?</h2>
 <p><a href=https://api.pixijs.io/@pixi/graphics/PIXI/Graphics.html>PIXI.Graphics</a> is a complex and much misunderstood tool in the PixiJS toolbox.  At first glance, it looks like a tool for drawing shapes.  And it is!  But it can also be used to generate masks.  How does that work?</p>
 <p>In this guide, we're going to de-mystify the Graphics object, starting with how to think about what it does.</p>
-<iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/graphics/simple.js" class="demo"></iframe>
+<div class="responsive-4-3"><iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/graphics/simple.js"></iframe></div>
 <h2>Graphics Is About Building - Not Drawing</h2>
 <p>First-time users of the PIXI.Graphics class often struggle with how it works.  Let's look at an example snippet that creates a Graphics object and draws a rectangle:</p>
 <pre><code class="hljs language-javascript"><span class="hljs-comment">// Create a Graphics object, set a fill color, draw a rectangle</span>
@@ -727,7 +727,7 @@ template.drawCircle(<span class="hljs-number">100</span>, <span class="hljs-numb
 <p>Doing so is simple.  Create the object, call the various builder functions to add your custom primitives, then add the object to the scene graph.  Each frame, the renderer will come along, ask the Graphics object to render itself, and each primitive, with associated line and fill styles, will be drawn to the screen.</p>
 <h2>Graphics as a Mask</h2>
 <p>You can also use a Graphics object as a complex mask.  To do so, build your object and primitives as usual.  Next create a PIXI.Container object that will contain the masked content, and set its <code>mask</code> property to your Graphics object.  The children of the container will now be clipped to only show through inside the geometry you've created.  This technique works for both WebGL and Canvas-based rendering.</p>
-<iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/masks/graphics.js" class="demo"></iframe>
+<div class="responsive-4-3"><iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/masks/graphics.js"></iframe></div>
 <h2>Caveats and Gotchas</h2>
 <p>The Graphics class is a complex beast, and so there are a number of things to be aware of when using it.</p>
 <p><strong>Memory Leaks</strong>: The first has already been mentioned - call <code>destroy()</code> on any Graphics object you no longer need to avoid memory leaks.</p>
