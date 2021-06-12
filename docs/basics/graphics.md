@@ -5,7 +5,7 @@
 
 In this guide, we're going to de-mystify the Graphics object, starting with how to think about what it does.
 
-<iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/graphics/simple.js" class="demo"></iframe>
+<div class="responsive-4-3"><iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/graphics/simple.js"></iframe></div>
 
 ## Graphics Is About Building - Not Drawing
 
@@ -84,7 +84,7 @@ Doing so is simple.  Create the object, call the various builder functions to ad
 
 You can also use a Graphics object as a complex mask.  To do so, build your object and primitives as usual.  Next create a PIXI.Container object that will contain the masked content, and set its `mask` property to your Graphics object.  The children of the container will now be clipped to only show through inside the geometry you've created.  This technique works for both WebGL and Canvas-based rendering.
 
-<iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/masks/graphics.js" class="demo"></iframe>
+<div class="responsive-4-3"><iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/masks/graphics.js"></iframe></div>
 
 ## Caveats and Gotchas
 

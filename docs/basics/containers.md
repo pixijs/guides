@@ -11,7 +11,7 @@ However, it's a good idea _not_ to do this.  Standalone Container objects are **
 
 So that's the primary use for Containers - as groups of renderable objects in a hierarchy.
 
-<iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/demos-basic/container.js" class="demo"></iframe>
+<div class="responsive-4-3"><iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/demos-basic/container.js"></iframe></div>
 
 ## Masking
 
