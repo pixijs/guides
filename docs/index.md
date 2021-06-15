@@ -1,10 +1,6 @@
 # Welcome to PixiJS Guides!
 
-PixiJS is an open source, web-based rendering system that provides blazing fast
-performance for games, data visualization, and other graphics intensive projects.
-
-These guides are designed to be a companion to the [API documentation](https://pixijs.download/release/docs/index.html), providing a
-structured introduction to using the API to solve problems and build projects.
+PixiJS is an open source, web-based rendering system that provides blazing fast performance for games, data visualization, and other graphics intensive projects. These guides are designed to be a companion to the [API documentation](https://pixijs.download/release/docs/index.html), providing a structured introduction to using the API to solve problems and build projects.
 
 ## Organization
 
@@ -12,7 +8,7 @@ The guides are split into three sections:
 
 * **Basics** - Learn how to set up and use PixiJS, with discussion of common objects such as Sprites and Text, as well as a thorough walk through of the application lifecycle.
 * **Production** - Information on optimization, deployment, and common issues encountered when moving from prototypes to production-ready code.
-* **Advance Topics** - Standalone articles exploring advanced features of the API.
+* **Advanced Topics** - Standalone articles exploring advanced features of the API.
 
 If you're new to PixiJS, we suggest you start with the Basics and read through them in order.  While PixiJS has a mature API and solid documentation, the guides go over many common issues and questions that developers new to the system encounter.
 
