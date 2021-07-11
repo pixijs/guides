@@ -18,7 +18,7 @@ let sprite = PIXI.Sprite.from('/some/texture.png');
 sprite.on('pointerdown', (event) => { alert('clicked!'); });
 ```
 
-Check out the {@link PIXI.DisplayObject} for the list of interaction events supported.
+Check out the {@link PIXI.DisplayObject DisplayObject} for the list of interaction events supported.
 
 ## Use Pointer Events
 
@@ -32,7 +32,7 @@ By default, PixiJS uses the bounding rectangle of an interactive object to deter
 
 The solution is to use the `hitArea` property of your DisplayObject.  Setting a hitArea allows you to customize what counts as a hit on your object.  You can set the hitArea property to be a PIXI.Circle, PIXI.Rectangle, PIXI.RoundedRectangle, or PIXI.Polygon.  Using a Polygon in particular allows you to make complex outlines of player characters or other complex visual geometry.
 
-Once you've set up your interaction objects, it can be useful to test what object is under a given point.  You can use {@link PIXI.InteractionManager}'s `hitTest()` method to find the interactive object at a (global) point:
+Once you've set up your interaction objects, it can be useful to test what object is under a given point.  You can use {@link PIXI.InteractionManager InteractionManager}'s `hitTest()` method to find the interactive object at a (global) point:
 
 ```javascript
 // Find out what interactive object lies at [100, 50]

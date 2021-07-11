@@ -1,7 +1,7 @@
 # PixiJS Guides
 ## What Is a DisplayObject?
 
-{@link PIXI.DisplayObject} is the core class for anything that can be rendered by the engine.  It's the base class for sprites, text, complex graphics, containers, etc., and provides much of the common functionality for those objects.  As you're learning PixiJS, it's important to [read through the documentation for this class]{@link PIXI.DisplayObject} to understand how to move, scale, rotate and compose the visual elements of your project.
+{@link PIXI.DisplayObject DisplayObject} is the core class for anything that can be rendered by the engine.  It's the base class for sprites, text, complex graphics, containers, etc., and provides much of the common functionality for those objects.  As you're learning PixiJS, it's important to [read through the documentation for this class]{@link PIXI.DisplayObject DisplayObject} to understand how to move, scale, rotate and compose the visual elements of your project.
 
 Be aware that you won't use DisplayObject directly - you'll use its functions and attributes in derived classes.
 

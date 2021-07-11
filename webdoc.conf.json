@@ -1,7 +1,7 @@
 {
   "opts": {
     "destination": "guides",
-    "import": ["https://api.pixijs.io/pixijs.api.json"]
+    "import": ["https://pixijs.download/release/docs/pixi.api.json"]
   },
   "template": {
     "alias": {

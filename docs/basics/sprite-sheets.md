@@ -1,7 +1,7 @@
 # PixiJS Guides
 ## Spritesheets and Why You Should Use Them
 
-Now that you understand basic sprites, it's time to talk about a better way to create them - the {@link PIXI.Spritesheet} class.
+Now that you understand basic sprites, it's time to talk about a better way to create them - the {@link PIXI.Spritesheet Spritesheet} class.
 
 A Spritesheet is a media format for more efficiently downloading and rendering Sprites.  While somewhat more complex to create and use, they are a key tool in optimizing your project.
 

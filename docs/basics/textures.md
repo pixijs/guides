@@ -17,11 +17,11 @@ To start with, you have the image you want to display.  The first step is to mak
 
 ### Loading the Image
 
-To work with the image, the first step is to pull the image file from your webserver into the user's web browser.  To do this, we can use `PIXI.Texture.from()`, which works for quick demos, but in production you'll use the {@link PIXI.Loader} class.  A Loader  wraps and manages using an `<IMG>` element to tell the browser to fetch the image, and then notifies you when that has been completed.  This process is *asynchronous* - you request the load, then time passes, then an event fires to let you know the load is completed.  We'll go into the loader in a lot more depth in a later guide.
+To work with the image, the first step is to pull the image file from your webserver into the user's web browser.  To do this, we can use `PIXI.Texture.from()`, which works for quick demos, but in production you'll use the {@link PIXI.Loader Loader} class.  A Loader  wraps and manages using an `<IMG>` element to tell the browser to fetch the image, and then notifies you when that has been completed.  This process is *asynchronous* - you request the load, then time passes, then an event fires to let you know the load is completed.  We'll go into the loader in a lot more depth in a later guide.
 
 ### BaseTextures Own the Data
 
-Once the Loader has done its work, the loaded `<IMG>` element contains the pixel data we need.  But to use it to render something, PixiJS has to take that raw image file and upload it to the GPU.  This brings us to the real workhorse of the texture system - the {@link PIXI.BaseTexture} class.  Each BaseTexture manages a single pixel source - usually an image, but can also be a Canvas or Video element.  BaseTextures allow PixiJS to convert the image to pixels and use those pixels in rendering.  In addition, it also contains settings that control how the texture data is rendered, such as the wrap mode (for UV coordinates outside the 0.0-1.0 range) and scale mode (used when scaling a texture).
+Once the Loader has done its work, the loaded `<IMG>` element contains the pixel data we need.  But to use it to render something, PixiJS has to take that raw image file and upload it to the GPU.  This brings us to the real workhorse of the texture system - the {@link PIXI.BaseTexture BaseTexture} class.  Each BaseTexture manages a single pixel source - usually an image, but can also be a Canvas or Video element.  BaseTextures allow PixiJS to convert the image to pixels and use those pixels in rendering.  In addition, it also contains settings that control how the texture data is rendered, such as the wrap mode (for UV coordinates outside the 0.0-1.0 range) and scale mode (used when scaling a texture).
 
 BaseTextures are automatically cached, so that calling `PIXI.Texture.from()` repeatedly for the same URL returns the same BaseTexture each time.  Destroying a BaseTexture frees the image data associated with it.
 
@@ -29,7 +29,7 @@ BaseTextures are automatically cached, so that calling `PIXI.Texture.from()` rep
 
 So finally, we get to the PIXI.Texture class itself!  At this point, you may be wondering what the Texture object *does*.  After all, the BaseTexture manages the pixels and render settings.  And the answer is, it doesn't do very much.  Textures are light-weight views on an underlying BaseTexture.  Their main attribute is the source rectangle within the BaseTexture from which to pull.  
 
-If all PixiJS drew were sprites, that would be pretty redundant.  But consider [SpriteSheets]{@link _basics/sprite-sheets.md}.  A SpriteSheet is a single image that contains multiple sprite images arranged within.  In a {@link PIXI.Spritesheet} object, a single BaseTexture is referenced by a set of Textures, one for each source image in the original sprite sheet.  By sharing a single BaseTexture, the browser only downloads one file, and our batching renderer can blaze through drawing sprites since they all share the same underlying pixel data.  The SpriteSheet's Textures pull out just the rectangle of pixels needed by each sprite.
+If all PixiJS drew were sprites, that would be pretty redundant.  But consider [SpriteSheets]{@link _basics/sprite-sheets.md}.  A SpriteSheet is a single image that contains multiple sprite images arranged within.  In a {@link PIXI.Spritesheet Spritesheet} object, a single BaseTexture is referenced by a set of Textures, one for each source image in the original sprite sheet.  By sharing a single BaseTexture, the browser only downloads one file, and our batching renderer can blaze through drawing sprites since they all share the same underlying pixel data.  The SpriteSheet's Textures pull out just the rectangle of pixels needed by each sprite.
 
 <!--TODO: Image showing sprite sheet base texture, plus each sprite's texture-->
 
@@ -42,7 +42,7 @@ We will discuss resource loading in a later guide, but one of the most common is
 Instead, here's a quick cheat sheet of one good solution:
 
 1. Show a loading image
-2. Create a {@link PIXI.Loader}
+2. Create a {@link PIXI.Loader Loader}
 3. Run all texture-based objects, add their textures to the loader
 4. Start the loader, and optionally update your loading image based on progress callbacks
 5. On loader completion, run all objects and use `PIXI.Texture.from()` to pull the loaded textures out of the texture cache
@@ -51,7 +51,7 @@ Instead, here's a quick cheat sheet of one good solution:
 
 Using this workflow ensures that your textures are pre-loaded, to prevent pop-in, and is relatively easy to code.
 
-Regarding preparing textures: Even after you've loaded your textures, the images still need to be pushed to the GPU and decoded.  Doing this for a large number of source images can be slow and cause lag spikes when your project first loads.  To solve this, you can use the {@link PIXI.Prepare} plugin, which allows you to pre-load textures in a final step before displaying your project.
+Regarding preparing textures: Even after you've loaded your textures, the images still need to be pushed to the GPU and decoded.  Doing this for a large number of source images can be slow and cause lag spikes when your project first loads.  To solve this, you can use the {@link PIXI.Prepare Prepare} plugin, which allows you to pre-load textures in a final step before displaying your project.
 
 ## Unloading Textures
 
@@ -69,7 +69,7 @@ Canvas: Similarly, you can wrap an HTML5 `<CANVAS>` element in a BaseTexture to 
 
 SVG: Pass in an `<SVG>` element or load a .svg URL, and PixiJS will attempt to rasterize it.  For highly network-constrained projects, this can allow for beautiful graphics with minimal network load times.
 
-RenderTexture: A more advanced (but very powerful!) feature is to build a Texture from a {@link PIXI.RenderTexture}.  This can allow for building complex geometry using a {@link PIXI.Geometry} object, then baking that geometry down to a simple texture.
+RenderTexture: A more advanced (but very powerful!) feature is to build a Texture from a {@link PIXI.RenderTexture RenderTexture}.  This can allow for building complex geometry using a {@link PIXI.Geometry Geometry} object, then baking that geometry down to a simple texture.
 
 Each of these texture sources has caveats and nuances that we can't cover in this guide, but they should give you a feeling for the power of PixiJS's texture system. <!--TODO: link to advanced textures guide-->
 

@@ -1,11 +1,11 @@
 # PixiJS Guides
 ## Working with Containers
 
-The {@link PIXI.Container} class provides a simple display object that does what its name implies - collect a set of child objects together.  But beyond grouping objects, containers have a few uses that you should be aware of.
+The {@link PIXI.Container Container} class provides a simple display object that does what its name implies - collect a set of child objects together.  But beyond grouping objects, containers have a few uses that you should be aware of.
 
 ## Containers as Groups
 
-Almost every type of display object is also derived from PIXI.Container - even Sprites!  This means that in many cases you can create a parent-child hierarchy with the objects you want to render.  
+Almost every type of display object is also derived from Container - even Sprites!  This means that in many cases you can create a parent-child hierarchy with the objects you want to render.  
 
 However, it's a good idea _not_ to do this.  Standalone Container objects are **very** cheap to render, and having a proper hierarchy of Container objects, each containing one or more renderable objects, provides flexibility in rendering order.  It also future-proofs your code, as when you need to add an additional object to a branch of the tree, your animation logic doesn't need to change - just drop the new object into the proper Container, and your logic moves the Container with no changes to your code.
 
@@ -75,7 +75,7 @@ app.ticker.add((delta) => {
 
 There are two types of masks supported by PixiJS:
 
-Graphics: Use a {@link PIXI.Graphics} object to create a mask with an arbitrary shape - powerful, but doesn't support anti-aliasing
+Use a {@link PIXI.Graphics Graphics} object to create a mask with an arbitrary shape - powerful, but doesn't support anti-aliasing
 
 Sprite: Use the alpha channel from a {@link PIXI.Sprite Sprite} as your mask, providing anti-aliased edging - _not_ supported on the Canvas renderer
 
@@ -87,11 +87,11 @@ Below are list of filters available by default in PixiJS. There is, however, a c
 
 | Filter | Description |
 | --- | --- |
-| AlphaFilter<br>`@pixi/filter-alpha` | Similar to setting `alpha` property, but flattens the Container instead of applying to children individually. |
-| BlurFilter<br>`@pixi/filter-blur` | Apply a blur effect | 
-| ColorMatrixFilter<br>`@pixi/filter-color-matrix` | A color matrix is a flexible way to apply more complex tints or color transforms (e.g., sepia tone). |
-| DisplacementFilter<br>`@pixi/filter-displacement` | Displacement maps create visual offset pixels, for instance creating a wavy water effect. |
-| FXAAFilter<br>`@pixi/filter-fxaa` | Basic FXAA (Fast Approximate Anti-Aliasing) to create smoothing effect. |
-| NoiseFilter<br>`@pixi/filter-noise` | Create random noise (e.g., grain effect). |
+| {@link PIXI.filters.AlphaFilter AlphaFilter} <br>`@pixi/filter-alpha` | Similar to setting `alpha` property, but flattens the Container instead of applying to children individually. |
+| {@link PIXI.filters.BlurFilter BlurFilter} <br>`@pixi/filter-blur` | Apply a blur effect | 
+| {@link PIXI.filters.ColorMatrixFilter ColorMatrixFilter} <br>`@pixi/filter-color-matrix` | A color matrix is a flexible way to apply more complex tints or color transforms (e.g., sepia tone). |
+| {@link PIXI.filters.DisplacementFilter DisplacementFilter} <br>`@pixi/filter-displacement` | Displacement maps create visual offset pixels, for instance creating a wavy water effect. |
+| {@link PIXI.filters.FXAAFilter FXAAFilter} <br>`@pixi/filter-fxaa` | Basic FXAA (Fast Approximate Anti-Aliasing) to create smoothing effect. |
+| {@link PIXI.filters.NoiseFilter NoiseFilter} <br>`@pixi/filter-noise` | Create random noise (e.g., grain effect). |
 
 _**Important:** Filters should be use somewhat sparingly. They can slow performance and increase memory if used too often in a scene._ 
