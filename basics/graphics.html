@@ -672,7 +672,7 @@
     
     <h1>PixiJS Guides</h1>
 <h2>What is PIXI.Graphics?</h2>
-<p><a href=https://api.pixijs.io/@pixi/graphics/PIXI/Graphics.html>PIXI.Graphics</a> is a complex and much misunderstood tool in the PixiJS toolbox.  At first glance, it looks like a tool for drawing shapes.  And it is!  But it can also be used to generate masks.  How does that work?</p>
+<p><a href=https://pixijs.download/release/docs/PIXI.Graphics.html>Graphics</a> is a complex and much misunderstood tool in the PixiJS toolbox.  At first glance, it looks like a tool for drawing shapes.  And it is!  But it can also be used to generate masks.  How does that work?</p>
 <p>In this guide, we're going to de-mystify the Graphics object, starting with how to think about what it does.</p>
 <div class="responsive-4-3"><iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/graphics/simple.js"></iframe></div>
 <h2>Graphics Is About Building - Not Drawing</h2>
@@ -711,7 +711,7 @@ app.stage.addChild(obj);
 <li>Rounded Polygon</li>
 </ul>
 <h2>The Geometry List</h2>
-<p>Inside every Graphics object is a GraphicsGeometry object.  The <a href="https://api.pixijs.io/@pixi/graphics/PIXI/GraphicsGeometry.html">PIXI.GraphicsGeometry</a> class manages the list of geometry primitives created by the Graphics parent object.  For the most part, you will not work directly with this object.  The owning Graphics object creates and manages it.  However, there are two related cases where you <em>do</em> work with the list.</p>
+<p>Inside every Graphics object is a GraphicsGeometry object.  The <a href="https://pixijs.download/release/docs/PIXI.GraphicsGeometry.html">GraphicsGeometry</a> class manages the list of geometry primitives created by the Graphics parent object.  For the most part, you will not work directly with this object.  The owning Graphics object creates and manages it.  However, there are two related cases where you <em>do</em> work with the list.</p>
 <p>First, you can re-use geometry from one Graphics object in another.  No matter whether you're re-drawing the same shape over and over, or re-using it as a mask over and over, it's more efficient to share identical GraphicsGeometry.  You can do this like so:</p>
 <pre><code class="hljs language-javascript"><span class="hljs-comment">// Create a master graphics object</span>
 <span class="hljs-keyword">let</span> template = <span class="hljs-keyword">new</span> PIXI.Graphics();

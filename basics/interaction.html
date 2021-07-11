@@ -681,14 +681,14 @@
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> sprite = PIXI.Sprite.from(<span class="hljs-string">&#x27;/some/texture.png&#x27;</span>);
 sprite.on(<span class="hljs-string">&#x27;pointerdown&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> { alert(<span class="hljs-string">&#x27;clicked!&#x27;</span>); });
 </code></pre>
-<p>Check out the <a href=https://api.pixijs.io/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a> for the list of interaction events supported.</p>
+<p>Check out the <a href=https://pixijs.download/release/docs/PIXI.DisplayObject.html>DisplayObject</a> for the list of interaction events supported.</p>
 <h2>Use Pointer Events</h2>
 <p>PixiJS supports three types of interaction events - mouse, touch and pointer.  Mouse events are fired by mouse movement, clicks etc.  Touch events are fired for touch-capable devices.  And pointer events are fired for <em>both</em>.</p>
 <p>What this means is that, in many cases, you can write your project to use pointer events and it will just work when used with <em>either</em> mouse or touch input.  Given that, the only reason to use non-pointer events is to support different modes of operation based on input type or to support multi-touch interaction.  In all other cases, prefer pointer events.</p>
 <h2>Hit Testing</h2>
 <p>By default, PixiJS uses the bounding rectangle of an interactive object to determine if a mouse or touch event &quot;hits&quot; that object.  In many cases, that's fine.  But what if you have a circular button or a complex character shape, and you want to only register clicks that are within that shape?  What if you want only a small part of an object to be clickable?</p>
 <p>The solution is to use the <code>hitArea</code> property of your DisplayObject.  Setting a hitArea allows you to customize what counts as a hit on your object.  You can set the hitArea property to be a PIXI.Circle, PIXI.Rectangle, PIXI.RoundedRectangle, or PIXI.Polygon.  Using a Polygon in particular allows you to make complex outlines of player characters or other complex visual geometry.</p>
-<p>Once you've set up your interaction objects, it can be useful to test what object is under a given point.  You can use <a href="https://api.pixijs.io/@pixi/interaction/PIXI/InteractionManager.html">PIXI.InteractionManager</a>'s <code>hitTest()</code> method to find the interactive object at a (global) point:</p>
+<p>Once you've set up your interaction objects, it can be useful to test what object is under a given point.  You can use <a href="https://pixijs.download/release/docs/PIXI.InteractionManager.html">InteractionManager</a>'s <code>hitTest()</code> method to find the interactive object at a (global) point:</p>
 <pre><code class="hljs language-javascript"><span class="hljs-comment">// Find out what interactive object lies at [100, 50]</span>
 <span class="hljs-keyword">let</span> globalPt = <span class="hljs-keyword">new</span> PIXI.Point(<span class="hljs-number">100</span>,<span class="hljs-number">50</span>);
 <span class="hljs-keyword">let</span> obj = app.renderer.plugins.interaction.hitTest(globalPt);

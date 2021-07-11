@@ -672,9 +672,9 @@
     
     <h1>PixiJS Guides</h1>
 <h2>Working with Containers</h2>
-<p>The <a href=https://api.pixijs.io/@pixi/display/PIXI/Container.html>PIXI.Container</a> class provides a simple display object that does what its name implies - collect a set of child objects together.  But beyond grouping objects, containers have a few uses that you should be aware of.</p>
+<p>The <a href=https://pixijs.download/release/docs/PIXI.Container.html>Container</a> class provides a simple display object that does what its name implies - collect a set of child objects together.  But beyond grouping objects, containers have a few uses that you should be aware of.</p>
 <h2>Containers as Groups</h2>
-<p>Almost every type of display object is also derived from PIXI.Container - even Sprites!  This means that in many cases you can create a parent-child hierarchy with the objects you want to render.</p>
+<p>Almost every type of display object is also derived from Container - even Sprites!  This means that in many cases you can create a parent-child hierarchy with the objects you want to render.</p>
 <p>However, it's a good idea <em>not</em> to do this.  Standalone Container objects are <strong>very</strong> cheap to render, and having a proper hierarchy of Container objects, each containing one or more renderable objects, provides flexibility in rendering order.  It also future-proofs your code, as when you need to add an additional object to a branch of the tree, your animation logic doesn't need to change - just drop the new object into the proper Container, and your logic moves the Container with no changes to your code.</p>
 <p>So that's the primary use for Containers - as groups of renderable objects in a hierarchy.</p>
 <div class="responsive-4-3"><iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/demos-basic/container.js"></iframe></div>
@@ -734,8 +734,8 @@ app.ticker.add(<span class="hljs-function">(<span class="hljs-params">delta</spa
 });
 </code></pre>
 <p>There are two types of masks supported by PixiJS:</p>
-<p>Graphics: Use a <a href="https://api.pixijs.io/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a> object to create a mask with an arbitrary shape - powerful, but doesn't support anti-aliasing</p>
-<p>Sprite: Use the alpha channel from a <a href=https://api.pixijs.io/@pixi/sprite/PIXI/Sprite.html>Sprite</a> as your mask, providing anti-aliased edging - <em>not</em> supported on the Canvas renderer</p>
+<p>Use a <a href="https://pixijs.download/release/docs/PIXI.Graphics.html">Graphics</a> object to create a mask with an arbitrary shape - powerful, but doesn't support anti-aliasing</p>
+<p>Sprite: Use the alpha channel from a <a href=https://pixijs.download/release/docs/PIXI.Sprite.html>Sprite</a> as your mask, providing anti-aliased edging - <em>not</em> supported on the Canvas renderer</p>
 <h2>Filtering</h2>
 <p>Another common use for Container objects is as hosts for filtered content.  Filters are an advanced, WebGL-only feature that allows PixiJS to perform per-pixel effects like blurring and displacements.  By setting a filter on a Container, the area of the screen the Container encompasses will be processed by the filter after the Container's contents have been rendered.</p>
 <p>Below are list of filters available by default in PixiJS. There is, however, a community repository with <a href="https://github.com/pixijs/filters">many more filters</a>.</p>
@@ -748,27 +748,27 @@ app.ticker.add(<span class="hljs-function">(<span class="hljs-params">delta</spa
 </thead>
 <tbody>
 <tr>
-<td>AlphaFilter<br><code>@pixi/filter-alpha</code></td>
+<td><a href="https://pixijs.download/release/docs/PIXI.filters.AlphaFilter.html">AlphaFilter</a> <br><code>@pixi/filter-alpha</code></td>
 <td>Similar to setting <code>alpha</code> property, but flattens the Container instead of applying to children individually.</td>
 </tr>
 <tr>
-<td>BlurFilter<br><code>@pixi/filter-blur</code></td>
+<td><a href="https://pixijs.download/release/docs/PIXI.filters.BlurFilter.html">BlurFilter</a> <br><code>@pixi/filter-blur</code></td>
 <td>Apply a blur effect</td>
 </tr>
 <tr>
-<td>ColorMatrixFilter<br><code>@pixi/filter-color-matrix</code></td>
+<td><a href="https://pixijs.download/release/docs/PIXI.filters.ColorMatrixFilter.html">ColorMatrixFilter</a> <br><code>@pixi/filter-color-matrix</code></td>
 <td>A color matrix is a flexible way to apply more complex tints or color transforms (e.g., sepia tone).</td>
 </tr>
 <tr>
-<td>DisplacementFilter<br><code>@pixi/filter-displacement</code></td>
+<td><a href="https://pixijs.download/release/docs/PIXI.filters.DisplacementFilter.html">DisplacementFilter</a> <br><code>@pixi/filter-displacement</code></td>
 <td>Displacement maps create visual offset pixels, for instance creating a wavy water effect.</td>
 </tr>
 <tr>
-<td>FXAAFilter<br><code>@pixi/filter-fxaa</code></td>
+<td><a href="https://pixijs.download/release/docs/PIXI.filters.FXAAFilter.html">FXAAFilter</a> <br><code>@pixi/filter-fxaa</code></td>
 <td>Basic FXAA (Fast Approximate Anti-Aliasing) to create smoothing effect.</td>
 </tr>
 <tr>
-<td>NoiseFilter<br><code>@pixi/filter-noise</code></td>
+<td><a href="https://pixijs.download/release/docs/PIXI.filters.NoiseFilter.html">NoiseFilter</a> <br><code>@pixi/filter-noise</code></td>
 <td>Create random noise (e.g., grain effect).</td>
 </tr>
 </tbody>
