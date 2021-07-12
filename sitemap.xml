@@ -49,37 +49,4 @@
   <url>
     <loc>https://pixijs.io/guides/basics/what-pixijs-is-not.html</loc>
   </url>
-  <url>
-    <loc>https://pixijs.io/guides/production.html</loc>
-  </url>
-  <url>
-    <loc>https://pixijs.io/guides/production/animation.html</loc>
-  </url>
-  <url>
-    <loc>https://pixijs.io/guides/production/canvas-renderer.html</loc>
-  </url>
-  <url>
-    <loc>https://pixijs.io/guides/production/debugging.html</loc>
-  </url>
-  <url>
-    <loc>https://pixijs.io/guides/production/memory-management.html</loc>
-  </url>
-  <url>
-    <loc>https://pixijs.io/guides/production/network-optimization.html</loc>
-  </url>
-  <url>
-    <loc>https://pixijs.io/guides/production/performance-tuning.html</loc>
-  </url>
-  <url>
-    <loc>https://pixijs.io/guides/production/resolution.html</loc>
-  </url>
-  <url>
-    <loc>https://pixijs.io/guides/production/resource-loading.html</loc>
-  </url>
-  <url>
-    <loc>https://pixijs.io/guides/advanced.html</loc>
-  </url>
-  <url>
-    <loc>https://pixijs.io/guides/advanced/particles.html</loc>
-  </url>
 </urlset>
