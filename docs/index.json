@@ -21,26 +21,5 @@
       "what-pixijs-is",
       "what-pixijs-is-not"
     ]
-  },
-  "production": {
-    "title": "Production",
-    "kind": "category",
-    "children": [
-      "animation",
-      "canvas-renderer",
-      "debugging",
-      "memory-management",
-      "network-optimization",
-      "performance-tuning",
-      "resolution",
-      "resource-loading"
-    ]
-  },
-  "advanced": {
-    "title": "Advanced",
-    "kind": "category",
-    "children": [
-      "particles"
-    ]
   }
 }
