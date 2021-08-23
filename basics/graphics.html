@@ -495,7 +495,7 @@ template.drawCircle(<span class="hljs-number">100</span>, <span class="hljs-numb
   <span class="hljs-keyword">let</span> duplicate = <span class="hljs-keyword">new</span> PIXI.Graphics(template.geometry);
 }
 </code></pre>
-<p>This leads to the second time you need to be aware of the underlying GraphicsGeometry object - avoiding memory leaks.  Because Graphics objects can share geometry, you <em>must</em> call <code>delete()</code> when you no longer need them.  Failure to do so will prevent the GraphicsGeometry object it owns from being properly de-referenced, and will lead to memory leaks.</p>
+<p>This leads to the second time you need to be aware of the underlying GraphicsGeometry object - avoiding memory leaks.  Because Graphics objects can share geometry, you <em>must</em> call <code>destroy()</code> when you no longer need them.  Failure to do so will prevent the GraphicsGeometry object it owns from being properly de-referenced, and will lead to memory leaks.</p>
 <h2>Graphics For Display</h2>
 <p>OK, so now that we've covered how the PIXI.Graphics class works, let's look at how you use it.  The most obvious use of a Graphics object is to draw dynamically generated shapes to the screen.</p>
 <p>Doing so is simple.  Create the object, call the various builder functions to add your custom primitives, then add the object to the scene graph.  Each frame, the renderer will come along, ask the Graphics object to render itself, and each primitive, with associated line and fill styles, will be drawn to the screen.</p>
