@@ -71,7 +71,7 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-This leads to the second time you need to be aware of the underlying GraphicsGeometry object - avoiding memory leaks.  Because Graphics objects can share geometry, you *must* call `delete()` when you no longer need them.  Failure to do so will prevent the GraphicsGeometry object it owns from being properly de-referenced, and will lead to memory leaks.
+This leads to the second time you need to be aware of the underlying GraphicsGeometry object - avoiding memory leaks.  Because Graphics objects can share geometry, you *must* call `destroy()` when you no longer need them.  Failure to do so will prevent the GraphicsGeometry object it owns from being properly de-referenced, and will lead to memory leaks.
 
 ## Graphics For Display
 
