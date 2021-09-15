@@ -108,7 +108,7 @@ Before PixiJS can render an image, it needs to be loaded.  Just like in any web 
   let sprite = PIXI.Sprite.from('sample.png');
 ```
 
-[Download the sample PNG here](../../static/images/sample.png), and save it into your `pixi-test` directory next to your `index.html`.
+[Download the sample PNG here](../static/images/sample.png), and save it into your `pixi-test` directory next to your `index.html`.
 
 ### Adding the Sprite to the Stage
 
