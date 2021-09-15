@@ -509,7 +509,7 @@
 <pre><code class="hljs language-JavaScript">  <span class="hljs-comment">// Magically load the PNG asynchronously</span>
   <span class="hljs-keyword">let</span> sprite = PIXI.Sprite.from(<span class="hljs-string">&#x27;sample.png&#x27;</span>);
 </code></pre>
-<p><a href="../../static/images/sample.png">Download the sample PNG here</a>, and save it into your <code>pixi-test</code> directory next to your <code>index.html</code>.</p>
+<p><a href="../static/images/sample.png">Download the sample PNG here</a>, and save it into your <code>pixi-test</code> directory next to your <code>index.html</code>.</p>
 <h3>Adding the Sprite to the Stage</h3>
 <p>Finally, we need to add our new sprite to the stage.  The stage is simply a <a href="https://pixijs.download/release/docs/PIXI.Container.html">Container</a> that is the root of the scene graph.  Every child of the stage container will be rendered every frame.  By adding our sprite to the stage, we tell PixiJS's renderer we want to draw it.</p>
 <pre><code class="hljs language-JavaScript">  app.stage.addChild(sprite);
