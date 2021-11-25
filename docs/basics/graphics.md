@@ -92,7 +92,7 @@ The Graphics class is a complex beast, and so there are a number of things to be
 
 **Memory Leaks**: The first has already been mentioned - call `destroy()` on any Graphics object you no longer need to avoid memory leaks.
 
-**Holes**: Holes you create have to be copmletely contained in the shape or else it may not be able to triangulate correctly. <!--TODO: primitive shapes not working on canvas?-->
+**Holes**: Holes you create have to be completely contained in the shape or else it may not be able to triangulate correctly. <!--TODO: primitive shapes not working on canvas?-->
 
 **Changing Geometry**: If you want to change the shape of a Graphics object, you don't need to delete and recreate it.  Instead you can use the `clear()` function to reset the contents of the geometry list, then add new primitives as desired.  Be careful of performance when doing this every frame.
 
