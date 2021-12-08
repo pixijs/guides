@@ -1,6 +1,6 @@
 # PixiJS Guides
 
-The purpose of this project is to provide high-level, authoritative guides about using [PixiJS](https://github.com/pixijs/pixijs). The concepts in these guides are generalized and shouldn't change much from version to version of PixiJS. If you're looking specific code documentation, view our [API docs](https://pixijs.io/guides).
+The purpose of this project is to provide high-level, authoritative guides about using [PixiJS](https://github.com/pixijs/pixijs). The concepts in these guides are generalized and shouldn't change much from version to version of PixiJS. If you're looking specific code documentation, view our [API docs](https://pixijs.io/docs).
 
 ## Building
 
