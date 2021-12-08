@@ -7,6 +7,8 @@
     "kind": "category",
     "children": [
       "getting-started",
+      "what-pixijs-is",
+      "what-pixijs-is-not",
       "architecture-overview",
       "containers",
       "display-object",
@@ -17,9 +19,7 @@
       "scene-graph",
       "sprites",
       "sprite-sheets",
-      "text",
-      "what-pixijs-is",
-      "what-pixijs-is-not"
+      "text"
     ]
   }
 }
