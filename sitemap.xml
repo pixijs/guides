@@ -11,6 +11,12 @@
     <loc>https://pixijs.io/guides/basics/getting-started.html</loc>
   </url>
   <url>
+    <loc>https://pixijs.io/guides/basics/what-pixijs-is.html</loc>
+  </url>
+  <url>
+    <loc>https://pixijs.io/guides/basics/what-pixijs-is-not.html</loc>
+  </url>
+  <url>
     <loc>https://pixijs.io/guides/basics/architecture-overview.html</loc>
   </url>
   <url>
@@ -42,11 +48,5 @@
   </url>
   <url>
     <loc>https://pixijs.io/guides/basics/text.html</loc>
-  </url>
-  <url>
-    <loc>https://pixijs.io/guides/basics/what-pixijs-is.html</loc>
-  </url>
-  <url>
-    <loc>https://pixijs.io/guides/basics/what-pixijs-is-not.html</loc>
   </url>
 </urlset>
