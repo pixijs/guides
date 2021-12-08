@@ -10,6 +10,7 @@
       "architecture-overview",
       "containers",
       "display-object",
+      "textures",
       "graphics",
       "interaction",
       "render-loop",
@@ -17,7 +18,6 @@
       "sprites",
       "sprite-sheets",
       "text",
-      "textures",
       "what-pixijs-is",
       "what-pixijs-is-not"
     ]
