@@ -20,6 +20,9 @@
     <loc>https://pixijs.io/guides/basics/display-object.html</loc>
   </url>
   <url>
+    <loc>https://pixijs.io/guides/basics/textures.html</loc>
+  </url>
+  <url>
     <loc>https://pixijs.io/guides/basics/graphics.html</loc>
   </url>
   <url>
@@ -39,9 +42,6 @@
   </url>
   <url>
     <loc>https://pixijs.io/guides/basics/text.html</loc>
-  </url>
-  <url>
-    <loc>https://pixijs.io/guides/basics/textures.html</loc>
   </url>
   <url>
     <loc>https://pixijs.io/guides/basics/what-pixijs-is.html</loc>

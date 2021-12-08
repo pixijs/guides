@@ -241,6 +241,25 @@
     <div>
       
       
+        <a href="/guides/basics/textures.html">
+          Textures
+        </a>
+      
+    </div>
+  </div>
+  
+</li>
+            
+          
+            
+              
+
+<li class="explorer-tree__target ">
+  
+  <div>
+    <div>
+      
+      
         <a href="/guides/basics/graphics.html">
           Graphics
         </a>
@@ -374,25 +393,6 @@
     <div>
       
       
-        <a href="/guides/basics/textures.html">
-          Textures
-        </a>
-      
-    </div>
-  </div>
-  
-</li>
-            
-          
-            
-              
-
-<li class="explorer-tree__target ">
-  
-  <div>
-    <div>
-      
-      
         <a href="/guides/basics/what-pixijs-is.html">
           What PixiJS Is
         </a>
@@ -457,7 +457,7 @@
 <p>BaseTextures are automatically cached, so that calling <code>PIXI.Texture.from()</code> repeatedly for the same URL returns the same BaseTexture each time.  Destroying a BaseTexture frees the image data associated with it.</p>
 <h3>Textures are a View on BaseTextures</h3>
 <p>So finally, we get to the PIXI.Texture class itself!  At this point, you may be wondering what the Texture object <em>does</em>.  After all, the BaseTexture manages the pixels and render settings.  And the answer is, it doesn't do very much.  Textures are light-weight views on an underlying BaseTexture.  Their main attribute is the source rectangle within the BaseTexture from which to pull.</p>
-<p>If all PixiJS drew were sprites, that would be pretty redundant.  But consider SpriteSheets.  A SpriteSheet is a single image that contains multiple sprite images arranged within.  In a <a href=https://pixijs.download/release/docs/PIXI.Spritesheet.html>Spritesheet</a> object, a single BaseTexture is referenced by a set of Textures, one for each source image in the original sprite sheet.  By sharing a single BaseTexture, the browser only downloads one file, and our batching renderer can blaze through drawing sprites since they all share the same underlying pixel data.  The SpriteSheet's Textures pull out just the rectangle of pixels needed by each sprite.</p>
+<p>If all PixiJS drew were sprites, that would be pretty redundant.  But consider SpriteSheets.  A SpriteSheet is a single image that contains multiple sprite images arranged within.  In a <a href="https://pixijs.download/release/docs/PIXI.Spritesheet.html">Spritesheet</a> object, a single BaseTexture is referenced by a set of Textures, one for each source image in the original sprite sheet.  By sharing a single BaseTexture, the browser only downloads one file, and our batching renderer can blaze through drawing sprites since they all share the same underlying pixel data.  The SpriteSheet's Textures pull out just the rectangle of pixels needed by each sprite.</p>
 <!--TODO: Image showing sprite sheet base texture, plus each sprite's texture-->
 <p>That is why we have both Textures and BaseTextures - to allow sprite sheets, animations, button states, etc to be loaded as a single image, while only displaying the part of the master image that is needed.</p>
 <h2>Loading Textures</h2>
@@ -489,7 +489,7 @@
   
     <div class="serial-navigation both">
       
-        <a class="serial-navigation-button previous" href="/guides/basics/text.html">
+        <a class="serial-navigation-button previous" href="/guides/basics/display-object.html">
           <svg
             class="arrow"
             version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -506,14 +506,14 @@
             <line x1="0" y1="7" x2="23" y2="7" />
           </svg>
           <span class="label">Previous Guide</span>
-          <span class="title">Text</span>
+          <span class="title">Display Objects</span>
         </a>
       
       
         <hr />
       
       
-        <a class="serial-navigation-button next" href="/guides/basics/what-pixijs-is.html">
+        <a class="serial-navigation-button next" href="/guides/basics/graphics.html">
           <svg
             class="arrow"
             version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -530,7 +530,7 @@
             <line x1="0" y1="7" x2="23" y2="7" />
           </svg>
           <span class="label">Next Guide</span>
-          <span class="title">What PixiJS Is</span>
+          <span class="title">Graphics</span>
         </a>
       
     </div>
