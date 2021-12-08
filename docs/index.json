@@ -6,9 +6,9 @@
     "title": "Basics",
     "kind": "category",
     "children": [
-      "getting-started",
       "what-pixijs-is",
       "what-pixijs-is-not",
+      "getting-started",
       "architecture-overview",
       "containers",
       "display-object",
