@@ -29,7 +29,7 @@ OK!  With those notes out of the way, let's get started.  There are only a few s
 * Create an HTML file
 * Serve the file with a web server
 * Load the PixiJS library
-* Create a {@link PIXI.Application Application}
+* Create an {@link PIXI.Application Application}
 * Add the generated view to the DOM
 * Add an image to the stage
 * Write an update loop
