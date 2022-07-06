@@ -41,7 +41,7 @@ Sprite sheet data can also be created manually or programatically, and supplied 
 // Create object to store sprite sheet data
 const atlasData = {
 	frames: {
-		enemy: {
+		enemy1: {
 			frame: { x: 0, y:0, w:32, h:32 },
 			sourceSize: { w: 32, h: 32 },
 			spriteSourceSize: { x: 0, y: 0, w: 32, h: 32 }
@@ -59,7 +59,7 @@ const atlasData = {
 		scale: 1
 	},
 	animations: {
-		enemy: ['enemy','enemy2'] //array of frames by name
+		enemy: ['enemy1','enemy2'] //array of frames by name
 	}
 }
 
