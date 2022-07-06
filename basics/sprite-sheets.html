@@ -457,9 +457,48 @@
 <p>First, by <strong>speeding up the loading process</strong>.  While downloading a SpriteSheet's texture requires moving the same (or even slightly more!) number of bytes, they're grouped into a single file.  This means that the user's browser can request and download far fewer files for the same number of Sprites.  The number of files <em>itself</em> is a key driver of download speed, because each request requires a round-trip to the webserver, and browsers are limited to how many files they can download simultaneously.  Converting a project from individual source images to shared sprite sheets can cut your download time in half, at no cost in quality.</p>
 <p>Second, by <strong>improving batch rendering</strong>.  WebGL rendering speed scales roughly with the number of draw calls made.  Batching multiple Sprites, etc. into a single draw call is the main secret to how PixiJS can run so blazingly fast.  Maximizing batching is a complex topic, but when multiple Sprites all share a common BaseTexture, it makes it more likely that they can be batched together and rendered in a single call.</p>
 <h2>Creating SpriteSheets</h2>
-<p>You will need to use a 3rd party tool to assemble your sprite sheet files.  Here are two that may fit your needs:</p>
+<p>You can use a 3rd party tool to assemble your sprite sheet files.  Here are two that may fit your needs:</p>
 <p><a href="http://renderhjs.net/shoebox/">ShoeBox</a>: ShoeBox is a free, Adobe AIR-based sprite packing utility that is great for small projects or learning how SpriteSheets work.</p>
-<p><a href="https://www.codeandweb.com/texturepacker">TexturePacker</a>: TexturePacker is a more polished paid tool that supports advanced features and workflows.  It's a good fit for larger projects and professional game development.</p>
+<p><a href="https://www.codeandweb.com/texturepacker">TexturePacker</a>: TexturePacker is a more polished tool that supports advanced features and workflows. A free version is available which has all the necessary features for packing spritesheets for PixiJS. It's a good fit for larger projects and professional game development, or projects that need more complex tile mapping features.</p>
+<p>Spritesheet data can also be created manually or programatically, and supplied to a new AnimatedSprite. This may be an easier option if your sprites are already contained in a single image.</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// Create object to store sprite sheet data</span>
+<span class="hljs-keyword">const</span> atlasData = {
+	<span class="hljs-attr">frames</span>: {
+		<span class="hljs-attr">enemy1</span>: {
+			<span class="hljs-attr">frame</span>: { <span class="hljs-attr">x</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">y</span>:<span class="hljs-number">0</span>, <span class="hljs-attr">w</span>:<span class="hljs-number">32</span>, <span class="hljs-attr">h</span>:<span class="hljs-number">32</span> },
+			<span class="hljs-attr">sourceSize</span>: { <span class="hljs-attr">w</span>: <span class="hljs-number">32</span>, <span class="hljs-attr">h</span>: <span class="hljs-number">32</span> },
+			<span class="hljs-attr">spriteSourceSize</span>: { <span class="hljs-attr">x</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">y</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">w</span>: <span class="hljs-number">32</span>, <span class="hljs-attr">h</span>: <span class="hljs-number">32</span> }
+		},
+		<span class="hljs-attr">enemy2</span>: {
+			<span class="hljs-attr">frame</span>: { <span class="hljs-attr">x</span>: <span class="hljs-number">32</span>, <span class="hljs-attr">y</span>:<span class="hljs-number">0</span>, <span class="hljs-attr">w</span>:<span class="hljs-number">32</span>, <span class="hljs-attr">h</span>:<span class="hljs-number">32</span> },
+			<span class="hljs-attr">sourceSize</span>: { <span class="hljs-attr">w</span>: <span class="hljs-number">32</span>, <span class="hljs-attr">h</span>: <span class="hljs-number">32</span> },
+			<span class="hljs-attr">spriteSourceSize</span>: { <span class="hljs-attr">x</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">y</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">w</span>: <span class="hljs-number">32</span>, <span class="hljs-attr">h</span>: <span class="hljs-number">32</span> }
+		},
+	},
+	<span class="hljs-attr">meta</span>: {
+		<span class="hljs-attr">image</span>: <span class="hljs-string">&#x27;images/spritesheet.png&#x27;</span>,
+		<span class="hljs-attr">format</span>: <span class="hljs-string">&#x27;RGBA8888&#x27;</span>,
+		<span class="hljs-attr">size</span>: { <span class="hljs-attr">w</span>: <span class="hljs-number">128</span>, <span class="hljs-attr">h</span>: <span class="hljs-number">32</span> },
+		<span class="hljs-attr">scale</span>: <span class="hljs-number">1</span>
+	},
+	<span class="hljs-attr">animations</span>: {
+		<span class="hljs-attr">enemy</span>: [<span class="hljs-string">&#x27;enemy1&#x27;</span>,<span class="hljs-string">&#x27;enemy2&#x27;</span>] <span class="hljs-comment">//array of frames by name</span>
+	}
+}
+
+
+<span class="hljs-comment">// Create the SpriteSheet from data and image</span>
+<span class="hljs-keyword">const</span> spritesheet = <span class="hljs-keyword">new</span> PIXI.Spritesheet(
+	PIXI.BaseTexture.from(atlasData.meta.image),
+	atlasData
+);
+
+<span class="hljs-comment">// Generate all the Textures asynchronously</span>
+spritesheet.parse(<span class="hljs-function">() =&gt;</span> {
+	<span class="hljs-comment">// spritesheet is ready to use!</span>
+	<span class="hljs-keyword">const</span> anim = <span class="hljs-keyword">new</span> PIXI.AnimatedSprite(spritesheet.animations.enemy);
+});
+</code></pre>
 
   </div>
   
