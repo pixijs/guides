@@ -39,12 +39,23 @@ Sprite sheet data can also be created manually or programatically, and supplied 
 
 ```javascript
 // Create object to store sprite sheet data
-const spriteSheetData = {
-	frames: {},
+const atlasData = {
+	frames: {
+		enemy: {
+			frame: { x: 0, y:0, w:32, h:32 },
+			sourceSize: { w: 32, h: 32 },
+			spriteSourceSize: { x: 0, y: 0, w: 32, h: 32 }
+		},
+		enemy2: {
+			frame: { x: 32, y:0, w:32, h:32 },
+			sourceSize: { w: 32, h: 32 },
+			spriteSourceSize: { x: 0, y: 0, w: 32, h: 32 }
+		},
+	},
 	meta: {
-		image: 'spritesheet.png',
+		image: 'images/spritesheet.png',
 		format: 'RGBA8888',
-		size: {	w: 128, h: 32},
+		size: { w: 128, h: 32 },
 		scale: 1
 	},
 	animations: {
@@ -52,26 +63,15 @@ const spriteSheetData = {
 	}
 }
 
-// Programmatically add frames to spriteSheetData
-['player','tree','enemy','enemy2'].forEach( (spriteName, i) => {
-	spriteSheetData.frames[spriteName] = {
-		frame: { x: i*32, y:0, w:32, h:32 },
-		sourceSize: { w: 32, h: 32 },
-		spriteSourceSize: {
-			x: 0,
-			y: 0,
-			w: 32,
-			h: 32
-		},
-	}
+
+// Create the SpriteSheet from data and image
+const spritesheet = new PIXI.Spritesheet(
+	PIXI.BaseTexture.from(atlasData.meta.image),
+	atlasData
+);
+
+// Generate all the Textures asynchronously
+spritesheet.parse(() => {
+	// spritesheet is ready to use!
+	const anim = new PIXI.AnimatedSprite(spritesheet.animations.enemy);
 });
-
-// Create the sprite sheet
-let spriteSheetTexture = new PIXI.BaseTexture('images/spritesheet.png');
-let spritesheet = new PIXI.Spritesheet(spriteSheetTexture,spriteSheetData);
-spritesheet.parse(e => console.log('spritesheet was loaded'));
-
-// Use the sprites from the sprite sheet 
-let player = new PIXI.Sprite(spritesheet.textures['player'])
-let enemy = new PIXI.AnimatedSprite(spritesheet.animations['enemy']);
-```
