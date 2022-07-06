@@ -29,8 +29,49 @@ Second, by __improving batch rendering__.  WebGL rendering speed scales roughly 
 
 ## Creating SpriteSheets
 
-You will need to use a 3rd party tool to assemble your sprite sheet files.  Here are two that may fit your needs:
+You can use a 3rd party tool to assemble your sprite sheet files.  Here are two that may fit your needs:
 
 [ShoeBox](http://renderhjs.net/shoebox/): ShoeBox is a free, Adobe AIR-based sprite packing utility that is great for small projects or learning how SpriteSheets work.
 
-[TexturePacker](https://www.codeandweb.com/texturepacker): TexturePacker is a more polished paid tool that supports advanced features and workflows.  It's a good fit for larger projects and professional game development.
+[TexturePacker](https://www.codeandweb.com/texturepacker): TexturePacker is a more polished tool that supports advanced features and workflows. A free version is available which has all the necessary features for packing spritesheets for PixiJS. It's a good fit for larger projects and professional game development, or projects that need more complex tile mapping features.
+
+Spritesheet data can also be created manually or programatically, and supplied to a new AnimatedSprite. This may be an easier option if your sprites are already contained in a single image.
+
+```javascript
+// Create object to store sprite sheet data
+const atlasData = {
+	frames: {
+		enemy1: {
+			frame: { x: 0, y:0, w:32, h:32 },
+			sourceSize: { w: 32, h: 32 },
+			spriteSourceSize: { x: 0, y: 0, w: 32, h: 32 }
+		},
+		enemy2: {
+			frame: { x: 32, y:0, w:32, h:32 },
+			sourceSize: { w: 32, h: 32 },
+			spriteSourceSize: { x: 0, y: 0, w: 32, h: 32 }
+		},
+	},
+	meta: {
+		image: 'images/spritesheet.png',
+		format: 'RGBA8888',
+		size: { w: 128, h: 32 },
+		scale: 1
+	},
+	animations: {
+		enemy: ['enemy1','enemy2'] //array of frames by name
+	}
+}
+
+
+// Create the SpriteSheet from data and image
+const spritesheet = new PIXI.Spritesheet(
+	PIXI.BaseTexture.from(atlasData.meta.image),
+	atlasData
+);
+
+// Generate all the Textures asynchronously
+spritesheet.parse(() => {
+	// spritesheet is ready to use!
+	const anim = new PIXI.AnimatedSprite(spritesheet.animations.enemy);
+});
