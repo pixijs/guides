@@ -35,6 +35,9 @@
   "textures": {
     "title": "Textures"
   },
+  "assets": {
+    "title": "Assets"
+  },
   "what-pixijs-is": {
     "title": "What PixiJS Is"
   },
