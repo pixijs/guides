@@ -1,0 +1,612 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>PixiJS: Assets</title>
+    
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-103772589-9']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+    
+      <meta name="og:title" content="PixiJS Guides" />
+    
+      <meta name="og:description" content="The holy guide for PixiJS developers" />
+    
+      <meta name="og:image" content="https://camo.githubusercontent.com/dd5f0c8ce84c09599ebd30c7a48076b3ca4ef7d1f36aed96c64952d3432942a1/68747470733a2f2f706978696a732e646f776e6c6f61642f706978696a732d62616e6e65722d6e6f2d76657273696f6e2e706e67" />
+    
+      <meta name="og:site" content="https://pixijs.io/guides/" />
+    
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    
+      <link rel="stylesheet" type="text/css" href="/guides/static/styles.css" />
+    
+  </head>
+  <body class="root">
+    <div class="docs tutorials">
+      <article class="page">
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point">
+            
+
+<div class="header__wrapper">
+  <div class="header__container">
+    <section class="explorer__header__title">
+      <a href="https://www.pixijs.com" class="pixi-logo">
+        PixiJS Guides
+      </a>
+    </section>
+    <div class="header__contents">
+      <section class="header__contents-main">
+        
+          
+            <a
+              class="header__link header__link--current"
+              href="/guides/index.html"
+            >
+              Guides
+            </a>
+          
+        
+          
+            <a
+              class="header__link "
+              href="https://github.com/pixijs/pixijs"
+            >
+              GitHub
+            </a>
+          
+        
+          
+            <a
+              class="header__link "
+              href="https://pixijs.io/examples"
+            >
+              Examples
+            </a>
+          
+        
+          
+            <a
+              class="header__link "
+              href="https://pixijs.io/docs"
+            >
+              API Docs
+            </a>
+          
+        
+          
+            <a
+              class="header__link "
+              href="https://opencollective.com/pixijs"
+            >
+              Support Us
+            </a>
+          
+        
+      </section>
+    </div>
+  </div>
+</div>
+
+          </section>
+          <div class="header-content-container__content">
+            <div class="page-explorer" id="explorer-mount-point">
+                
+
+<div class="explorer-wrapper">
+  <h3>Guides</h3>
+  
+<div class="explorer">
+  <ul role="tree" class="explorer__tree explorer__tree-open">
+    
+      
+        
+
+<li class="explorer-tree__target ">
+  
+  <div>
+    <div>
+      
+      
+        <a href="/guides/index.html">
+          Welcome
+        </a>
+      
+    </div>
+  </div>
+  
+</li>
+      
+    
+      
+        
+
+<li class="explorer-tree__target explorer-tree__parent">
+  
+    <input type="checkbox" checked="true" />
+  
+  <div>
+    <div>
+      
+         <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" width="24px" height="24px"><path d="M10 17l5-5-5-5v10z"></path></svg>
+      
+      
+        <section>Basics</section>
+      
+    </div>
+  </div>
+  
+    <ul role="group">
+      <div>
+        <div>
+          
+            
+              
+
+<li class="explorer-tree__target ">
+  
+  <div>
+    <div>
+      
+      
+        <a href="/guides/basics/what-pixijs-is.html">
+          What PixiJS Is
+        </a>
+      
+    </div>
+  </div>
+  
+</li>
+            
+          
+            
+              
+
+<li class="explorer-tree__target ">
+  
+  <div>
+    <div>
+      
+      
+        <a href="/guides/basics/what-pixijs-is-not.html">
+          What PixiJS Is Not
+        </a>
+      
+    </div>
+  </div>
+  
+</li>
+            
+          
+            
+              
+
+<li class="explorer-tree__target ">
+  
+  <div>
+    <div>
+      
+      
+        <a href="/guides/basics/getting-started.html">
+          Getting Started
+        </a>
+      
+    </div>
+  </div>
+  
+</li>
+            
+          
+            
+              
+
+<li class="explorer-tree__target ">
+  
+  <div>
+    <div>
+      
+      
+        <a href="/guides/basics/architecture-overview.html">
+          Architecture Overview
+        </a>
+      
+    </div>
+  </div>
+  
+</li>
+            
+          
+            
+              
+
+<li class="explorer-tree__target ">
+  
+  <div>
+    <div>
+      
+      
+        <a href="/guides/basics/containers.html">
+          Containers
+        </a>
+      
+    </div>
+  </div>
+  
+</li>
+            
+          
+            
+              
+
+<li class="explorer-tree__target ">
+  
+  <div>
+    <div>
+      
+      
+        <a href="/guides/basics/display-object.html">
+          Display Objects
+        </a>
+      
+    </div>
+  </div>
+  
+</li>
+            
+          
+            
+              
+
+<li class="explorer-tree__target ">
+  
+  <div>
+    <div>
+      
+      
+        <a href="/guides/basics/textures.html">
+          Textures
+        </a>
+      
+    </div>
+  </div>
+  
+</li>
+            
+          
+            
+              
+
+<li class="explorer-tree__target ">
+  
+  <div>
+    <div>
+      
+      
+        <a href="/guides/basics/graphics.html">
+          Graphics
+        </a>
+      
+    </div>
+  </div>
+  
+</li>
+            
+          
+            
+              
+
+<li class="explorer-tree__target ">
+  
+  <div>
+    <div>
+      
+      
+        <a href="/guides/basics/interaction.html">
+          Interaction
+        </a>
+      
+    </div>
+  </div>
+  
+</li>
+            
+          
+            
+              
+
+<li class="explorer-tree__target ">
+  
+  <div>
+    <div>
+      
+      
+        <a href="/guides/basics/render-loop.html">
+          Render Loop
+        </a>
+      
+    </div>
+  </div>
+  
+</li>
+            
+          
+            
+              
+
+<li class="explorer-tree__target ">
+  
+  <div>
+    <div>
+      
+      
+        <a href="/guides/basics/scene-graph.html">
+          Scene Graph
+        </a>
+      
+    </div>
+  </div>
+  
+</li>
+            
+          
+            
+              
+
+<li class="explorer-tree__target ">
+  
+  <div>
+    <div>
+      
+      
+        <a href="/guides/basics/sprites.html">
+          Sprites
+        </a>
+      
+    </div>
+  </div>
+  
+</li>
+            
+          
+            
+              
+
+<li class="explorer-tree__target ">
+  
+  <div>
+    <div>
+      
+      
+        <a href="/guides/basics/sprite-sheets.html">
+          Spritesheets
+        </a>
+      
+    </div>
+  </div>
+  
+</li>
+            
+          
+            
+              
+
+<li class="explorer-tree__target ">
+  
+  <div>
+    <div>
+      
+      
+        <a href="/guides/basics/text.html">
+          Text
+        </a>
+      
+    </div>
+  </div>
+  
+</li>
+            
+          
+        </div>
+      </div>
+    </ul>
+  
+</li>
+      
+    
+      
+        
+
+<li class="explorer-tree__target ">
+  
+  <div>
+    <div>
+      
+      
+        <a href="/guides/basics/assets.html">
+          Assets
+        </a>
+      
+    </div>
+  </div>
+  
+</li>
+      
+    
+  </ul>
+</div>
+</div>
+
+            </div>
+            
+<main class="page-content">
+  <a class="edit-link" href="https://github.com/pixijs/guides/edit/main/docs/basics/assets.md">
+    Edit Guide
+  </a>
+  <div class="document">
+    
+    <h1>PixiJS Guides</h1>
+<h2>The Assets package</h2>
+<p>The Assets package is a modern replacement for the old <code>PIXI.Loader</code> class. It is a promise-based resource management solution that will download, cache and parse your assets into something you can use. The downloads can be simultaneous and in the background, meaning faster startup times for your app, the cache ensures that you never download the same asset twice and the extensible parser system allows you to easily extend and customize the process to your needs.</p>
+<h2>Getting started</h2>
+<p>The <code>@pixi/assets</code> package doesn't come bundled with PixiJS in version 6.x and must be added externally, however it will become integrated with version 7. The class that does all the heavy lifting is called <code>AssetsClass</code> but you don't need to create your own instance since you will find one ready to use in <code>PIXI.Assets</code>.<br>
+This package relies heavily on JavaScript Promises that all modern browsers support, however, if your target browser <a href="https://caniuse.com/promises">doesn't support promises</a> you should look into <a href="https://github.com/zloirock/core-js#ecmascript-promise">polyfilling them</a>.</p>
+<h2>Making our first Assets Promise</h2>
+<p>To quickly use the <code>PIXI.Assets</code> instance, you just need to call <code>PIXI.Assets.load</code> and pass in an asset. This will return a promise that when resolved will yield the value you seek.<br>
+In this example, we will load a texture and then turn it into a sprite.</p>
+<div class="responsive-4-3"><iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/assets/promise.js"></iframe></div>
+<p>One very important thing to keep in mind while using <code>Assets</code> is that all requests are cached and if the URL is the same, the promise returned will also be the same.<br>
+To show it in code</p>
+<pre><code class="hljs language-js">promise1 = PIXI.Assets.load(<span class="hljs-string">&#x27;bunny.png&#x27;</span>)
+promise2 = PIXI.Assets.load(<span class="hljs-string">&#x27;bunny.png&#x27;</span>)
+
+<span class="hljs-comment">//promise1 === promise2</span>
+</code></pre>
+<p>Out of the box, the following assets types can be loaded without the need for external plugins:</p>
+<ul>
+<li>Textures (<code>avif</code>, <code>webp</code>, <code>png</code>, <code>jpg</code>, <code>gif</code>)</li>
+<li>Sprite sheets (<code>json</code>)</li>
+<li>Bitmap fonts (<code>xml</code>, <code>fnt</code>, <code>txt</code>)</li>
+<li>Web fonts (<code>ttf</code>, <code>woff</code>, <code>woff2</code>)</li>
+<li>Json files (<code>json</code>)</li>
+<li>Text files (<code>txt</code>)</li>
+</ul>
+<p>More types can be added fairly easily by creating additional loader parsers.</p>
+<h2>Warning about solved promises</h2>
+<p>When an asset is downloaded, it is cached as a promise inside the <code>Assets</code> instance and if you try to download it again you will get a reference to the already resolved promise.<br>
+However promise handlers <code>.then(...)</code>/<code>.catch(...)</code>/<code>.finally(...)</code> are always asynchronous, this means that even if a promise was already resolved the code below the <code>.then(...)</code>/<code>.catch(...)</code>/<code>.finally(...)</code> will execute before the code inside them.<br>
+See this example</p>
+<pre><code class="hljs language-js"><span class="hljs-built_in">console</span>.log(<span class="hljs-number">1</span>);
+alreadyResolvedPromise.then(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span>));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">3</span>);
+
+<span class="hljs-comment">// Console output:</span>
+<span class="hljs-comment">// 1</span>
+<span class="hljs-comment">// 3</span>
+<span class="hljs-comment">// 2</span>
+</code></pre>
+<p>To learn more about why this happens you will need to learn about <a href="https://javascript.info/microtask-queue">Microtasks</a>, however, using async functions should mitigate this problem.</p>
+<h2>Using Async/Await</h2>
+<p>There is a way to work with promises that is more intuitive and easier to read: <code>async</code>/<code>await</code>.</p>
+<p>To use it we first need to create a function/method and mark it as <code>async</code>.</p>
+<pre><code class="hljs language-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">test</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<p>This function now wraps the return value in a promise and allows us to use the <code>await</code> keyword before a promise to halt the execution of the code until it is resolved and gives us the value.</p>
+<p>See this example:</p>
+<div class="responsive-4-3"><iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/assets/async.js"></iframe></div>
+<p>The <code>texture</code> variable now is not a promise but the resolved texture that resulted after waiting for this promise to resolve.</p>
+<pre><code class="hljs language-js"><span class="hljs-keyword">const</span> texture = <span class="hljs-keyword">await</span> PIXI.Assets.load(<span class="hljs-string">&#x27;examples/assets/bunny.png&#x27;</span>);
+</code></pre>
+<p>This allows us to write more readable code without falling into callback hell and to better think when our program halts and yields.</p>
+<h2>Loading multiple assets</h2>
+<p>We can add assets to the cache and then load them all simultaneously by using <code>PIXI.Assets.add(...)</code> and then calling <code>PIXI.Assets.load(...)</code> with all the keys you want to have loaded.<br>
+See the following example</p>
+<div class="responsive-4-3"><iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/assets/multiple.js"></iframe></div>
+<p>However, if you want to take full advantage of <code>@pixi/Assets</code> you should use bundles.<br>
+Bundles are just a way to group assets together and can be added manually by calling <code>PIXI.Assets.addBundle(...)</code>/<code>PIXI.Assets.loadBundle(...)</code>.</p>
+<pre><code class="hljs language-js">  PIXI.Assets.addBundle(<span class="hljs-string">&#x27;animals&#x27;</span>, {
+    <span class="hljs-attr">bunny</span>: <span class="hljs-string">&#x27;bunny.png&#x27;</span>,
+    <span class="hljs-attr">chicken</span>: <span class="hljs-string">&#x27;chicken.png&#x27;</span>,
+    <span class="hljs-attr">thumper</span>: <span class="hljs-string">&#x27;thumper.png&#x27;</span>,
+  });
+
+ <span class="hljs-keyword">const</span> assets = <span class="hljs-keyword">await</span> PIXI.Assets.loadBundle(<span class="hljs-string">&#x27;animals&#x27;</span>);
+</code></pre>
+<p>However, the best way to handle bundles is to use a manifest and call <code>PIXI.Assets.init({manifest})</code> with said manifest (or even better, an URL pointing to it).<br>
+Splitting our assets into bundles that correspond to screens or stages of our app will come in handy for loading in the background while the user is using the app instead of locking them in a single monolithic loading screen.</p>
+<pre><code class="hljs language-json">{
+   <span class="hljs-attr">&quot;bundles&quot;</span>:[
+      {
+         <span class="hljs-attr">&quot;name&quot;</span>:<span class="hljs-string">&quot;load-screen&quot;</span>,
+         <span class="hljs-attr">&quot;assets&quot;</span>:[
+            {
+               <span class="hljs-attr">&quot;name&quot;</span>:<span class="hljs-string">&quot;background&quot;</span>,
+               <span class="hljs-attr">&quot;srcs&quot;</span>:<span class="hljs-string">&quot;sunset.png&quot;</span>
+            },
+            {
+               <span class="hljs-attr">&quot;name&quot;</span>:<span class="hljs-string">&quot;bar&quot;</span>,
+               <span class="hljs-attr">&quot;srcs&quot;</span>:<span class="hljs-string">&quot;load-bar.{png,webp}&quot;</span>
+            }
+         ]
+      },
+      {
+         <span class="hljs-attr">&quot;name&quot;</span>:<span class="hljs-string">&quot;game-screen&quot;</span>,
+         <span class="hljs-attr">&quot;assets&quot;</span>:[
+            {
+               <span class="hljs-attr">&quot;name&quot;</span>:<span class="hljs-string">&quot;character&quot;</span>,
+               <span class="hljs-attr">&quot;srcs&quot;</span>:<span class="hljs-string">&quot;robot.png&quot;</span>
+            },
+            {
+               <span class="hljs-attr">&quot;name&quot;</span>:<span class="hljs-string">&quot;enemy&quot;</span>,
+               <span class="hljs-attr">&quot;srcs&quot;</span>:<span class="hljs-string">&quot;bad-guy.png&quot;</span>
+            }
+         ]
+      }
+   ]
+}
+</code></pre>
+<pre><code class="hljs language-js">PIXI.Assets.init({<span class="hljs-attr">manifest</span>: <span class="hljs-string">&quot;path/manifest.json&quot;</span>});
+</code></pre>
+<p>beware that <strong>you can only call <code>init</code> once</strong></p>
+<p>Remember there is no downside in repeating URLs since they will all be cached, so if you need the same asset in two bundles you can duplicate the request without any extra cost!</p>
+<h2>Background loading</h2>
+<p>The old approach to loading was to use <code>PIXI.Loader</code> to load all your assets at the beginning of your app, but users are less patient now and want content to be instantly available so the practices are moving towards loading the bare minimum needed to show the user some content and, while they are interacting with that, we keep loading the following content in the background.</p>
+<p>Luckily, <code>@pixi/assets</code> has us covered with a system that allows us to load everything in the background and in case we need some assets right now, bump them to the top of the queue so we can minimize loading times.</p>
+<p>To achieve this, we have the methods <code>PIXI.Assets.backgroundLoad(...)</code> and <code>PIXI.Assets.backgroundLoadBundle(...)</code> that will passively begin to load these assets in the background. So when you finally come to loading them you will get a promise that resolves to the loaded assets immediately.</p>
+<p>When you finally need the assets to show, you call the usual <code>PIXI.Assets.load(...)</code> or <code>PIXI.Assets.loadBundle(...)</code> and you will get the corresponding promise.</p>
+<p>The best way to do this is using bundles, see the following example</p>
+<div class="responsive-4-3"><iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/assets/bundle.js"></iframe></div>
+<p>We create one bundle for each screen our game will have and set them all to start downloading at the beginning of our app. If the user progresses slowly enough in our app then they should never get to see a loading screen after the first one!</p>
+
+  </div>
+  
+  
+
+
+  <footer class="footer" id="footer-mount-point"></footer>
+
+</main>
+          </div>
+          <div class="bottom-banner">
+              <div class="bottom-banner-content">
+  <div class="authors">
+    <a href="https://www.pixijs.com" target="_blank" class="pixi-logo">
+      PixiJS Logo
+    </a>
+    <section>
+      &copy; 2022 PixiJS. All Rights Reserved.
+    </section>
+    <section>
+      A labor of love by Rob Morris <a href="https://github.com/irongaze">@irongaze</a>,
+      Shukant Pal <a href="https://twitter.com/shukantp">@ShukantP</a> and the
+      <a href="https://github.com/orgs/pixijs/people">PixiJS team</a>.
+    </section>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </article>
+    </body>
+  </div>
+  
+    <script src="/guides/static/main.js"></script>
+  
+</html>
