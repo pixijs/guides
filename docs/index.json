@@ -19,7 +19,15 @@
       "scene-graph",
       "sprites",
       "sprite-sheets",
-      "text"
+      "text",
+      "assets"
+    ]
+  },
+  "production": {
+    "title": "Production",
+    "kind": "category",
+    "children": [
+      "performance-tips"
     ]
   }
 }
