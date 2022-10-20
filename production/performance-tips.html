@@ -515,7 +515,7 @@
 <li>Only optimize when you need to! PixiJS can handle a fair amount of content off the bat</li>
 <li>Be mindful of the complexity of your scene. The more objects you add the slower things will end up</li>
 <li>Order can help, for example sprite / graphic / sprite / graphic is slower than sprite / sprite / graphic / graphic</li>
-<li>Some older mobile devices run things a little slower. Passing in the option <code>contextAlpha: useContextAlpha</code> and <code>antialias: false</code> to the Renderer or Application can help with performance</li>
+<li>Some older mobile devices run things a little slower. Passing in the option <code>useContextAlpha: false</code> and <code>antialias: false</code> to the Renderer or Application can help with performance</li>
 <li>Culling, is disabled by default as its often better to do this at an application level or set objects to be <code>cullable = true</code>. If you are GPU it will improve performance, if you are CPU bound - it will degrade performance</li>
 </ul>
 <h3>Sprites</h3>
