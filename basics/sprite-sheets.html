@@ -561,10 +561,10 @@
 );
 
 <span class="hljs-comment">// Generate all the Textures asynchronously</span>
-spritesheet.parse(<span class="hljs-function">() =&gt;</span> {
-	<span class="hljs-comment">// spritesheet is ready to use!</span>
-	<span class="hljs-keyword">const</span> anim = <span class="hljs-keyword">new</span> PIXI.AnimatedSprite(spritesheet.animations.enemy);
-});
+<span class="hljs-keyword">await</span> spritesheet.parse();
+
+<span class="hljs-comment">// spritesheet is ready to use!</span>
+<span class="hljs-keyword">const</span> anim = <span class="hljs-keyword">new</span> PIXI.AnimatedSprite(spritesheet.animations.enemy);
 </code></pre>
 
   </div>
