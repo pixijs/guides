@@ -71,7 +71,8 @@ const spritesheet = new PIXI.Spritesheet(
 );
 
 // Generate all the Textures asynchronously
-spritesheet.parse(() => {
-	// spritesheet is ready to use!
-	const anim = new PIXI.AnimatedSprite(spritesheet.animations.enemy);
-});
+await spritesheet.parse();
+
+// spritesheet is ready to use!
+const anim = new PIXI.AnimatedSprite(spritesheet.animations.enemy);
+```
