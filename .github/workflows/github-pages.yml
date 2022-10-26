@@ -9,23 +9,23 @@ jobs:
   github-pages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Use Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 16
       - name: Install npm
-        run: npm install -g npm@7
+        run: npm install -g npm@8
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
       - name: Generate
         run: npm run build
       - name: GH Pages deploy
-        uses: Cecilapp/GitHub-Pages-deploy@3.2.0
+        uses: Cecilapp/GitHub-Pages-deploy@v3
         env:
-          GITHUB_TOKEN: ${{ secrets.JEKYLL_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          email: sukantk2002@outlook.com
+          email: matt@mattkarl.com
           build_dir: guides
           branch: gh-pages
           commit_message: Generate guides site, with webdoc
