@@ -7,7 +7,7 @@
 - Be mindful of the complexity of your scene. The more objects you add the slower things will end up
 - Order can help, for example sprite / graphic / sprite / graphic is slower than sprite / sprite / graphic / graphic
 - Some older mobile devices run things a little slower. Passing in the option `useContextAlpha: false` and `antialias: false` to the Renderer or Application can help with performance
-- Culling, is disabled by default as its often better to do this at an application level or set objects to be `cullable = true`. If you are GPU it will improve performance, if you are CPU bound - it will degrade performance
+- Culling is disabled by default as it's often better to do this at an application level or set objects to be `cullable = true`. If you are GPU-bound it will improve performance; if you are CPU-bound it will degrade performance
 
 ### Sprites
 
@@ -43,7 +43,7 @@
 - Masks can be expensive if too many are used: e.g., 100s of masks will really slow things down
 - Axis-aligned Rectangle masks are the fastest (as the use scissor rect)
 - Graphics masks are second fastest (as they use the stencil buffer)
-- Sprite masks are the third fastest (they uses filters) - really expensive do not use too many in your scene!
+- Sprite masks are the third fastest (they uses filters). They are really expensive. Do not use too many in your scene!
 
 ### Filters
 
@@ -62,11 +62,11 @@
 - Setting to `true` turns an object into a Sprite by caching it as a Texture
 - It has a one time cost when it is activated as it draws the object to a Texture
 - Avoid changing this on elements frequently
-- If you have a complicated item that has lots of sprites / filters AND do not move then this will speed up rendering!
+- If you have a complicated item that has lots of sprites / filters AND does not move then this will speed up rendering!
 - Do not need apply to sprites as they are already Textures
 - Do not use if the object where its children are constantly changing as this will slow things down
 
 ### Events
 
-- If an object has no interactive children use `interactiveChildren = false` the event system will then be able to avoid crawling through the object
-- Set `hitArea = new PIXI.Rectangle(x,y,w,h)` as above should stop the event system from crawling through the object
+- If an object has no interactive children use `interactiveChildren = false`. The event system will then be able to avoid crawling through the object
+- Setting `hitArea = new PIXI.Rectangle(x,y,w,h)` as above should stop the event system from crawling through the object
