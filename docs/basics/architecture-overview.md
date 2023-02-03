@@ -19,7 +19,7 @@ Here's a list of the major components that make up PixiJS.  Note that this list 
 | --- | --- |
 | **Renderer**<br>`@pixi/core` | The core of the PixiJS system is the renderer, which displays the scene graph and draws it to the screen.  The default renderer for PixiJS is based on WebGL under the hood. |
 | **Container**<br>`@pixi/display` | Main display object which creates a scene graph: the tree of renderable objects to be displayed, such as sprites, graphics and text. See [Scene Graph](scene-graph.html) for more details. |
-| **Loader** <br>`@pixi/loader`| The loader system provides tools for asynchronously loading resources such as images and audio files. |
+| **Loader** <br>`@pixi/loaders`| The loader system provides tools for asynchronously loading resources such as images and audio files. |
 | **Ticker**<br>`@pixi/ticker` | Tickers provide periodic callbacks based on a clock.  Your game update logic will generally be run in response to a tick once per frame.  You can have multiple tickers in use at one time. |
 | **Application**<br>`@pixi/app` | The Application is a simple helper that wraps a Loader, Ticker and Renderer into a single, convenient easy-to-use object. Great for getting started quickly, prototyping and building simple projects. |
 | **Interaction**<br>`@pixi/interaction` | PixiJS supports both touch and mouse-based interaction - making objects clickable, firing hover events, etc. |
