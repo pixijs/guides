@@ -4,7 +4,7 @@ PixiJS is an open source, web-based rendering system that provides blazing fast 
 
 ## About The Guides
 
-If you're new to PixiJS, we suggest you start with the Basics and read through them in order (a good place to start is [Getting Started](basics/getting-started.html)).  While PixiJS has a mature API and solid documentation, the guides go over many common issues and questions that developers new to the system encounter.
+If you're new to PixiJS, we suggest you start with the Basics and read through them in order (a good place to start is [Getting Started](basics/getting-started.md)).  While PixiJS has a mature API and solid documentation, the guides go over many common issues and questions that developers new to the system encounter.
 
 ## Other Resources
 
