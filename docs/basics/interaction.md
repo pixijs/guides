@@ -7,7 +7,7 @@ PixiJS is primarily a rendering system, but it also includes support for interac
 
 Any DisplayObject-derived object (Sprite, Container, etc.) can become interactive simply by setting its `interactive` property to `true`.  Doing so will cause the object to emit interaction events that can be responded to in order to drive your project's behavior.
 
-<div class="responsive-4-3"><iframe src="https://pixijs.io/examples-v5/?embed=1&showcode=1#/interaction/click.js"></iframe></div>
+<div class="responsive-4-3"><iframe src="https://pixijs.io/examples-v5/?embed=1&showcode=1#/interaction/click.js"></iframe></div>  
 
 ## Interaction is Events
 
