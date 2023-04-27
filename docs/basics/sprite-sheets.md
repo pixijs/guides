@@ -35,7 +35,7 @@ You can use a 3rd party tool to assemble your sprite sheet files.  Here are two 
 
 [TexturePacker](https://www.codeandweb.com/texturepacker): TexturePacker is a more polished tool that supports advanced features and workflows. A free version is available which has all the necessary features for packing spritesheets for PixiJS. It's a good fit for larger projects and professional game development, or projects that need more complex tile mapping features.
 
-Spritesheet data can also be created manually or programatically, and supplied to a new AnimatedSprite. This may be an easier option if your sprites are already contained in a single image.
+Spritesheet data can also be created manually or programmatically, and supplied to a new AnimatedSprite. This may be an easier option if your sprites are already contained in a single image.
 
 ```javascript
 // Create object to store sprite sheet data
