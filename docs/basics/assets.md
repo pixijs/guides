@@ -16,7 +16,7 @@ In this example, we will load a texture and then turn it into a sprite.
 <div class="responsive-4-3"><iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/assets/promise.js"></iframe></div>
 
 One very important thing to keep in mind while using `Assets` is that all requests are cached and if the URL is the same, the promise returned will also be the same.  
-To show it in code
+To show it in code:
 ```js
 promise1 = PIXI.Assets.load('bunny.png')
 promise2 = PIXI.Assets.load('bunny.png')
@@ -39,7 +39,7 @@ More types can be added fairly easily by creating additional loader parsers.
 
 When an asset is downloaded, it is cached as a promise inside the `Assets` instance and if you try to download it again you will get a reference to the already resolved promise.  
 However promise handlers `.then(...)`/`.catch(...)`/`.finally(...)` are always asynchronous, this means that even if a promise was already resolved the code below the `.then(...)`/`.catch(...)`/`.finally(...)` will execute before the code inside them.  
-See this example
+See this example:
 
 ```js
 console.log(1);
@@ -84,7 +84,7 @@ This allows us to write more readable code without falling into callback hell an
 ## Loading multiple assets
 
 We can add assets to the cache and then load them all simultaneously by using `PIXI.Assets.add(...)` and then calling `PIXI.Assets.load(...)` with all the keys you want to have loaded.  
-See the following example
+See the following example:
 
 <div class="responsive-4-3"><iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/assets/multiple.js"></iframe></div>
 
@@ -140,7 +140,7 @@ Splitting our assets into bundles that correspond to screens or stages of our ap
 PIXI.Assets.init({manifest: "path/manifest.json"});
 ```
 
-beware that **you can only call `init` once**
+Beware that **you can only call `init` once**.
 
 Remember there is no downside in repeating URLs since they will all be cached, so if you need the same asset in two bundles you can duplicate the request without any extra cost!
 
@@ -154,7 +154,7 @@ To achieve this, we have the methods `PIXI.Assets.backgroundLoad(...)` and `PIXI
 
 When you finally need the assets to show, you call the usual `PIXI.Assets.load(...)` or `PIXI.Assets.loadBundle(...)` and you will get the corresponding promise.
 
-The best way to do this is using bundles, see the following example
+The best way to do this is using bundles, see the following example:
 
 <div class="responsive-4-3"><iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/assets/bundle.js"></iframe></div>
 
