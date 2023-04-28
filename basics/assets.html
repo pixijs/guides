@@ -519,7 +519,7 @@ This package relies heavily on JavaScript Promises that all modern browsers supp
 In this example, we will load a texture and then turn it into a sprite.</p>
 <div class="responsive-4-3"><iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/assets/promise.js"></iframe></div>
 <p>One very important thing to keep in mind while using <code>Assets</code> is that all requests are cached and if the URL is the same, the promise returned will also be the same.<br>
-To show it in code</p>
+To show it in code:</p>
 <pre><code class="hljs language-js">promise1 = PIXI.Assets.load(<span class="hljs-string">&#x27;bunny.png&#x27;</span>)
 promise2 = PIXI.Assets.load(<span class="hljs-string">&#x27;bunny.png&#x27;</span>)
 
@@ -538,7 +538,7 @@ promise2 = PIXI.Assets.load(<span class="hljs-string">&#x27;bunny.png&#x27;</spa
 <h2>Warning about solved promises</h2>
 <p>When an asset is downloaded, it is cached as a promise inside the <code>Assets</code> instance and if you try to download it again you will get a reference to the already resolved promise.<br>
 However promise handlers <code>.then(...)</code>/<code>.catch(...)</code>/<code>.finally(...)</code> are always asynchronous, this means that even if a promise was already resolved the code below the <code>.then(...)</code>/<code>.catch(...)</code>/<code>.finally(...)</code> will execute before the code inside them.<br>
-See this example</p>
+See this example:</p>
 <pre><code class="hljs language-js"><span class="hljs-built_in">console</span>.log(<span class="hljs-number">1</span>);
 alreadyResolvedPromise.then(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span>));
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">3</span>);
@@ -565,7 +565,7 @@ alreadyResolvedPromise.then(<span class="hljs-function">() =&gt;</span> <span cl
 <p>This allows us to write more readable code without falling into callback hell and to better think when our program halts and yields.</p>
 <h2>Loading multiple assets</h2>
 <p>We can add assets to the cache and then load them all simultaneously by using <code>PIXI.Assets.add(...)</code> and then calling <code>PIXI.Assets.load(...)</code> with all the keys you want to have loaded.<br>
-See the following example</p>
+See the following example:</p>
 <div class="responsive-4-3"><iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/assets/multiple.js"></iframe></div>
 <p>However, if you want to take full advantage of <code>@pixi/Assets</code> you should use bundles.<br>
 Bundles are just a way to group assets together and can be added manually by calling <code>PIXI.Assets.addBundle(...)</code>/<code>PIXI.Assets.loadBundle(...)</code>.</p>
@@ -612,14 +612,14 @@ Splitting our assets into bundles that correspond to screens or stages of our ap
 </code></pre>
 <pre><code class="hljs language-js">PIXI.Assets.init({<span class="hljs-attr">manifest</span>: <span class="hljs-string">&quot;path/manifest.json&quot;</span>});
 </code></pre>
-<p>beware that <strong>you can only call <code>init</code> once</strong></p>
+<p>Beware that <strong>you can only call <code>init</code> once</strong>.</p>
 <p>Remember there is no downside in repeating URLs since they will all be cached, so if you need the same asset in two bundles you can duplicate the request without any extra cost!</p>
 <h2>Background loading</h2>
 <p>The old approach to loading was to use <code>PIXI.Loader</code> to load all your assets at the beginning of your app, but users are less patient now and want content to be instantly available so the practices are moving towards loading the bare minimum needed to show the user some content and, while they are interacting with that, we keep loading the following content in the background.</p>
 <p>Luckily, <code>@pixi/assets</code> has us covered with a system that allows us to load everything in the background and in case we need some assets right now, bump them to the top of the queue so we can minimize loading times.</p>
 <p>To achieve this, we have the methods <code>PIXI.Assets.backgroundLoad(...)</code> and <code>PIXI.Assets.backgroundLoadBundle(...)</code> that will passively begin to load these assets in the background. So when you finally come to loading them you will get a promise that resolves to the loaded assets immediately.</p>
 <p>When you finally need the assets to show, you call the usual <code>PIXI.Assets.load(...)</code> or <code>PIXI.Assets.loadBundle(...)</code> and you will get the corresponding promise.</p>
-<p>The best way to do this is using bundles, see the following example</p>
+<p>The best way to do this is using bundles, see the following example:</p>
 <div class="responsive-4-3"><iframe src="https://pixijs.io/examples/?embed=1&showcode=1#/assets/bundle.js"></iframe></div>
 <p>We create one bundle for each screen our game will have and set them all to start downloading at the beginning of our app. If the user progresses slowly enough in our app then they should never get to see a loading screen after the first one!</p>
 
